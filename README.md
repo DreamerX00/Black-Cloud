@@ -421,14 +421,14 @@ Kubernetes Dragon
 
 ### Framework
 
-* Next.js 16+
-* React 20
+* Next.js 16.2.10
+* React 19.2.4
 * TypeScript
 * Bun
 
 ### Styling
 
-* Tailwind CSS v5
+* Tailwind CSS v4
 * ShadCN UI
 * Radix UI
 
@@ -524,7 +524,7 @@ Python
 
 ## Runtime
 
-Python 3.14+
+Python 3.14.6
 
 ## Framework
 
@@ -706,3 +706,122 @@ Build the world's most intelligent, immersive, and visually advanced cloud archi
 A place where engineers do not merely draw infrastructure.
 
 They understand it, simulate it, improve it, and evolve it.
+
+---
+
+# Requirements
+
+## System Requirements
+
+| Tool | Version | Notes |
+|------|---------|-------|
+| Python | 3.14.6+ | Latest LTS (released June 10, 2026) |
+| Node.js | 22.x+ | LTS |
+| Bun | 1.2.x | Frontend package manager & runtime |
+| UV | 0.6.x | Python package manager |
+| Docker | 27.x+ | Container runtime |
+| Docker Compose | 2.x+ | Local orchestration |
+| PostgreSQL | 17.x+ | Database |
+| Redis | 7.4+ | Cache & message broker |
+
+---
+
+## Python Dependencies
+
+```toml
+[project]
+name = "black-cloud"
+version = "0.1.0"
+description = "Cloud Decision Intelligence Platform"
+requires-python = ">=3.14"
+dependencies = [
+    "fastapi>=0.139.0",
+    "uvicorn[standard]>=0.51.0",
+    "sqlalchemy[asyncio]>=2.0.51",
+    "alembic>=1.18.5",
+    "pydantic>=2.13.4",
+    "pydantic-settings>=2.14.2",
+    "psycopg[binary]>=3.3.4",
+    "redis>=5.0.2,<=5.2.1",
+    "celery[redis]>=5.6.3",
+    "langgraph>=1.2.8",
+    "langchain>=1.3.12",
+    "langchain-anthropic>=1.4.8",
+    "langchain-google-genai>=4.2.7",
+    "openai>=2.44.0",
+    "httpx2>=2.5.0",
+    "python-multipart>=0.0.32",
+    "email-validator>=2.3.0",
+    "pyjwt>=2.13.0",
+    "sentry-sdk[fastapi]>=2.64.0",
+    "tenacity>=9.1.4",
+]
+```
+
+---
+
+## Frontend Dependencies
+
+```json
+{
+  "dependencies": {
+    "next": "16.2.10",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "motion": "^12.42.2",
+    "@xyflow/react": "^12.11.2",
+    "zustand": "^5.0.14",
+    "@tanstack/react-query": "^5.101.2",
+    "react-hook-form": "^7.81.0",
+    "zod": "^4.4.3",
+    "@hookform/resolvers": "^5.4.0",
+    "three": "^0.185.1",
+    "@react-three/fiber": "^9.6.1",
+    "@react-three/drei": "^10.7.7",
+    "gsap": "^3.15.0",
+    "@theatre/core": "^0.7.2",
+    "@theatre/studio": "^0.7.2",
+    "@theatre/r3f": "^0.7.2",
+    "pixi.js": "^8.19.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^3.6.0",
+    "lucide-react": "^1.23.0",
+    "next-themes": "^0.4.6",
+    "sonner": "^2.0.7",
+    "@langchain/langgraph-sdk": "^1.9.25"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.2",
+    "tailwindcss": "^4.3.2",
+    "tw-animate-css": "^1.4.0",
+    "typescript": "^5",
+    "@types/node": "^26.1.1",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.10"
+  }
+}
+```
+
+---
+
+# Install Commands
+
+## Python (backend)
+
+```bash
+# One-shot install — run from project root
+uv add fastapi uvicorn sqlalchemy alembic pydantic pydantic-settings psycopg redis celery langgraph langchain langchain-anthropic langchain-google-genai openai httpx2 python-multipart email-validator pyjwt sentry-sdk tenacity
+```
+
+## Frontend
+
+```bash
+# One-shot install — run from frontend/
+bun add motion @xyflow/react zustand @tanstack/react-query react-hook-form zod @hookform/resolvers three @react-three/fiber @react-three/drei gsap @theatre/core @theatre/studio @theatre/r3f pixi.js class-variance-authority clsx tailwind-merge lucide-react next-themes sonner @langchain/langgraph-sdk
+
+# Dev dependencies
+bun add -d @tailwindcss/postcss tailwindcss tw-animate-css @types/node @types/react @types/react-dom
+```

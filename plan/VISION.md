@@ -495,8 +495,8 @@ Container orchestration guidance.
 
 ## Core
 
-* Next.js 16+
-* React 20+
+* Next.js 16.2.10
+* React 19.2.4
 * TypeScript
 * Bun
 
@@ -504,7 +504,7 @@ Container orchestration guidance.
 
 ## Styling
 
-* Tailwind CSS v5
+* Tailwind CSS v4
 * CSS Variables
 * Design Tokens
 

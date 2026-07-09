@@ -99,8 +99,8 @@ can become independent services.
 
 ### Framework
 
-* Next.js 16+
-* React 20+
+* Next.js 16.2.10
+* React 19.2.4
 * TypeScript
 * Bun
 
@@ -207,7 +207,7 @@ src/
 
 ### Runtime
 
-Python 3.14+
+Python 3.14.6
 
 ---
 

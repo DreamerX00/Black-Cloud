@@ -397,11 +397,11 @@ Deferred.
 
 ## Frontend
 
-* Next.js 16+
-* React 20+
+* Next.js 16.2.10
+* React 19.2.4
 * TypeScript
 * Bun
-* Tailwind CSS v5
+* Tailwind CSS v4
 * Motion
 * React Flow
 * Zustand
@@ -413,7 +413,7 @@ Deferred.
 
 ## Backend
 
-* Python 3.14+
+* Python 3.14.6
 * FastAPI
 * UV
 * SQLAlchemy

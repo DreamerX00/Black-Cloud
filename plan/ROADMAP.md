@@ -39,14 +39,14 @@ Establish architecture, design system, and development workflow.
 
 ### Core Stack
 
-* Next.js 16
-* React 20
+* Next.js 16.2.10
+* React 19.2.4
 * TypeScript
 * Bun
 
 ### Styling
 
-* Tailwind CSS v5
+* Tailwind CSS v4
 * Design Tokens
 * Dark Theme System
 
@@ -82,7 +82,7 @@ Establish architecture, design system, and development workflow.
 
 ### Runtime
 
-* Python 3.14
+* Python 3.14.6
 * UV
 
 ### Database
