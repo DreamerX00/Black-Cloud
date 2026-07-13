@@ -43,3 +43,6 @@ Thumbs.db
 credentials/
 
 /graphify-out
+
+
+*.txt
