@@ -1,26 +1,217 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+
+/* ---------------------------------------------------------------------------
+ * BlackCloud Design Tokens
+ * Source of truth: plan/DESIGN_SYSTEM.md
+ *
+ * Convention:
+ *   - `--bc-*`  → BlackCloud brand tokens (raw palette, provider accents)
+ *   - `--*`     → shadcn/ui semantic tokens (consumed by primitives)
+ * Dark theme is the default. Light theme is defined but MVP is dark-first.
+ * ------------------------------------------------------------------------- */
+
+@custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* ── Brand palette ── */
+  --bc-void: #050505;         /* Black Void — root background, canvas */
+  --bc-space: #0b0f17;        /* Deep Space — panels */
+  --bc-graphite: #161b22;     /* Graphite — cards, elevated surfaces */
+  --bc-graphite-2: #1f2630;   /* Graphite hover / borders */
+  --bc-ink: #ededed;          /* Primary text on dark */
+  --bc-ink-muted: #a1a1aa;    /* Secondary text */
+  --bc-ink-dim: #71717a;      /* Tertiary text, placeholders */
+
+  /* Provider accents */
+  --bc-aws: #ff9900;
+  --bc-azure: #0078d4;
+  --bc-gcp: #4285f4;
+  --bc-ai: #8b5cf6;
+
+  /* Semantic accents */
+  --bc-success: #22c55e;
+  --bc-warning: #f59e0b;
+  --bc-danger: #ef4444;
+
+  /* Motion durations (DESIGN_SYSTEM.md §Motion System) */
+  --motion-interaction: 200ms;   /* 150–250ms — hover, buttons */
+  --motion-structural: 450ms;    /* 300–600ms — panels, layout shifts */
+  --motion-navigation: 800ms;    /* 500–1200ms — page/camera transitions */
+  --motion-cinematic: 1400ms;    /* 1000ms+ — onboarding, reveals */
+
+  /* Motion easing */
+  --ease-emphasized: cubic-bezier(0.2, 0, 0, 1);
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Radii */
+  --radius: 0.625rem;
 }
 
+/* ── shadcn semantic tokens — LIGHT (fallback) ── */
+:root {
+  --background: #ffffff;
+  --foreground: #0b0f17;
+  --card: #ffffff;
+  --card-foreground: #0b0f17;
+  --popover: #ffffff;
+  --popover-foreground: #0b0f17;
+  --primary: #0b0f17;
+  --primary-foreground: #fafafa;
+  --secondary: #f4f4f5;
+  --secondary-foreground: #0b0f17;
+  --muted: #f4f4f5;
+  --muted-foreground: #71717a;
+  --accent: #f4f4f5;
+  --accent-foreground: #0b0f17;
+  --destructive: #ef4444;
+  --destructive-foreground: #fafafa;
+  --border: #e4e4e7;
+  --input: #e4e4e7;
+  --ring: #a1a1aa;
+}
+
+/* ── shadcn semantic tokens — DARK (default for MVP) ── */
+.dark {
+  --background: var(--bc-void);
+  --foreground: var(--bc-ink);
+  --card: var(--bc-graphite);
+  --card-foreground: var(--bc-ink);
+  --popover: var(--bc-space);
+  --popover-foreground: var(--bc-ink);
+  --primary: var(--bc-ink);
+  --primary-foreground: var(--bc-void);
+  --secondary: var(--bc-graphite);
+  --secondary-foreground: var(--bc-ink);
+  --muted: var(--bc-graphite);
+  --muted-foreground: var(--bc-ink-muted);
+  --accent: var(--bc-graphite-2);
+  --accent-foreground: var(--bc-ink);
+  --destructive: var(--bc-danger);
+  --destructive-foreground: var(--bc-ink);
+  --border: rgba(255, 255, 255, 0.08);
+  --input: rgba(255, 255, 255, 0.1);
+  --ring: var(--bc-ai);
+}
+
+/* ── Tailwind v4 theme mapping ── */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Brand palette utility exposure — `bg-void`, `text-aws`, etc. */
+  --color-void: var(--bc-void);
+  --color-space: var(--bc-space);
+  --color-graphite: var(--bc-graphite);
+  --color-aws: var(--bc-aws);
+  --color-azure: var(--bc-azure);
+  --color-gcp: var(--bc-gcp);
+  --color-ai: var(--bc-ai);
+  --color-success: var(--bc-success);
+  --color-warning: var(--bc-warning);
+  --color-danger: var(--bc-danger);
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, SFMono-Regular, monospace;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  /* Responsive breakpoints (DESIGN_SYSTEM.md §Breakpoints).
+   * Tailwind default `md`=768 aligns with "tablet"; we ALSO expose semantic
+   * names so utilities read `tablet:`, `desktop:`, `ultra:` and stay tied
+   * to the design language instead of raw viewport widths.
+   */
+  --breakpoint-tablet: 768px;
+  --breakpoint-desktop: 1280px;
+  --breakpoint-ultra: 1920px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* ── Base layer ── */
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+
+  html {
+    color-scheme: dark;
+    /* ponytail: dark-first; no light-mode toggle in MVP */
+  }
+
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Reduced-motion: DESIGN_SYSTEM + MVP a11y requirement */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* Focus-visible: keyboard a11y (MVP.md §Accessibility) */
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+  }
+
+  /* Hide native cursor when custom cursor is active — keep on inputs. */
+  html.has-custom-cursor,
+  html.has-custom-cursor a,
+  html.has-custom-cursor button {
+    cursor: none;
+  }
+  html.has-custom-cursor input,
+  html.has-custom-cursor textarea {
+    cursor: text;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ── Marquee keyframes (Tailwind v4 flat: define at root) ───────────────── */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@keyframes marquee-rev {
+  from { transform: translateX(-50%); }
+  to   { transform: translateX(0); }
+}
+@keyframes aurora-drift {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  50%      { transform: translate3d(2%, -3%, 0) scale(1.08); }
+}
+@keyframes shimmer {
+  0%   { background-position: -200% 50%; }
+  100% { background-position: 200% 50%; }
 }
