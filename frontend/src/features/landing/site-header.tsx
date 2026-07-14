@@ -7,14 +7,19 @@ import { useAuth } from "@/store/auth";
 
 /**
  * Landing header — floats over the hero, condenses on scroll.
- * Pattern lifted from Apple Vision Pro / Stripe: transparent at top,
- * frosted panel once the user starts scrolling.
+ * Now carries an inline ⌘K hint so the command-palette showcase further
+ * down doesn't feel unmotivated.
  */
+const NAV = [
+  { label: "Features", href: "#bento" },
+  { label: "Playground", href: "#playground" },
+  { label: "Export", href: "#code" },
+  { label: "Pricing", href: "#pricing" },
+  { label: "FAQ", href: "#faq" },
+];
+
 export function SiteHeader() {
   const [scrolled, setScrolled] = useState(false);
-  // Auth state so the header shows "Open dashboard" when a session already
-  // exists — the biggest friction point was landing pages hiding the app
-  // from visitors who had already signed in.
   const { user, hydrated, hydrate } = useAuth();
 
   useEffect(() => {
@@ -39,7 +44,7 @@ export function SiteHeader() {
           : "border-b border-transparent"
       }`}
     >
-      <div className="mx-auto flex h-14 w-full max-w-6xl items-center justify-between px-6 tablet:px-10">
+      <div className="mx-auto flex h-14 w-full max-w-6xl items-center justify-between gap-4 px-6 tablet:px-10">
         <Link
           href="/"
           data-magnetic
@@ -49,34 +54,25 @@ export function SiteHeader() {
           BlackCloud
         </Link>
 
-        <nav className="hidden items-center gap-1 text-sm tablet:flex">
-          <a
-            href="#design"
-            className="rounded-md px-3 py-1.5 text-muted-foreground transition-colors hover:text-foreground"
-          >
-            Design
-          </a>
-          <a
-            href="#validate"
-            className="rounded-md px-3 py-1.5 text-muted-foreground transition-colors hover:text-foreground"
-          >
-            Validate
-          </a>
-          <a
-            href="#export"
-            className="rounded-md px-3 py-1.5 text-muted-foreground transition-colors hover:text-foreground"
-          >
-            Export
-          </a>
-          <a
-            href="#providers"
-            className="rounded-md px-3 py-1.5 text-muted-foreground transition-colors hover:text-foreground"
-          >
-            Multi-cloud
-          </a>
+        <nav className="hidden items-center gap-0.5 text-sm tablet:flex">
+          {NAV.map((n) => (
+            <a
+              key={n.href}
+              href={n.href}
+              className="rounded-md px-3 py-1.5 text-muted-foreground transition-colors hover:text-foreground"
+            >
+              {n.label}
+            </a>
+          ))}
         </nav>
 
         <div className="flex items-center gap-2">
+          {/* ⌘K hint — decorative, mirrors the palette showcase further down */}
+          <div className="hidden items-center gap-1.5 rounded-md border border-border/50 bg-graphite/40 px-2 py-1 desktop:flex">
+            <kbd className="font-mono text-[10px] text-muted-foreground">⌘K</kbd>
+            <span className="text-[11px] text-muted-foreground">Search</span>
+          </div>
+
           {user ? (
             <Link
               href="/dashboard"

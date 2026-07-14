@@ -66,7 +66,13 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full bg-background text-foreground font-sans flex flex-col">
+      {/* suppressHydrationWarning on <body>: browser extensions (Grammarly,
+          LastPass, ColorZilla) inject data-* attrs before React hydrates.
+          Targeted suppression — only skips attr diff on <body>, not children. */}
+      <body
+        suppressHydrationWarning
+        className="min-h-full bg-background text-foreground font-sans flex flex-col"
+      >
         <ThemeProvider>
           <QueryProvider>
             <TooltipProvider delayDuration={200}>

@@ -90,12 +90,12 @@ export function Chapter({
         )}
       >
         <TiltCard className="w-full">
-          <div className="relative">
+          <div className="group relative flex items-center justify-center">
             {visual}
             {/* Spotlight follow — reads --mx/--my set by TiltCard. */}
             <div
               aria-hidden
-              className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 [ .group:hover_&, :hover_>_& ]:opacity-100"
+              className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
               style={{
                 background:
                   "radial-gradient(circle at var(--mx,50%) var(--my,50%), rgba(139,92,246,0.14), transparent 40%)",
