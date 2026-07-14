@@ -1,7 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import { Suspense, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { ACESFilmicToneMapping } from "three";
 import { useReducedMotion } from "motion/react";
@@ -30,7 +30,14 @@ function hasWebGL(): boolean {
  */
 export function ExperienceRoot() {
   const reduced = useReducedMotion();
-  const [webgl] = useState(() => (typeof window !== "undefined" ? hasWebGL() : false));
+  // Detect WebGL only after mount so the client's first render matches the
+  // server's (both render the fallback), avoiding a hydration mismatch. The
+  // Canvas swaps in on the next render once support is confirmed.
+  const [webgl, setWebgl] = useState(false);
+  // Intentional: a one-shot mount-only client capability probe. Running it in an
+  // effect is exactly what keeps the first render server-identical (see above).
+  // eslint-disable-next-line react-hooks/set-state-in-effect
+  useEffect(() => setWebgl(hasWebGL()), []);
 
   if (reduced || !webgl) return <StaticFallback />;
 
