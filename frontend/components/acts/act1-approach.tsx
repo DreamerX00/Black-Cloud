@@ -1,22 +1,47 @@
 "use client";
-import { motion } from "motion/react";
 import { Spotlight } from "@/components/effects/spotlight";
 import { ShimmerButton } from "@/components/effects/shimmer-button";
+import { SplitText } from "@/components/effects/split-text";
+import { TextReveal } from "@/components/effects/text-reveal";
+import { Magnetic } from "@/components/effects/magnetic";
+import { AnimatedGradient } from "@/components/effects/animated-gradient";
+import { DotPattern } from "@/components/effects/dot-pattern";
+import { Parallax } from "@/components/effects/parallax";
 
 export default function Act1Approach() {
   return (
-    <section className="relative flex min-h-screen flex-col items-center justify-center text-center">
+    <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden text-center">
+      {/* decorative layers — partial opacity + pointer-events-none so the 3D galaxy stays visible */}
+      <div className="pointer-events-none absolute inset-0 opacity-25">
+        <AnimatedGradient />
+      </div>
+      <DotPattern className="opacity-40" />
+
       <Spotlight />
-      <motion.h1 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }} transition={{ duration: 0.8 }}
-        className="max-w-3xl bg-gradient-to-b from-white to-zinc-500 bg-clip-text text-6xl font-bold text-transparent">
-        One control plane for every cloud.
-      </motion.h1>
-      <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ delay: 0.3 }}
-        className="mt-6 max-w-xl text-lg text-zinc-400">
-        Deploy, observe, and scale across AWS, Azure, and Google Cloud from a single cinematic surface.
-      </motion.p>
-      <div className="mt-10"><ShimmerButton>Enter the galaxy →</ShimmerButton></div>
+
+      <Parallax speed={0.2} className="flex flex-col items-center">
+        <SplitText
+          text="One control plane for every cloud."
+          as="h1"
+          className="max-w-3xl bg-gradient-to-b from-white to-zinc-500 bg-clip-text text-5xl font-bold text-transparent sm:text-6xl"
+        />
+
+        <TextReveal className="mt-6 max-w-xl text-lg text-zinc-400">
+          Deploy, observe, and scale across AWS, Azure, and Google Cloud from a
+          single cinematic surface.
+        </TextReveal>
+      </Parallax>
+
+      <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+        <Magnetic>
+          <ShimmerButton>Enter the galaxy →</ShimmerButton>
+        </Magnetic>
+        <Magnetic strength={0.3}>
+          <button className="rounded-full border border-white/20 px-6 py-3 text-sm font-medium text-zinc-200 transition-colors hover:border-white/40 hover:text-white">
+            Watch the flythrough
+          </button>
+        </Magnetic>
+      </div>
     </section>
   );
 }
