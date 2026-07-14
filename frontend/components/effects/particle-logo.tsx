@@ -57,7 +57,7 @@ export function ParticleLogo({ text }: { text: string }) {
     return () => {
       cancelAnimationFrame(raf);
       window.removeEventListener("resize", resize);
-      el.removeChild(gl.canvas);
+      gl.canvas.remove(); // no-op if already detached (StrictMode double-unmount safe)
     };
   }, [text]);
   return <div ref={host} className="h-40 w-full" />;
