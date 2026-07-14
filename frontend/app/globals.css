@@ -52,6 +52,19 @@
 
   /* ── Motion (DESIGN_SYSTEM durations) ─────────────────────── */
   --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+
+  /* Radix Accordion open/close (consumed by components/ui/accordion.tsx) */
+  --animate-accordion-down: accordion-down 0.3s var(--ease-out-quart);
+  --animate-accordion-up: accordion-up 0.3s var(--ease-out-quart);
+}
+
+@keyframes accordion-down {
+  from { height: 0; }
+  to { height: var(--radix-accordion-content-height); }
+}
+@keyframes accordion-up {
+  from { height: var(--radix-accordion-content-height); }
+  to { height: 0; }
 }
 
 /* ShadCN-compatible semantic aliases (so generated components inherit tokens) */
