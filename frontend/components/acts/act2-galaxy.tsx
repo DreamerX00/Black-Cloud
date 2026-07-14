@@ -74,7 +74,7 @@ export default function Act2Galaxy() {
           </h2>
         </TextReveal>
         <TextReveal className="mb-12 text-center">
-          <p className="mx-auto max-w-xl text-balance text-zinc-400">
+          <p className="mx-auto max-w-xl text-balance text-muted-foreground">
             Every major primitive across AWS, Azure, and Google Cloud —
             provisioned, wired, and observable from a single control plane.
           </p>
@@ -82,9 +82,9 @@ export default function Act2Galaxy() {
 
         <div className="mb-12 flex justify-center">
           <Tabs value={filter} onValueChange={(v) => setFilter(v as Filter)}>
-            <TabsList className="border border-white/10 bg-white/5 backdrop-blur-sm">
+            <TabsList className="clay backdrop-blur-sm">
               {FILTERS.map((f) => (
-                <TabsTrigger key={f.value} value={f.value} className="px-4">
+                <TabsTrigger key={f.value} value={f.value} className="clay-pressable px-4">
                   {f.label}
                 </TabsTrigger>
               ))}
@@ -100,7 +100,7 @@ export default function Act2Galaxy() {
               const brand = BRAND[s.provider];
 
               const inner = (
-                <SpotlightCard className="flex h-full flex-col justify-between border-white/10 bg-white/[0.03] p-5 backdrop-blur-sm">
+                <SpotlightCard className="flex h-full flex-col justify-between p-5">
                   <div className="flex items-start justify-between">
                     <span
                       className="font-mono text-xs uppercase tracking-wider"
@@ -117,13 +117,13 @@ export default function Act2Galaxy() {
                   <div>
                     <h3
                       className={cn(
-                        "font-semibold text-white",
+                        "font-semibold text-foreground",
                         featured ? "text-2xl" : "text-lg",
                       )}
                     >
                       {s.name}
                     </h3>
-                    <p className="mt-1 text-sm text-zinc-400">{s.blurb}</p>
+                    <p className="mt-1 text-sm text-muted-foreground">{s.blurb}</p>
                   </div>
                 </SpotlightCard>
               );

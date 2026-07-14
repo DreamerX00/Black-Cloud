@@ -144,7 +144,7 @@ export function Navbar() {
             animate={reduced ? { opacity: 1 } : { opacity: 1, height: "auto" }}
             exit={reduced ? { opacity: 0 } : { opacity: 0, height: 0 }}
             transition={reduced ? { duration: 0 } : { duration: 0.28, ease: "easeInOut" }}
-            className="overflow-hidden border-b border-border/60 bg-background/95 backdrop-blur-xl md:hidden"
+            className="clay overflow-hidden bg-background/95 backdrop-blur-xl md:hidden"
           >
             <div className="mx-auto flex w-full max-w-7xl flex-col gap-1 px-4 py-4 sm:px-6">
               {LINKS.map((l) => (

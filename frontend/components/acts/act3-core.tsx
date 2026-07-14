@@ -50,13 +50,13 @@ export default function Act3Core() {
             const Icon = s.icon;
             return (
               <BeamBorder key={s.label}>
-                <SpotlightCard className="!rounded-[inherit] border-0 bg-transparent">
+                <SpotlightCard className="!rounded-[inherit]">
                   <div className="flex flex-col items-center gap-3 px-4 py-8">
                     <Icon className="size-6 text-accent-violet" aria-hidden />
                     <div className="text-4xl font-bold text-accent-cyan sm:text-5xl">
                       <NumberTicker value={s.value} suffix={s.suffix} />
                     </div>
-                    <div className="text-sm text-zinc-400">{s.label}</div>
+                    <div className="text-sm text-muted-foreground">{s.label}</div>
                   </div>
                 </SpotlightCard>
               </BeamBorder>
@@ -79,15 +79,15 @@ export default function Act3Core() {
                   viewport={{ once: true, margin: "-15%" }}
                   transition={{ duration: 0.5, delay: i * 0.15, ease: [0.22, 1, 0.36, 1] }}
                 >
-                  <div className="flex size-14 items-center justify-center rounded-full border border-white/15 bg-white/[0.03] backdrop-blur-sm">
+                  <div className="clay flex size-14 items-center justify-center rounded-full">
                     <Icon className="size-6 text-accent-cyan" aria-hidden />
                   </div>
-                  <span className="text-xs font-medium text-zinc-300 sm:text-sm">{step.label}</span>
+                  <span className="text-xs font-medium text-muted-foreground sm:text-sm">{step.label}</span>
                 </motion.div>
 
                 {i < STEPS.length - 1 && (
                   <div className="relative h-8 w-px flex-1 sm:h-px sm:w-auto">
-                    <div className="absolute inset-0 bg-white/10" />
+                    <div className="absolute inset-0 bg-border" />
                     <motion.div
                       className="absolute inset-0 origin-top bg-gradient-to-b from-accent-violet to-accent-cyan sm:origin-left sm:bg-gradient-to-r"
                       initial={reduced ? false : { scaleX: 0, scaleY: 0 }}

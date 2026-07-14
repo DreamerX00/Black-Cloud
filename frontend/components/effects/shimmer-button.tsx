@@ -7,7 +7,7 @@ export function ShimmerButton({ className, children, ...props }: ComponentProps<
     <button
       {...props}
       className={cn(
-        "relative overflow-hidden rounded-full border border-white/15 bg-zinc-900 px-8 py-3 font-medium text-white",
+        "clay-pressable relative overflow-hidden rounded-full px-8 py-3 font-medium text-foreground",
         "transition-transform hover:scale-[1.03] active:scale-95",
         "before:absolute before:inset-0 before:-translate-x-full before:bg-gradient-to-r",
         "before:from-transparent before:via-white/25 before:to-transparent before:transition-transform",

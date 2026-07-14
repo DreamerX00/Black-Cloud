@@ -7,13 +7,13 @@ import { Moon, Sun } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export function ThemeToggle({ className }: { className?: string }) {
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
   const reduceMotion = useReducedMotion();
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
 
   const base = cn(
-    "relative inline-flex size-9 items-center justify-center rounded-md border border-border bg-background/50 text-foreground transition-colors hover:bg-accent hover:text-accent-foreground",
+    "clay-pressable relative inline-flex size-9 items-center justify-center text-foreground",
     className
   );
 
@@ -23,7 +23,7 @@ export function ThemeToggle({ className }: { className?: string }) {
     return <div className={base} aria-hidden />;
   }
 
-  const isDark = theme === "dark";
+  const isDark = resolvedTheme === "dark";
   const next = isDark ? "light" : "dark";
   const label = `Switch to ${next} theme`;
 

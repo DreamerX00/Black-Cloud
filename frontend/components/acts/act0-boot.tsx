@@ -19,7 +19,7 @@ export default function Act0Boot() {
       <SplitText
         text="A cinematic control plane for the multi-cloud era."
         as="p"
-        className="mt-6 max-w-xl text-sm text-zinc-400 sm:text-base"
+        className="mt-6 max-w-xl text-sm text-muted-foreground sm:text-base"
       />
 
       {/* animated scroll cue */}
@@ -29,12 +29,12 @@ export default function Act0Boot() {
         animate={reduced ? undefined : { opacity: 1 }}
         transition={{ delay: 1.2, duration: 0.8 }}
       >
-        <p className="font-mono text-xs tracking-[0.3em] text-zinc-400">
+        <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground">
           SCROLL TO DESCEND
         </p>
-        <div className="flex h-9 w-6 justify-center rounded-full border border-white/25 pt-2">
+        <div className="flex h-9 w-6 justify-center rounded-full border border-border pt-2">
           <motion.span
-            className="h-1.5 w-1 rounded-full bg-white/70"
+            className="h-1.5 w-1 rounded-full bg-foreground/70"
             animate={reduced ? undefined : { y: [0, 10, 0], opacity: [1, 0.2, 1] }}
             transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
           />
@@ -44,7 +44,7 @@ export default function Act0Boot() {
           height="16"
           viewBox="0 0 24 24"
           fill="none"
-          className="text-white/50"
+          className="text-foreground/50"
           animate={reduced ? undefined : { y: [0, 5, 0] }}
           transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
         >

@@ -23,10 +23,10 @@ export default function Act1Approach() {
         <SplitText
           text="One control plane for every cloud."
           as="h1"
-          className="max-w-3xl bg-gradient-to-b from-white to-zinc-500 bg-clip-text text-5xl font-bold text-transparent sm:text-6xl"
+          className="max-w-3xl bg-gradient-to-b from-foreground to-muted-foreground bg-clip-text text-5xl font-bold text-transparent sm:text-6xl"
         />
 
-        <TextReveal className="mt-6 max-w-xl text-lg text-zinc-400">
+        <TextReveal className="mt-6 max-w-xl text-lg text-muted-foreground">
           Deploy, observe, and scale across AWS, Azure, and Google Cloud from a
           single cinematic surface.
         </TextReveal>
@@ -37,7 +37,7 @@ export default function Act1Approach() {
           <ShimmerButton>Enter the galaxy →</ShimmerButton>
         </Magnetic>
         <Magnetic strength={0.3}>
-          <button className="rounded-full border border-white/20 px-6 py-3 text-sm font-medium text-zinc-200 transition-colors hover:border-white/40 hover:text-white">
+          <button className="clay-pressable px-6 py-3 text-sm font-medium text-foreground">
             Watch the flythrough
           </button>
         </Magnetic>

@@ -133,28 +133,23 @@ function PricingCard({ tier, index }: { tier: Tier; index: number }) {
   const reduced = useReducedMotion();
 
   const inner = (
-    <SpotlightCard
-      className={cn(
-        "flex h-full flex-col p-8 text-left",
-        tier.featured ? "bg-background/70" : "bg-white/[0.03] backdrop-blur-sm",
-      )}
-    >
+    <SpotlightCard className="flex h-full flex-col p-8 text-left">
       {tier.featured && (
         <span className="mb-4 inline-flex w-fit items-center rounded-full border border-accent-violet/40 bg-accent-violet/10 px-3 py-1 text-xs font-medium text-accent-violet">
           Most popular
         </span>
       )}
-      <h3 className="text-lg font-semibold text-white">{tier.name}</h3>
+      <h3 className="text-lg font-semibold text-foreground">{tier.name}</h3>
       <div className="mt-3 flex items-baseline gap-1">
-        <span className="text-4xl font-bold text-white">{tier.price}</span>
+        <span className="text-4xl font-bold text-foreground">{tier.price}</span>
         {tier.period && (
-          <span className="text-sm text-zinc-500">{tier.period}</span>
+          <span className="text-sm text-muted-foreground">{tier.period}</span>
         )}
       </div>
-      <p className="mt-3 text-sm text-zinc-400">{tier.blurb}</p>
+      <p className="mt-3 text-sm text-muted-foreground">{tier.blurb}</p>
       <ul className="mt-6 space-y-3 text-sm">
         {tier.perks.map((perk) => (
-          <li key={perk} className="flex items-center gap-2.5 text-zinc-300">
+          <li key={perk} className="flex items-center gap-2.5 text-muted-foreground">
             <Check
               className="size-4 shrink-0 text-accent-cyan"
               aria-hidden
@@ -203,8 +198,8 @@ function TestimonialCard({
   company,
 }: (typeof TESTIMONIALS)[number]) {
   return (
-    <figure className="w-[320px] shrink-0 rounded-2xl border border-white/10 bg-white/[0.03] p-6 backdrop-blur-sm">
-      <blockquote className="text-sm leading-relaxed text-zinc-300">
+    <figure className="clay w-[320px] shrink-0 rounded-2xl p-6">
+      <blockquote className="text-sm leading-relaxed text-muted-foreground">
         “{quote}”
       </blockquote>
       <figcaption className="mt-5 flex items-center gap-3">
@@ -215,8 +210,8 @@ function TestimonialCard({
             .join("")}
         </span>
         <span className="text-xs">
-          <span className="block font-medium text-white">{name}</span>
-          <span className="block text-zinc-500">
+          <span className="block font-medium text-foreground">{name}</span>
+          <span className="block text-muted-foreground">
             {role} · {company}
           </span>
         </span>
@@ -231,11 +226,11 @@ export default function Act4Emergence() {
       {/* Heading */}
       <div className="px-6 text-center">
         <TextReveal>
-          <h2 className="mx-auto max-w-3xl text-balance text-4xl font-bold tracking-tight text-white sm:text-5xl">
+          <h2 className="mx-auto max-w-3xl text-balance text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
             Emerge with control.
           </h2>
         </TextReveal>
-        <p className="mx-auto mt-4 max-w-xl text-balance text-zinc-400">
+        <p className="mx-auto mt-4 max-w-xl text-balance text-muted-foreground">
           One control plane for every cloud. Pick a tier and descend.
         </p>
       </div>
@@ -250,7 +245,7 @@ export default function Act4Emergence() {
       {/* Testimonials */}
       <div className="mt-32">
         <TextReveal>
-          <h3 className="mb-10 text-center text-2xl font-semibold text-white">
+          <h3 className="mb-10 text-center text-2xl font-semibold text-foreground">
             Teams that already descended
           </h3>
         </TextReveal>
@@ -270,14 +265,14 @@ export default function Act4Emergence() {
 
       {/* Logos */}
       <div className="mt-24">
-        <p className="mb-8 text-center text-xs font-medium uppercase tracking-widest text-zinc-600">
+        <p className="mb-8 text-center text-xs font-medium uppercase tracking-widest text-muted-foreground">
           Deploys everywhere you already run
         </p>
         <Marquee reverse speed={38} className="[--gap:3rem]">
           {LOGOS.map((logo) => (
             <span
               key={logo}
-              className="shrink-0 text-lg font-semibold tracking-tight text-zinc-500 transition-colors hover:text-white"
+              className="shrink-0 text-lg font-semibold tracking-tight text-muted-foreground transition-colors hover:text-foreground"
             >
               {logo}
             </span>
@@ -288,21 +283,21 @@ export default function Act4Emergence() {
       {/* FAQ */}
       <div className="mx-auto mt-32 max-w-2xl px-6">
         <TextReveal>
-          <h3 className="mb-8 text-center text-2xl font-semibold text-white">
+          <h3 className="mb-8 text-center text-2xl font-semibold text-foreground">
             Questions, answered
           </h3>
         </TextReveal>
-        <Accordion type="single" collapsible className="text-zinc-300">
+        <Accordion type="single" collapsible className="gap-3 text-muted-foreground">
           {FAQS.map((faq) => (
             <AccordionItem
               key={faq.q}
               value={faq.q}
-              className="border-white/10"
+              className="clay border-0 px-5"
             >
-              <AccordionTrigger className="py-4 text-base text-white">
+              <AccordionTrigger className="py-4 text-base text-foreground">
                 {faq.q}
               </AccordionTrigger>
-              <AccordionContent className="text-sm leading-relaxed text-zinc-400">
+              <AccordionContent className="text-sm leading-relaxed text-muted-foreground">
                 {faq.a}
               </AccordionContent>
             </AccordionItem>
@@ -313,11 +308,11 @@ export default function Act4Emergence() {
       {/* Final CTA */}
       <div className="mx-auto mt-32 max-w-2xl px-6 text-center">
         <TextReveal>
-          <h2 className="text-balance text-4xl font-bold tracking-tight text-white sm:text-5xl">
+          <h2 className="text-balance text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
             Ready to descend?
           </h2>
         </TextReveal>
-        <p className="mx-auto mt-4 max-w-md text-balance text-zinc-400">
+        <p className="mx-auto mt-4 max-w-md text-balance text-muted-foreground">
           Spin up your first cloud in minutes. No credit card required.
         </p>
         <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -326,7 +321,7 @@ export default function Act4Emergence() {
           </Magnetic>
           <a
             href="#"
-            className="text-sm text-zinc-400 underline-offset-4 transition-colors hover:text-white hover:underline"
+            className="text-sm text-muted-foreground underline-offset-4 transition-colors hover:text-foreground hover:underline"
           >
             Book a demo →
           </a>
@@ -334,22 +329,22 @@ export default function Act4Emergence() {
       </div>
 
       {/* Footer */}
-      <footer className="relative mt-32 border-t border-white/10 bg-gradient-to-b from-background/80 to-black">
+      <footer className="relative mt-32 border-t border-border bg-gradient-to-b from-background/80 to-background">
         <AuroraBackground className="pointer-events-none absolute inset-0 -z-10 opacity-30" />
         <Meteors count={12} />
         <div className="mx-auto max-w-6xl px-6 py-16">
           <div className="grid grid-cols-2 gap-10 md:grid-cols-5">
             <div className="col-span-2 md:col-span-1">
-              <span className="text-lg font-bold tracking-tight text-white">
+              <span className="text-lg font-bold tracking-tight text-foreground">
                 BLACKCLOUD
               </span>
-              <p className="mt-3 max-w-[16rem] text-sm text-zinc-500">
+              <p className="mt-3 max-w-[16rem] text-sm text-muted-foreground">
                 Descend, deploy, dominate — one control plane for every cloud.
               </p>
             </div>
             {FOOTER_COLUMNS.map((col) => (
               <div key={col.title}>
-                <h4 className="text-xs font-semibold uppercase tracking-widest text-zinc-500">
+                <h4 className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">
                   {col.title}
                 </h4>
                 <ul className="mt-4 space-y-2.5 text-sm">
@@ -357,7 +352,7 @@ export default function Act4Emergence() {
                     <li key={link}>
                       <a
                         href="#"
-                        className="text-zinc-400 transition-colors hover:text-white"
+                        className="text-muted-foreground transition-colors hover:text-foreground"
                       >
                         {link}
                       </a>
@@ -367,7 +362,7 @@ export default function Act4Emergence() {
               </div>
             ))}
           </div>
-          <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 text-xs text-zinc-600 sm:flex-row">
+          <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-border pt-8 text-xs text-muted-foreground sm:flex-row">
             {/* ponytail: static year — avoids new Date() (SSR hydration risk + blocked in this env); bump annually */}
             <span>© 2026 BlackCloud, Inc. All rights reserved.</span>
             <span>Made for teams that ship across clouds.</span>

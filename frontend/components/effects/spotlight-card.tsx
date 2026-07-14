@@ -24,7 +24,7 @@ export function SpotlightCard({
     <div
       onMouseMove={handleMove}
       className={cn(
-        "group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02]",
+        "clay group relative overflow-hidden rounded-2xl",
         className,
       )}
     >

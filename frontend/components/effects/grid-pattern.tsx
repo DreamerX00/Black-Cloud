@@ -12,7 +12,7 @@ export function GridPattern({ className }: { className?: string }) {
       className={cn(
         "pointer-events-none absolute inset-0 -z-10 h-full w-full",
         "[mask-image:radial-gradient(ellipse_at_center,white,transparent_75%)]",
-        "text-white/10",
+        "text-foreground/10",
         className,
       )}
     >
