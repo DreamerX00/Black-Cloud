@@ -368,7 +368,8 @@ export default function Act4Emergence() {
             ))}
           </div>
           <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 text-xs text-zinc-600 sm:flex-row">
-            <span>© {new Date().getFullYear()} BlackCloud, Inc. All rights reserved.</span>
+            {/* ponytail: static year — avoids new Date() (SSR hydration risk + blocked in this env); bump annually */}
+            <span>© 2026 BlackCloud, Inc. All rights reserved.</span>
             <span>Made for teams that ship across clouds.</span>
           </div>
         </div>
