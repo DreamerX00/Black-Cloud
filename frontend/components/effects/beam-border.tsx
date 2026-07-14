@@ -30,7 +30,7 @@ export function BeamBorder({
           }}
         />
       </div>
-      <div className="relative rounded-[inherit] bg-background/90 backdrop-blur-sm">
+      <div className="relative h-full rounded-[inherit] bg-background/90 backdrop-blur-sm">
         {children}
       </div>
       <style>{`

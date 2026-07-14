@@ -151,9 +151,7 @@ export default function Act2Galaxy() {
                 >
                   <TiltCard className="h-full">
                     {featured ? (
-                      <BeamBorder className="h-full [&>div:last-of-type]:h-full">
-                        {inner}
-                      </BeamBorder>
+                      <BeamBorder className="h-full">{inner}</BeamBorder>
                     ) : (
                       inner
                     )}

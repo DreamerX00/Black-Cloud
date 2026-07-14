@@ -30,6 +30,10 @@
   --chart-4: oklch(0.371 0 0);
   --chart-5: oklch(0.269 0 0);
   --radius: 0.625rem;
+  /* Claymorphism surface (light theme): soft matte panel + dual shadow. */
+  --clay-surface: oklch(0.97 0.005 260);
+  --clay-shadow-dark: oklch(0.7 0.02 260 / 0.35);
+  --clay-shadow-light: oklch(1 0 0 / 0.9);
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
   --sidebar-primary: oklch(0.205 0 0);
@@ -129,6 +133,10 @@ html, body { background: var(--background); color: var(--foreground); }
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+  /* Claymorphism surface (dark theme): raised matte panel over the void. */
+  --clay-surface: oklch(0.22 0.015 265);
+  --clay-shadow-dark: oklch(0 0 0 / 0.55);
+  --clay-shadow-light: oklch(1 0 0 / 0.06);
 }
 
 @layer base {
@@ -140,5 +148,54 @@ html, body { background: var(--background); color: var(--foreground); }
   }
   html {
     @apply font-sans;
+  }
+  /* Smooth theme flip: colors/shadows cross-fade when the .dark class toggles.
+     Gated off for reduced-motion by the media block above. */
+  body, body * {
+    transition: background-color 0.4s ease, border-color 0.4s ease,
+      color 0.4s ease, box-shadow 0.4s ease;
+  }
+}
+
+@layer components {
+  /* Claymorphism: soft inflated matte surface — raised dual shadow + inner
+     highlight/shade. Token-driven so it adapts to light/dark automatically. */
+  .clay {
+    background-color: var(--clay-surface);
+    border-radius: var(--radius-2xl);
+    box-shadow:
+      6px 6px 16px var(--clay-shadow-dark),
+      -6px -6px 16px var(--clay-shadow-light),
+      inset 1px 1px 1px var(--clay-shadow-light),
+      inset -1px -1px 2px var(--clay-shadow-dark);
+  }
+  /* Pressed/carved-in variant for inputs, wells, active states. */
+  .clay-inset {
+    background-color: var(--clay-surface);
+    border-radius: var(--radius-xl);
+    box-shadow:
+      inset 5px 5px 12px var(--clay-shadow-dark),
+      inset -5px -5px 12px var(--clay-shadow-light);
+  }
+  /* Interactive clay: lifts on hover, presses on active. */
+  .clay-pressable {
+    background-color: var(--clay-surface);
+    border-radius: var(--radius-xl);
+    box-shadow:
+      6px 6px 16px var(--clay-shadow-dark),
+      -6px -6px 16px var(--clay-shadow-light);
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+  }
+  .clay-pressable:hover {
+    box-shadow:
+      8px 8px 20px var(--clay-shadow-dark),
+      -8px -8px 20px var(--clay-shadow-light);
+    transform: translateY(-2px);
+  }
+  .clay-pressable:active {
+    box-shadow:
+      inset 4px 4px 10px var(--clay-shadow-dark),
+      inset -4px -4px 10px var(--clay-shadow-light);
+    transform: translateY(0);
   }
 }

@@ -38,7 +38,7 @@ export function SpotlightCard({
           }}
         />
       )}
-      <div className="relative">{children}</div>
+      <div className="relative h-full">{children}</div>
     </div>
   )
 }
