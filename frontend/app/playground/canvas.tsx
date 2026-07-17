@@ -4,6 +4,7 @@
 // animated edges, MiniMap + Controls + Background. Selection state is lifted here
 // and rendered into the library (left) and inspector (right).
 import { useCallback, useMemo, useState } from "react";
+import { PanelLeftClose, PanelLeftOpen, PanelRightClose, PanelRightOpen } from "lucide-react";
 import {
   ReactFlow,
   ReactFlowProvider,
@@ -83,6 +84,8 @@ function Flow() {
   const [nodes, setNodes, onNodesChange] = useNodesState<ServiceFlowNode>(SEED_NODES);
   const [edges, setEdges, onEdgesChange] = useEdgesState<Edge>(SEED_EDGES);
   const [selectedId, setSelectedId] = useState<string | null>(null);
+  const [libOpen, setLibOpen] = useState(true);
+  const [inspOpen, setInspOpen] = useState(true);
 
   const addService = useCallback(
     (svc: Service, position?: { x: number; y: number }) => {
@@ -167,10 +170,40 @@ function Flow() {
       .filter((c): c is NonNullable<typeof c> => c !== null);
   }, [selectedNode, edges, nodes]);
 
+  // Grid columns react to collapse state so the canvas reclaims the freed space.
+  const cols = `${libOpen ? "240px" : "52px"}_1fr_${inspOpen ? "300px" : "52px"}`;
+
   return (
-    <div className="grid min-h-0 flex-1 grid-cols-1 gap-4 lg:grid-cols-[240px_1fr_300px]">
+    <div
+      className="grid min-h-0 flex-1 grid-cols-1 gap-4 lg:[grid-template-columns:var(--cols)]"
+      style={{ ["--cols" as string]: cols }}
+    >
       <div className="hidden min-h-0 lg:block">
-        <NodeLibrary onAdd={(svc) => addService(svc)} />
+        {libOpen ? (
+          <div className="relative flex h-full flex-col">
+            <button
+              type="button"
+              aria-label="Collapse services"
+              onClick={() => setLibOpen(false)}
+              className="clay-pressable absolute right-2 top-2 z-10 grid size-7 place-items-center rounded-lg text-muted-foreground hover:text-foreground"
+            >
+              <PanelLeftClose className="size-4" />
+            </button>
+            <NodeLibrary onAdd={(svc) => addService(svc)} />
+          </div>
+        ) : (
+          <button
+            type="button"
+            aria-label="Expand services"
+            onClick={() => setLibOpen(true)}
+            className="clay group flex h-full w-full flex-col items-center gap-3 rounded-2xl py-4 text-muted-foreground hover:text-foreground"
+          >
+            <PanelLeftOpen className="size-4 text-accent-cyan" />
+            <span className="text-xs font-semibold uppercase tracking-wide [writing-mode:vertical-rl]">
+              Services
+            </span>
+          </button>
+        )}
       </div>
 
       <div
@@ -208,7 +241,31 @@ function Flow() {
       </div>
 
       <div className="hidden min-h-0 lg:block">
-        <Inspector node={selectedNode} connections={connections} onDelete={deleteNode} />
+        {inspOpen ? (
+          <div className="relative flex h-full flex-col">
+            <button
+              type="button"
+              aria-label="Collapse inspector"
+              onClick={() => setInspOpen(false)}
+              className="clay-pressable absolute right-2 top-2 z-10 grid size-7 place-items-center rounded-lg text-muted-foreground hover:text-foreground"
+            >
+              <PanelRightClose className="size-4" />
+            </button>
+            <Inspector node={selectedNode} connections={connections} onDelete={deleteNode} />
+          </div>
+        ) : (
+          <button
+            type="button"
+            aria-label="Expand inspector"
+            onClick={() => setInspOpen(true)}
+            className="clay group flex h-full w-full flex-col items-center gap-3 rounded-2xl py-4 text-muted-foreground hover:text-foreground"
+          >
+            <PanelRightOpen className="size-4 text-accent-cyan" />
+            <span className="text-xs font-semibold uppercase tracking-wide [writing-mode:vertical-rl]">
+              Inspector
+            </span>
+          </button>
+        )}
       </div>
     </div>
   );

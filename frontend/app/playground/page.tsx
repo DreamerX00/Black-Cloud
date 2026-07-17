@@ -15,7 +15,9 @@ const HINTS = [
 export default function PlaygroundPage() {
   return (
     <AppFrame title="Playground">
-      <div className="flex min-h-[calc(100vh-8rem)] flex-col gap-4">
+      {/* Fixed height so the flex-1 canvas fills the viewport instead of collapsing
+          to content and leaving dead space below. 3.75rem topbar + 2rem→4rem main pad. */}
+      <div className="flex h-[calc(100vh-5.75rem)] min-h-[600px] flex-col gap-4 sm:h-[calc(100vh-6.75rem)] lg:h-[calc(100vh-8.75rem)]">
         <div className="clay flex flex-col gap-3 rounded-2xl px-5 py-4 md:flex-row md:items-center">
           <div>
             <h2 className="font-display text-xl font-semibold text-foreground">

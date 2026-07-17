@@ -140,7 +140,9 @@ export function AppFrame({
             </Avatar>
           </div>
         </header>
-        <main className="relative p-4 sm:p-6 lg:p-8">{children}</main>
+        {/* min-h fills the viewport below the 3.75rem topbar so short pages don't
+            strand a dead void under their content. */}
+        <main className="relative min-h-[calc(100vh-3.75rem)] p-4 sm:p-6 lg:p-8">{children}</main>
       </div>
     </div>
   );

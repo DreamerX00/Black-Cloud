@@ -171,6 +171,41 @@ export default function AiArchitectPage() {
           </div>
         </section>
 
+        {/* Idle preview — dimmed sample of a real result so the page never shows a
+            bare console over a void. Reuses the same diagram + numbers as the output. */}
+        {phase === "idle" && (
+          <section aria-hidden className="flex flex-col gap-3">
+            <div className="flex items-center gap-2 text-xs font-medium uppercase tracking-wide text-muted-foreground">
+              <span className="h-px flex-1 bg-border/60" />
+              Preview · your result appears here
+              <span className="h-px flex-1 bg-border/60" />
+            </div>
+            <div className="pointer-events-none select-none opacity-45 blur-[0.4px]">
+              <div className="clay flex flex-col gap-4 rounded-2xl p-4 sm:p-5">
+                <DiagramGraph reduced />
+                <div className="grid gap-3 sm:grid-cols-3">
+                  <div className="clay-inset flex flex-col rounded-xl p-3">
+                    <span className="text-xs text-muted-foreground">Est. monthly</span>
+                    <span className="font-mono text-lg font-bold text-ai">${COST_TOTAL}</span>
+                  </div>
+                  <div className="clay-inset flex flex-col rounded-xl p-3">
+                    <span className="text-xs text-muted-foreground">Security checks</span>
+                    <span className="font-mono text-lg font-bold text-status-success">
+                      {SECURITY.filter((s) => s.status === "pass").length}/{SECURITY.length} pass
+                    </span>
+                  </div>
+                  <div className="clay-inset flex flex-col rounded-xl p-3">
+                    <span className="text-xs text-muted-foreground">Deliverables</span>
+                    <span className="font-display text-sm font-semibold text-foreground">
+                      Diagram · Cost · Terraform
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
+
         {/* Generating state */}
         {phase === "generating" && (
           <div
