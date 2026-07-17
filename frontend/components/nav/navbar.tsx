@@ -9,18 +9,51 @@ import {
   useReducedMotion,
   useScroll,
 } from "motion/react";
-import { Cloud, Menu, X } from "lucide-react";
+import { Cloud, Menu, X, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Magnetic } from "@/components/effects/magnetic";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { PRODUCT_NAV } from "@/lib/nav";
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem,
+} from "@/components/ui/dropdown-menu";
 
 const LINKS = [
-  { label: "Galaxy", href: "#galaxy" },
-  { label: "Core", href: "#core" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "Docs", href: "#docs" },
+  { label: "Pricing", href: "/pricing" },
+  { label: "Docs", href: "/docs" },
+  { label: "About", href: "/about" },
+  { label: "Changelog", href: "/changelog" },
 ] as const;
+
+function ProductMenu() {
+  return (
+    <DropdownMenu>
+      <DropdownMenuTrigger className="flex items-center gap-1 rounded-sm px-1 py-1 text-sm font-medium text-muted-foreground outline-none transition-colors hover:text-foreground focus-visible:text-foreground focus-visible:ring-2 focus-visible:ring-accent-violet">
+        Product <ChevronDown className="size-3.5" />
+      </DropdownMenuTrigger>
+      <DropdownMenuContent align="start" className="w-72">
+        {PRODUCT_NAV.map((item) => {
+          const Icon = item.icon;
+          return (
+            <DropdownMenuItem key={item.href} asChild>
+              <Link href={item.href} className="items-start">
+                <Icon className="mt-0.5 size-4 shrink-0 text-accent-cyan" />
+                <span className="flex flex-col">
+                  <span className="text-sm font-medium text-foreground">{item.label}</span>
+                  <span className="text-xs text-muted-foreground">{item.desc}</span>
+                </span>
+              </Link>
+            </DropdownMenuItem>
+          );
+        })}
+      </DropdownMenuContent>
+    </DropdownMenu>
+  );
+}
 
 function NavLink({
   href,
@@ -90,7 +123,7 @@ export function Navbar() {
         <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
           {/* Logo */}
           <Link
-            href="#top"
+            href="/"
             className="group flex items-center gap-2 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-violet"
           >
             <span className="grid size-8 place-items-center rounded-lg bg-gradient-to-br from-accent-violet to-accent-cyan text-white shadow-sm">
@@ -103,6 +136,7 @@ export function Navbar() {
 
           {/* Desktop links */}
           <div className="hidden items-center gap-7 md:flex">
+            <ProductMenu />
             {LINKS.map((l) => (
               <NavLink key={l.href} href={l.href} label={l.label} reduced={reduced} />
             ))}
@@ -113,7 +147,7 @@ export function Navbar() {
             <ThemeToggle />
             <Magnetic strength={0.3}>
               <Button asChild size="lg" className="bg-gradient-to-r from-accent-violet to-accent-cyan text-white hover:opacity-90">
-                <Link href="#console">Launch console</Link>
+                <Link href="/dashboard">Launch console</Link>
               </Button>
             </Magnetic>
           </div>
@@ -147,6 +181,15 @@ export function Navbar() {
             className="clay overflow-hidden bg-background/95 backdrop-blur-xl md:hidden"
           >
             <div className="mx-auto flex w-full max-w-7xl flex-col gap-1 px-4 py-4 sm:px-6">
+              {PRODUCT_NAV.map((l) => (
+                <NavLink
+                  key={l.href}
+                  href={l.href}
+                  label={l.label}
+                  reduced={reduced}
+                  onClick={() => setOpen(false)}
+                />
+              ))}
               {LINKS.map((l) => (
                 <NavLink
                   key={l.href}
@@ -162,7 +205,7 @@ export function Navbar() {
                   size="lg"
                   className="mt-3 w-full bg-gradient-to-r from-accent-violet to-accent-cyan text-white hover:opacity-90"
                 >
-                  <Link href="#console" onClick={() => setOpen(false)}>
+                  <Link href="/dashboard" onClick={() => setOpen(false)}>
                     Launch console
                   </Link>
                 </Button>

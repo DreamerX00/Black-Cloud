@@ -10,6 +10,9 @@ export function ThemeToggle({ className }: { className?: string }) {
   const { resolvedTheme, setTheme } = useTheme();
   const reduceMotion = useReducedMotion();
   const [mounted, setMounted] = useState(false);
+  // Canonical next-themes hydration guard: theme is unknown on the server, so we
+  // render a placeholder until mount. Setting state once on mount is intentional.
+  // eslint-disable-next-line react-hooks/set-state-in-effect
   useEffect(() => setMounted(true), []);
 
   const base = cn(

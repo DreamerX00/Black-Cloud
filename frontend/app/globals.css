@@ -6,6 +6,15 @@
 :root {
   --accent-violet: #8b5cf6;
   --accent-cyan: #22d3ee;
+  /* Provider brand + status colors (per plan/DESIGN_SYSTEM.md). Universe-wide. */
+  --provider-aws: #ff9900;
+  --provider-azure: #0078d4;
+  --provider-gcp: #4285f4;
+  --status-success: #22c55e;
+  --status-warning: #f59e0b;
+  --status-danger: #ef4444;
+  --status-info: #3b82f6;
+  --ai-intelligence: #8b5cf6;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
@@ -49,9 +58,18 @@
   --color-foreground: var(--foreground);
   --color-accent-violet: var(--accent-violet);
   --color-accent-cyan: var(--accent-cyan);
+  --color-provider-aws: var(--provider-aws);
+  --color-provider-azure: var(--provider-azure);
+  --color-provider-gcp: var(--provider-gcp);
+  --color-status-success: var(--status-success);
+  --color-status-warning: var(--status-warning);
+  --color-status-danger: var(--status-danger);
+  --color-status-info: var(--status-info);
+  --color-ai: var(--ai-intelligence);
   --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-  --font-heading: var(--font-sans);
+  --font-mono: var(--font-jetbrains);
+  --font-display: var(--font-display);
+  --font-heading: var(--font-display);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -197,5 +215,21 @@ html, body { background: var(--background); color: var(--foreground); }
       inset 4px 4px 10px var(--clay-shadow-dark),
       inset -4px -4px 10px var(--clay-shadow-light);
     transform: translateY(0);
+  }
+  /* Glassmorphism: floating controls, toolbars, nav (per DESIGN_SYSTEM Layer 2). */
+  .glass {
+    background: color-mix(in oklch, var(--background) 55%, transparent);
+    backdrop-filter: blur(16px) saturate(1.4);
+    border: 1px solid color-mix(in oklch, var(--foreground) 10%, transparent);
+    border-radius: var(--radius-xl);
+  }
+  /* Display heading: Space Grotesk, tight tracking — hero/marketing headlines. */
+  .font-display { font-family: var(--font-display), var(--font-geist-sans), sans-serif; }
+  /* Signature gradient text: violet → cyan, the BlackCloud accent wash. */
+  .text-gradient {
+    background-image: linear-gradient(to right, var(--accent-violet), var(--accent-cyan));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
   }
 }

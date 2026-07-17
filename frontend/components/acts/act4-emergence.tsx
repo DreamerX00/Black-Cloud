@@ -8,8 +8,7 @@ import { Marquee } from "@/components/effects/marquee";
 import { Magnetic } from "@/components/effects/magnetic";
 import { ShimmerButton } from "@/components/effects/shimmer-button";
 import { TextReveal } from "@/components/effects/text-reveal";
-import { AuroraBackground } from "@/components/effects/aurora-background";
-import { Meteors } from "@/components/effects/meteors";
+import { SiteFooter } from "@/components/layout/site-footer";
 import { Button } from "@/components/ui/button";
 import {
   Accordion,
@@ -329,53 +328,9 @@ export default function Act4Emergence() {
       </div>
 
       {/* Footer */}
-      <footer className="relative mt-32 border-t border-border bg-gradient-to-b from-background/80 to-background">
-        <AuroraBackground className="pointer-events-none absolute inset-0 -z-10 opacity-30" />
-        <Meteors count={12} />
-        <div className="mx-auto max-w-6xl px-6 py-16">
-          <div className="grid grid-cols-2 gap-10 md:grid-cols-5">
-            <div className="col-span-2 md:col-span-1">
-              <span className="text-lg font-bold tracking-tight text-foreground">
-                BLACKCLOUD
-              </span>
-              <p className="mt-3 max-w-[16rem] text-sm text-muted-foreground">
-                Descend, deploy, dominate — one control plane for every cloud.
-              </p>
-            </div>
-            {FOOTER_COLUMNS.map((col) => (
-              <div key={col.title}>
-                <h4 className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">
-                  {col.title}
-                </h4>
-                <ul className="mt-4 space-y-2.5 text-sm">
-                  {col.links.map((link) => (
-                    <li key={link}>
-                      <a
-                        href="#"
-                        className="text-muted-foreground transition-colors hover:text-foreground"
-                      >
-                        {link}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-          <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-border pt-8 text-xs text-muted-foreground sm:flex-row">
-            {/* ponytail: static year — avoids new Date() (SSR hydration risk + blocked in this env); bump annually */}
-            <span>© 2026 BlackCloud, Inc. All rights reserved.</span>
-            <span>Made for teams that ship across clouds.</span>
-          </div>
-        </div>
-      </footer>
+      <div className="mt-32">
+        <SiteFooter />
+      </div>
     </section>
   );
 }
-
-const FOOTER_COLUMNS = [
-  { title: "Product", links: ["Overview", "Pricing", "Integrations", "Changelog"] },
-  { title: "Company", links: ["About", "Careers", "Blog", "Contact"] },
-  { title: "Resources", links: ["Docs", "API", "Status", "Community"] },
-  { title: "Legal", links: ["Privacy", "Terms", "Security", "DPA"] },
-];
