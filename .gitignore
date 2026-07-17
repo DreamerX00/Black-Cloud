@@ -46,3 +46,8 @@ credentials/
 
 
 *.txt
+
+
+# scratch verification scripts (Claude)
+frontend/.bc-*
+.claude/scheduled_tasks.lock

@@ -14,10 +14,12 @@ export function Meteors({ count = 20 }: { count?: number }) {
 
   if (reduced) return null
 
+  // Round to fixed precision so SSR and client serialize the identical style
+  // string (full-precision floats round differently across the boundary → hydration mismatch).
   const meteors = Array.from({ length: count }, (_, i) => {
-    const left = frac(i, 12.9898) * 100
-    const delay = frac(i, 78.233) * 5
-    const duration = 3 + frac(i, 37.719) * 5
+    const left = (frac(i, 12.9898) * 100).toFixed(3)
+    const delay = (frac(i, 78.233) * 5).toFixed(3)
+    const duration = (3 + frac(i, 37.719) * 5).toFixed(3)
     return { left, delay, duration }
   })
 

@@ -56,13 +56,14 @@ HUD "Return to cinematic" eases the camera back onto the rail.
 ## Assets (build-time, network-tolerant)
 
 `scripts/fetch-assets.mjs` downloads into `/public/experience/`:
+
 - HDRI (2k .hdr) from Poly Haven CDN — the lighting base.
 - 2–3 license-clear Khronos glTF-Sample GLBs as centerpieces.
-Every download is wrapped: on failure → log + skip. The scene detects missing
-files and swaps in PROCEDURAL geometry (instanced racks, icosahedron orbs,
-torus-knot centerpiece, all PBR). Build never hard-depends on the network.
-Sources verified reachable (HTTP 200). Writes `/public/experience/CREDITS.md`
-(CC0 / Khronos CC-BY attribution).
+  Every download is wrapped: on failure → log + skip. The scene detects missing
+  files and swaps in PROCEDURAL geometry (instanced racks, icosahedron orbs,
+  torus-knot centerpiece, all PBR). Build never hard-depends on the network.
+  Sources verified reachable (HTTP 200). Writes `/public/experience/CREDITS.md`
+  (CC0 / Khronos CC-BY attribution).
 
 ## Post-processing (max fidelity, always)
 
@@ -88,6 +89,7 @@ components/experience/{experience-root,world,server-galaxy,fetched-models,
 components/experience/{free-roam-controls,store}.ts
 lib/experience/rail.ts + rail.check.ts
 ```
+
 `app/page.tsx` → `<ExperienceRoot>`. The existing 12-section landing is KEPT,
 placed after exiting the world / behind a HUD "Skip to site" link (not deleted).
 
