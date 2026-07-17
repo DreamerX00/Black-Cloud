@@ -127,10 +127,13 @@ function PricingCard({ tier, delay }: { tier: Tier; delay: number }) {
               zIndex: -1,
             }}
           />
-          <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full border border-ai/50 bg-ai/20 px-3 py-0.5 text-[10px] font-medium uppercase tracking-[0.2em] text-ai">
-            Most popular
-          </span>
         </>
+      )}
+
+      {tier.highlight && (
+        <span className="mb-2 self-start rounded-full border border-ai/50 bg-ai/20 px-3 py-0.5 text-[10px] font-medium uppercase tracking-[0.2em] text-ai">
+          Most popular
+        </span>
       )}
 
       <div className="text-[10px] uppercase tracking-[0.3em] text-muted-foreground">

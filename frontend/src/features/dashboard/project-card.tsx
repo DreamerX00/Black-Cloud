@@ -2,9 +2,8 @@
 
 import Link from "next/link";
 import { formatDistanceToNowStrict } from "@/lib/format";
-import { MoreVertical, Trash2 } from "lucide-react";
+import { MoreVertical, Trash2, ArrowUpRight } from "@/components/icons";
 import { motion } from "@/components/motion/primitives";
-import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -12,8 +11,19 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import {
+  ClayCard,
+  ClayCardHeader,
+  ClayCardTitle,
+  ClayCardDescription,
+  ClayCardFooter,
+  ClayBadge,
+  ClayOrb,
+} from "@/components/ui/clay";
+import { ProviderMark } from "@/components/icons";
 import { PROVIDER_META } from "@/lib/nodes/registry";
 import type { ProjectSummary } from "@/types/project";
+import { cn } from "@/lib/utils";
 
 interface Props {
   project: ProjectSummary;
@@ -21,76 +31,127 @@ interface Props {
 }
 
 /**
- * Individual project tile. Card is a link; the menu button stops propagation
- * so clicking it doesn't navigate.
+ * ProjectCard — a claymorphic project tile.
+ *
+ * The tile itself is a clay-bump card. Its provider badges glow with the
+ * matching provider shadow (clay-aws / clay-azure / clay-gcp) so the eye
+ * reads "which cloud" before "which project."
+ *
+ * Empty (no providers yet) projects render a soft AI-glow orb so the
+ * blank canvas still feels alive.
  */
 export function ProjectCard({ project, onDelete }: Props) {
+  const dominantProvider = project.providers[0];
+  const tone =
+    dominantProvider === "aws"
+      ? "aws"
+      : dominantProvider === "azure"
+        ? "azure"
+        : dominantProvider === "gcp"
+          ? "gcp"
+          : "ai";
+
   return (
     <motion.div
       layout
-      whileHover={{ y: -2 }}
-      transition={{ duration: 0.2 }}
+      whileHover={{ y: -4 }}
+      transition={{ type: "spring", stiffness: 380, damping: 26 }}
       className="group relative"
     >
-      <Link href={`/playground/${project.id}`} className="block">
-        <Card className="h-full border-border/60 bg-graphite/40 p-5 transition-colors hover:border-ai/60 hover:bg-graphite/70">
-          <div className="flex items-start justify-between gap-2">
-            <div className="min-w-0">
-              <h3 className="truncate font-medium">{project.name}</h3>
-              <p className="mt-0.5 line-clamp-2 text-sm text-muted-foreground">
-                {project.description || "No description yet"}
-              </p>
+      <Link
+        href={`/playground/${project.id}`}
+        data-magnetic
+        className="block"
+      >
+        <ClayCard
+          interactive
+          className="min-h-[220px] flex-col justify-between overflow-hidden"
+        >
+          {/* Ambient provider glow on hover */}
+          <div
+            aria-hidden
+            className={cn(
+              "pointer-events-none absolute -right-16 -top-16 size-40 rounded-full blur-3xl",
+              "opacity-40 group-hover:opacity-90 transition-opacity duration-500",
+              tone === "aws" && "bg-aws/40",
+              tone === "azure" && "bg-azure/40",
+              tone === "gcp" && "bg-gcp/40",
+              tone === "ai" && "bg-ai/40",
+            )}
+          />
+
+          <ClayCardHeader>
+            <div className="flex items-center gap-3 min-w-0">
+              <ClayOrb size="md" tone={tone}>
+                {dominantProvider ? (
+                  <ProviderMark provider={dominantProvider} className="size-6" />
+                ) : (
+                  <span className="font-display text-lg font-semibold text-ink">
+                    {project.name.slice(0, 1).toUpperCase() || "·"}
+                  </span>
+                )}
+              </ClayOrb>
+              <div className="min-w-0">
+                <ClayCardTitle className="truncate">{project.name}</ClayCardTitle>
+                <ClayCardDescription className="line-clamp-1">
+                  {project.description || "No description yet"}
+                </ClayCardDescription>
+              </div>
             </div>
-          </div>
-          <div className="mt-5 flex items-center gap-2 text-xs text-muted-foreground">
+            <ArrowUpRight className="size-4 text-ink-dim shrink-0 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-ai-bright" />
+          </ClayCardHeader>
+
+          <div className="mt-2 flex flex-wrap items-center gap-1.5">
             {project.providers.length === 0 ? (
-              <span className="italic">Empty canvas</span>
+              <ClayBadge tone="ai" pulse>
+                empty · draw your first node
+              </ClayBadge>
             ) : (
               project.providers.map((p) => (
-                <span
-                  key={p}
-                  className="inline-flex items-center gap-1 rounded-full border border-border/60 bg-background/50 px-2 py-0.5"
-                >
-                  <span
-                    className="h-1.5 w-1.5 rounded-full"
-                    style={{ backgroundColor: PROVIDER_META[p].accent }}
-                  />
+                <ClayBadge key={p} tone={p}>
+                  <ProviderMark provider={p} className="size-3" />
                   {PROVIDER_META[p].label}
-                </span>
+                </ClayBadge>
               ))
             )}
-            <span className="ml-auto shrink-0">
-              {project.nodeCount} node{project.nodeCount !== 1 && "s"}
-            </span>
           </div>
-          <p className="mt-3 text-xs text-muted-foreground/70">
-            Updated {formatDistanceToNowStrict(project.updatedAt)} ago
-          </p>
-        </Card>
+
+          <ClayCardFooter className="text-xs font-mono uppercase tracking-widest text-ink-dim">
+            <span>
+              {project.nodeCount} node{project.nodeCount !== 1 && "s"} ·{" "}
+              {project.edgeCount} edge{project.edgeCount !== 1 && "s"}
+            </span>
+            <span>{formatDistanceToNowStrict(project.updatedAt)} ago</span>
+          </ClayCardFooter>
+        </ClayCard>
       </Link>
 
+      {/* Actions menu — visible on hover / focus, doesn't navigate */}
       <div className="absolute right-3 top-3 opacity-0 transition-opacity group-hover:opacity-100 focus-within:opacity-100">
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button
-              size="icon"
-              variant="ghost"
-              className="h-8 w-8"
+              size="icon-sm"
+              variant="clay-ghost"
               aria-label={`Actions for ${project.name}`}
               onClick={(e) => e.preventDefault()}
             >
-              <MoreVertical className="h-4 w-4" />
+              <MoreVertical className="size-4" />
             </Button>
           </DropdownMenuTrigger>
-          <DropdownMenuContent align="end" onClick={(e) => e.stopPropagation()}>
+          <DropdownMenuContent
+            align="end"
+            className="clay shadow-clay-3"
+            onClick={(e) => e.stopPropagation()}
+          >
             <DropdownMenuItem
               onSelect={(e) => {
                 e.preventDefault();
                 onDelete(project.id);
               }}
-              className="text-danger focus:text-danger"
+              className="text-danger focus:text-danger focus:bg-danger/10"
             >
-              <Trash2 className="mr-2 h-4 w-4" /> Delete
+              <Trash2 className="mr-2 size-4" /> Delete project
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>

@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
-import { Loader2, PlayCircle } from "lucide-react";
+import { Loader2, PlayCircle } from "@/components/icons";
 import { MagneticButton } from "@/components/motion/magnetic";
 import { bootstrapDemo } from "@/services/demo";
 import { useAuth } from "@/store/auth";

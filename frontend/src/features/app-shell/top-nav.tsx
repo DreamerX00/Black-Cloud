@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { LogOut, User as UserIcon } from "lucide-react";
+import { LogOut, User as UserIcon } from "@/components/icons";
 import { useAuth } from "@/store/auth";
 import { logout as logoutService } from "@/services/auth";
 import { Button } from "@/components/ui/button";

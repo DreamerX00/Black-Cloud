@@ -1,36 +1,29 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
 
 /**
- * Placeholder Google OAuth button. Disabled until backend `/auth/google` lands.
- * Kept in the UI so the visual layout locks in — deleting later would shift
- * the auth card height and force redesign.
+ * Google OAuth entry. Disabled until backend `/auth/google` ships; kept in
+ * the flow so the layout doesn't shift when we re-enable it. Rendered in
+ * claymorphic mode so it matches the surrounding panel language.
  */
 export function GoogleOAuthButton() {
   return (
-    <Tooltip>
-      <TooltipTrigger asChild>
-        <span className="block w-full">
-          <Button
-            type="button"
-            variant="outline"
-            className="w-full"
-            disabled
-            aria-disabled
-          >
-            <GoogleGlyph />
-            <span className="ml-2">Continue with Google</span>
-          </Button>
-        </span>
-      </TooltipTrigger>
-      <TooltipContent>Coming soon — backend integration pending</TooltipContent>
-    </Tooltip>
+    <Button
+      type="button"
+      variant="clay"
+      size="lg"
+      className="w-full justify-center gap-3"
+      disabled
+      aria-disabled
+      title="Coming soon — backend integration pending"
+    >
+      <GoogleGlyph />
+      Continue with Google
+      <span className="ml-auto text-[10px] font-mono uppercase tracking-widest text-ink-dim">
+        soon
+      </span>
+    </Button>
   );
 }
 
@@ -38,8 +31,8 @@ function GoogleGlyph() {
   return (
     <svg
       aria-hidden
-      width="16"
-      height="16"
+      width="18"
+      height="18"
       viewBox="0 0 48 48"
       xmlns="http://www.w3.org/2000/svg"
     >

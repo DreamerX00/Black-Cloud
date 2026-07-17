@@ -1,32 +1,50 @@
 "use client";
 
-import dynamic from "next/dynamic";
 import { useSyncExternalStore } from "react";
+import { ClayOrb, ClayPanel } from "@/components/ui/clay";
+import { ProviderMark } from "@/components/icons";
+import { Sparkles, Shield, DocDownload, Network } from "@/components/icons";
 
 /**
- * Chapter visuals — one 3D R3F scene per chapter, dynamically imported.
+ * Chapter visuals — claymorphic 2D compositions.
  *
- * Each visual is a fixed-size, bounded card. The 3D canvas fills its
- * card, sparkles + geometry stay inside the frustum, and nothing bleeds
- * into the parent Chapter's text column. Reduced-motion falls back to a
- * static gradient card so the layout still reads.
+ * These were previously per-chapter R3F canvases, but the landing already
+ * carries one persistent WebGL canvas (Cinematic). Claymorphism handles
+ * the visual weight here — one shipped clay orb sells the concept faster
+ * than a WebGL context spun up for a card.
  */
 
-const DesignScene3D = dynamic(
-  () => import("./scene/chapter-3d").then((m) => m.DesignScene3D),
-  { ssr: false, loading: () => null },
+const DesignScene3D = () => (
+  <div className="grid h-full place-items-center">
+    <ClayOrb size="xl" tone="ai" className="animate-[float-y_4s_ease-in-out_infinite]">
+      <Sparkles className="size-10" />
+    </ClayOrb>
+  </div>
 );
-const ValidateScene3D = dynamic(
-  () => import("./scene/chapter-3d").then((m) => m.ValidateScene3D),
-  { ssr: false, loading: () => null },
+const ValidateScene3D = () => (
+  <div className="grid h-full place-items-center">
+    <ClayOrb size="xl" tone="success">
+      <Shield className="size-10" />
+    </ClayOrb>
+  </div>
 );
-const ExportScene3D = dynamic(
-  () => import("./scene/chapter-3d").then((m) => m.ExportScene3D),
-  { ssr: false, loading: () => null },
+const ExportScene3D = () => (
+  <div className="grid h-full place-items-center">
+    <ClayOrb size="xl" tone="azure">
+      <DocDownload className="size-10" />
+    </ClayOrb>
+  </div>
 );
-const ProvidersScene3D = dynamic(
-  () => import("./scene/chapter-3d").then((m) => m.ProvidersScene3D),
-  { ssr: false, loading: () => null },
+const ProvidersScene3D = () => (
+  <div className="grid h-full place-items-center gap-4">
+    <ClayPanel elevation={2} className="flex items-center gap-4 px-6 py-4">
+      <ProviderMark provider="aws" className="size-8" />
+      <Network className="size-4 text-ink-dim" />
+      <ProviderMark provider="azure" className="size-8" />
+      <Network className="size-4 text-ink-dim" />
+      <ProviderMark provider="gcp" className="size-8" />
+    </ClayPanel>
+  </div>
 );
 
 const MQ = "(prefers-reduced-motion: reduce)";

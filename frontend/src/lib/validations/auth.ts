@@ -30,3 +30,20 @@ export const signupSchema = z
   });
 
 export type SignupInput = z.infer<typeof signupSchema>;
+
+export const forgotSchema = z.object({
+  email: z.string().email("Enter a valid email address"),
+});
+export type ForgotInput = z.infer<typeof forgotSchema>;
+
+/**
+ * Email verify code — 6 digits, delivered by the transactional pipeline
+ * (backend TODO). Client validates length + numeric.
+ */
+export const verifySchema = z.object({
+  code: z
+    .string()
+    .length(6, "Enter the 6-digit code")
+    .regex(/^\d+$/, "Numbers only"),
+});
+export type VerifyInput = z.infer<typeof verifySchema>;

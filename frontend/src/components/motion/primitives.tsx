@@ -128,6 +128,23 @@ export function Stagger({
   );
 }
 
+/**
+ * StaggerItem — child slot for <Stagger>. Uses fadeInUp variants by default.
+ * A no-op passthrough when reduced motion is on, so semantics stay identical.
+ */
+export function StaggerItem({
+  children,
+  ...props
+}: DivProps & { children: ReactNode }) {
+  const reduce = useReducedMotion();
+  if (reduce) return <div {...(props as React.HTMLAttributes<HTMLDivElement>)}>{children}</div>;
+  return (
+    <motion.div variants={fadeInUp} {...props}>
+      {children}
+    </motion.div>
+  );
+}
+
 // Re-export `motion` for one-off cases where the primitives above don't fit.
 // Consumers should still respect `useReducedMotion` themselves.
 export { motion, useReducedMotion };

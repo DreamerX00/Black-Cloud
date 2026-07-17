@@ -1,9 +1,7 @@
-import { CustomCursor } from "@/components/motion/cursor";
-import { SmoothScroll } from "@/components/motion/smooth-scroll";
-import { SiteHeader } from "@/features/landing/site-header";
+import { Cinematic } from "@/features/landing/scenes/cinematic";
 import { Aurora } from "@/features/landing/aurora";
 import { SpotlightOverlay } from "@/features/landing/spotlight-overlay";
-import { Hero } from "@/features/landing/hero";
+import { SiteHeader } from "@/features/landing/site-header";
 import { GlobeSection } from "@/features/landing/globe-section";
 import { ProviderMarquee } from "@/features/landing/marquee";
 import { BentoGrid } from "@/features/landing/bento";
@@ -25,7 +23,9 @@ import { Timeline } from "@/features/landing/timeline";
 import { FlipCards } from "@/features/landing/flip-cards";
 import { CostCalculator } from "@/features/landing/cost-calculator";
 import { Integrations } from "@/features/landing/integrations";
+import { Comparison } from "@/features/landing/comparison";
 import { Trust } from "@/features/landing/trust";
+import { Customers } from "@/features/landing/customers";
 import { CaseStudies } from "@/features/landing/case-studies";
 import { Testimonials } from "@/features/landing/testimonials";
 import { Pricing } from "@/features/landing/pricing";
@@ -37,54 +37,50 @@ import { ScrollProgress } from "@/features/landing/scroll-progress";
 /**
  * Landing page — the immersive AAAA-grade centerpiece.
  *
- * Nineteen-act composition, three WebGL scenes, one custom GLSL nebula,
- * two scroll-choreographed pin sections, one real interactive builder:
+ * OPENING ACT — 5-scene Cinematic (per plan/VISION.md):
+ *   1  Dark universe · single packet appears
+ *   2  Packet moves Route53 → CF → ALB → ECS → RDS
+ *   3  Architecture grows into a network
+ *   4  Camera pulls back — universe revealed
+ *   5  Enter the platform CTA
  *
- *   I     Hero            hero-scene WebGL universe · big display type
- *   II    Globe           R3F orbiting service constellation
- *   III   Marquee         23-service dual-row infinite ribbon
- *   IV    Bento           6-tile asymmetric feature grid
- *   V     Architecture    R3F 3D chips + fbm nebula shader
- *   VI    Playground      live scripted three-tier canvas demo
- *   VII   Command         ⌘K palette in motion
- *   VIII  Horizontal      pin-scroll gallery of 5 panels
- *   IX    Chapters × 4    parallax + tilt + spotlight
- *   X     Code Export     tabbed Terraform / CFN / JSON snippet
- *   XI    Stack Builder   real interactive assemble-your-stack canvas
- *   XII   Timeline        sticky rail 5-step how-it-works
- *   XIII  Flip Cards      3D CSS flip-on-hover principle tiles
- *   XIV   Cost Calc       live sliders + total
- *   XV    Integrations    24-tool constellation w/ hover connections
- *   XVI   Trust           SOC 2 / GDPR / ISO / HIPAA / AES / SSO
- *   XVII  Case Studies    three long-form stories with metrics
- *   XVIII Testimonials    pull-quotes with oversized quote glyph
- *   XIX   Pricing         Free / Pro (highlighted) / Team
- *   XX    FAQ             native <details> accordion
+ * Below the cinematic, the extended landing composition unfolds:
+ *   VI    Globe           orbiting service constellation
+ *   VII   Marquee         23-service dual-row ribbon
+ *   VIII  Bento           6-tile asymmetric feature grid (clay tiles)
+ *   IX    Architecture    claymorphic provider constellation
+ *   X     Playground      live scripted three-tier canvas
+ *   XI    Command         ⌘K palette showcase
+ *   XII   Horizontal      pin-scroll gallery
+ *   XIII  Chapters × 4    design · validate · export · multi-cloud
+ *   XIV   Code Export     Terraform / CFN / JSON snippet tabs
+ *   XV    Stack Builder   interactive assemble-your-stack canvas
+ *   XVI   Timeline        5-step how-it-works rail
+ *   XVII  Flip Cards      principle tiles
+ *   XVIII Cost Calc       live sliders
+ *   XIX   Integrations    24-tool constellation
+ *   XX    Trust           SOC 2 / GDPR / ISO / HIPAA
+ *   XXI   Cases           long-form stories
+ *   XXII  Testimonials    pull-quotes
+ *   XXIII Pricing         Free / Pro (highlighted) / Team
+ *   XXIV  FAQ             native <details>
  *   —     Final CTA       conic aurora closer
- *   —     Footer          columns + full-bleed wordmark
+ *   —     Footer          columns + big wordmark strip
  *
- * Global overlays: Aurora (weather), SmoothScroll (Lenis lerp),
- * CustomCursor (magnetic), SpotlightOverlay (cursor spotlight, screen blend),
- * ScrollProgress (top bar + dot rail), SiteHeader (condensing).
- *
- * Every WebGL section dynamic-imports its Canvas so initial bundle stays
- * lean and LCP is not blocked by three.js. All motion gates on
- * prefers-reduced-motion at the component level.
+ * Global providers (SmoothScroll, CustomCursor, CommandPalette) live in
+ * the root layout — they render on every route.
  */
 export default function HomePage() {
   return (
     <>
-      <SmoothScroll />
       <Aurora />
       <SpotlightOverlay />
-      <CustomCursor />
       <ScrollProgress />
       <SiteHeader />
 
       <main className="relative flex flex-1 flex-col">
-        <div id="hero">
-          <Hero />
-        </div>
+        {/* Opening — the 5-scene R3F cinematic */}
+        <Cinematic />
 
         <div id="globe">
           <GlobeSection />
@@ -186,8 +182,16 @@ export default function HomePage() {
           <Integrations />
         </div>
 
+        <div id="compare">
+          <Comparison />
+        </div>
+
         <div id="trust">
           <Trust />
+        </div>
+
+        <div id="customers">
+          <Customers />
         </div>
 
         <div id="cases">

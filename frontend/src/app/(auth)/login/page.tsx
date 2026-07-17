@@ -1,14 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
+import { ClayPanel, ClayDivider } from "@/components/ui/clay";
 import { LoginForm } from "@/features/auth/login-form";
 import { GoogleOAuthButton } from "@/features/auth/oauth-button";
 import { FadeInUp } from "@/components/motion/primitives";
@@ -18,33 +10,45 @@ export const metadata: Metadata = { title: "Sign in" };
 export default function LoginPage() {
   return (
     <FadeInUp className="w-full max-w-md">
-      <Card className="border-border/60 bg-graphite/40 backdrop-blur">
-        <CardHeader className="space-y-1.5">
-          <CardTitle className="font-display text-2xl">Welcome back</CardTitle>
-          <CardDescription>
-            Sign in to your BlackCloud account to continue designing.
-          </CardDescription>
-        </CardHeader>
-        <CardContent className="space-y-6">
+      <ClayPanel elevation={3} tone="default" className="p-8 space-y-8">
+        <header className="space-y-2">
+          <h1 className="font-display text-3xl font-semibold tracking-tight text-ink">
+            Welcome back
+          </h1>
+          <p className="text-sm text-ink-muted">
+            Pick up where your architecture left off.
+          </p>
+        </header>
+
+        <div className="space-y-5">
           <GoogleOAuthButton />
-          <div className="relative">
-            <Separator />
-            <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-graphite/40 px-2 text-xs uppercase tracking-widest text-muted-foreground">
-              or
+
+          <div className="relative flex items-center gap-3">
+            <ClayDivider />
+            <span className="text-[10px] font-mono uppercase tracking-[0.25em] text-ink-dim">
+              or with email
             </span>
+            <ClayDivider />
           </div>
+
           <LoginForm />
-        </CardContent>
-        <CardFooter className="justify-center text-sm text-muted-foreground">
+        </div>
+
+        <footer className="text-center text-sm text-ink-muted">
           Don&apos;t have an account?{" "}
           <Link
             href="/signup"
-            className="ml-1 font-medium text-foreground hover:text-ai transition-colors"
+            data-magnetic
+            className="font-medium text-ai-bright hover:text-ai transition-colors underline-offset-4 hover:underline"
           >
             Create one
           </Link>
-        </CardFooter>
-      </Card>
+        </footer>
+      </ClayPanel>
+
+      <p className="mt-6 text-center text-[10px] font-mono uppercase tracking-[0.2em] text-ink-dim">
+        Own the graph. Own the decision.
+      </p>
     </FadeInUp>
   );
 }

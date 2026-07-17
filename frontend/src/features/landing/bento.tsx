@@ -1,31 +1,64 @@
 "use client";
 
-import dynamic from "next/dynamic";
 import { motion, useReducedMotion } from "motion/react";
 import { Reveal } from "@/components/motion/reveal";
 import { PROVIDER_META } from "@/lib/nodes/registry";
+import { ClayOrb } from "@/components/ui/clay";
+import { Sparkles, Cloud, Shield, DragHandle, ProviderMark } from "@/components/icons";
 
 /**
- * 3D scenes — lazy-loaded per tile so the initial bundle doesn't pay for
- * four canvases we haven't scrolled to yet. `ssr: false` because R3F needs
- * DOM globals; the placeholder is a plain empty div so nothing pops.
+ * Bento tile micro-visuals — claymorphic 2D compositions. The old R3F
+ * per-tile canvases were removed because they consumed 4 WebGL contexts
+ * beside the main landing scene canvas. Claymorphism carries the depth.
  */
-const CopilotScene3D = dynamic(
-  () => import("./scene/bento-3d").then((m) => m.CopilotScene3D),
-  { ssr: false, loading: () => null },
+const floatAnim = { y: [0, -8, 0] };
+const floatTransition = { duration: 4, repeat: Infinity, ease: "easeInOut" as const };
+
+const CopilotScene3D = () => (
+  <div className="absolute inset-0 grid place-items-center">
+    <motion.div animate={floatAnim} transition={floatTransition}>
+      <ClayOrb size="lg" tone="ai" className="animate-[pulse-glow_3s_ease-in-out_infinite]">
+        <Sparkles className="size-8" />
+      </ClayOrb>
+    </motion.div>
+  </div>
 );
-const MultiCloudScene3D = dynamic(
-  () => import("./scene/bento-3d").then((m) => m.MultiCloudScene3D),
-  { ssr: false, loading: () => null },
+const MultiCloudScene3D = () => (
+  <div className="absolute inset-0 grid place-items-center">
+    <div className="flex items-center gap-3">
+      <motion.div animate={floatAnim} transition={floatTransition}>
+        <ClayOrb size="md" tone="aws"><ProviderMark provider="aws" className="size-5" /></ClayOrb>
+      </motion.div>
+      <motion.div animate={floatAnim} transition={{ ...floatTransition, delay: 0.4 }}>
+        <ClayOrb size="md" tone="azure"><ProviderMark provider="azure" className="size-5" /></ClayOrb>
+      </motion.div>
+      <motion.div animate={floatAnim} transition={{ ...floatTransition, delay: 0.8 }}>
+        <ClayOrb size="md" tone="gcp"><ProviderMark provider="gcp" className="size-5" /></ClayOrb>
+      </motion.div>
+    </div>
+  </div>
 );
-const ValidationScene3D = dynamic(
-  () => import("./scene/bento-3d").then((m) => m.ValidationScene3D),
-  { ssr: false, loading: () => null },
+const ValidationScene3D = () => (
+  <div className="absolute inset-0 grid place-items-center">
+    <motion.div animate={floatAnim} transition={floatTransition}>
+      <ClayOrb size="lg" tone="success">
+        <Shield className="size-8" />
+      </ClayOrb>
+    </motion.div>
+  </div>
 );
-const DragScene3D = dynamic(
-  () => import("./scene/bento-3d").then((m) => m.DragScene3D),
-  { ssr: false, loading: () => null },
+const DragScene3D = () => (
+  <div className="absolute inset-0 grid place-items-center">
+    <motion.div animate={floatAnim} transition={floatTransition}>
+      <ClayOrb size="lg" tone="default">
+        <DragHandle className="size-8 text-ai" />
+      </ClayOrb>
+    </motion.div>
+  </div>
 );
+// Cloud icon may be referenced by legacy tile JSX; keep it imported so
+// tsc doesn't flag unused-var if we mid-refactor later.
+void Cloud;
 
 /**
  * BentoGrid — Act III of the landing scroll.

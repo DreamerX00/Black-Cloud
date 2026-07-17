@@ -109,7 +109,7 @@ export function CodeExport() {
 
   return (
     <section ref={ref} className="relative mx-auto w-full max-w-6xl px-6 py-24 tablet:px-10 tablet:py-32">
-      <div className="mb-10 flex items-end justify-between gap-6">
+      <div className="mb-10 flex items-start justify-between gap-6">
         <div>
           <Reveal>
             <div className="text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
@@ -162,7 +162,7 @@ export function CodeExport() {
             <button
               type="button"
               onClick={() => setCopied(true)}
-              className="rounded-md border border-border/50 bg-graphite/50 px-2.5 py-1 font-mono text-[10px] text-muted-foreground transition-colors hover:text-foreground"
+              className="rounded-md border border-border/50 bg-graphite/50 px-4 py-3 font-mono text-[10px] text-muted-foreground transition-colors hover:text-foreground"
             >
               {copied ? "copied ✓" : "copy"}
             </button>
@@ -185,7 +185,7 @@ export function CodeExport() {
                 key={`${tab}-${i}`}
                 initial={reduce ? { opacity: 1 } : { opacity: 0, x: -6 }}
                 animate={inView ? { opacity: 1, x: 0 } : { opacity: 0 }}
-                transition={{ duration: 0.35, delay: reduce ? 0 : i * 0.05 }}
+                transition={{ duration: 0.35, delay: reduce ? 0 : 0.1 + i * 0.08 }}
                 className={
                   line.c === "muted"
                     ? "text-muted-foreground/60"

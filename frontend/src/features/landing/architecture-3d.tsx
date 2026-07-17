@@ -1,12 +1,38 @@
 "use client";
 
-import dynamic from "next/dynamic";
 import { useSyncExternalStore } from "react";
 import { Reveal } from "@/components/motion/reveal";
+import { ClayOrb } from "@/components/ui/clay";
+import { ProviderMark } from "@/components/icons";
 
-const ArchitectureScene = dynamic(
-  () => import("./scene/architecture").then((m) => m.ArchitectureScene),
-  { ssr: false, loading: () => null },
+/**
+ * Architecture scene — was a nebula-shader R3F canvas; superseded by the
+ * always-visible Cinematic (5-scene) canvas at the top of the page. Here
+ * we render a claymorphic constellation of provider marks that reads as
+ * "walk inside your stack" without a second WebGL context.
+ */
+const ArchitectureScene = () => (
+  <div className="absolute inset-0 grid place-items-center">
+    <div className="relative size-[520px]">
+      {[
+        { p: "aws", angle: 0, tone: "aws" as const },
+        { p: "azure", angle: 120, tone: "azure" as const },
+        { p: "gcp", angle: 240, tone: "gcp" as const },
+      ].map(({ p, angle, tone }) => (
+        <div
+          key={p}
+          className="absolute left-1/2 top-1/2"
+          style={{
+            transform: `translate(-50%, -50%) rotate(${angle}deg) translateY(-200px) rotate(${-angle}deg)`,
+          }}
+        >
+          <ClayOrb size="lg" tone={tone} className="animate-[float-y_5s_ease-in-out_infinite]">
+            <ProviderMark provider={p as "aws" | "azure" | "gcp"} className="size-10" />
+          </ClayOrb>
+        </div>
+      ))}
+    </div>
+  </div>
 );
 
 const MQ = "(prefers-reduced-motion: reduce)";

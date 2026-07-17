@@ -125,7 +125,13 @@ export function CommandShowcase() {
         </div>
 
         {/* The palette mock */}
-        <div className="relative">
+        <motion.div
+          className="relative"
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6 }}
+        >
           <div className="absolute -inset-6 -z-10 rounded-3xl bg-[radial-gradient(circle_at_50%_50%,rgba(139,92,246,0.15),transparent_70%)] blur-3xl" />
 
           <div className="overflow-hidden rounded-2xl border border-border/60 bg-space/70 shadow-[0_40px_120px_-30px_rgba(139,92,246,0.35)] backdrop-blur-xl">
@@ -154,7 +160,7 @@ export function CommandShowcase() {
                   key={`${typed}-${n.id}`}
                   initial={{ opacity: 0, x: 8 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.2, delay: i * 0.03 }}
+                  transition={{ duration: 0.2, delay: 0.4 + i * 0.03 }}
                   className={`flex items-center gap-3 px-5 py-3 ${i === 0 ? "bg-graphite/50" : ""}`}
                 >
                   {n.iconPath ? (
@@ -197,7 +203,7 @@ export function CommandShowcase() {
               <span className="ml-auto">{results.length} of {NODE_REGISTRY.length}</span>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

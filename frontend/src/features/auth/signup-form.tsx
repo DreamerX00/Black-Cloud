@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { toast } from "sonner";
-import { Loader2 } from "lucide-react";
+import { Loader2 } from "@/components/icons";
 
 import { signupSchema, type SignupInput } from "@/lib/validations/auth";
 import { signup } from "@/services/auth";

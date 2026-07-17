@@ -1,54 +1,240 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-/* ---------------------------------------------------------------------------
- * BlackCloud Design Tokens
- * Source of truth: plan/DESIGN_SYSTEM.md
+/* ═══════════════════════════════════════════════════════════════════════════
+ *  BlackCloud Design System — v2 (Maximalist)
+ *  Source: plan/DESIGN_SYSTEM.md + plan/VISION.md
  *
- * Convention:
- *   - `--bc-*`  → BlackCloud brand tokens (raw palette, provider accents)
- *   - `--*`     → shadcn/ui semantic tokens (consumed by primitives)
- * Dark theme is the default. Light theme is defined but MVP is dark-first.
- * ------------------------------------------------------------------------- */
+ *  Layers (per DESIGN_SYSTEM §Visual Layers):
+ *    L1  Universe background          (dark space, gradients, stars)
+ *    L2  3D environment               (R3F canvases, particles)
+ *    L3  Canvas layer                 (React Flow, traffic sim)
+ *    L4  UI layer                     (claymorphic panels, glass floaters)
+ *    L5  Modal layer                  (dialogs, AI insights, tutorials)
+ *
+ *  Surface roles (per DESIGN_SYSTEM §Surface Styles):
+ *    Claymorphism  → panels, cards, sidebars       (soft shadows, elevated)
+ *    Glassmorphism → floating controls, toolbars   (blur, transparency)
+ *    Brutalism     → warnings, alerts, critical    (strong contrast, hard)
+ *
+ *  Token convention:
+ *    --bc-*      brand raw palette
+ *    --clay-*    claymorphism system
+ *    --glass-*   glassmorphism system
+ *    --brut-*    brutalism system
+ *    --*         shadcn semantic (consumed by primitives)
+ * ═════════════════════════════════════════════════════════════════════════ */
 
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* ── Brand palette ── */
-  --bc-void: #050505;         /* Black Void — root background, canvas */
-  --bc-space: #0b0f17;        /* Deep Space — panels */
-  --bc-graphite: #161b22;     /* Graphite — cards, elevated surfaces */
+  /* ──────────────────────────────────────────────────────────────────────
+   * BRAND PALETTE
+   * ──────────────────────────────────────────────────────────────────── */
+  --bc-void: #050505;         /* Black Void — root background */
+  --bc-void-2: #0a0a0f;       /* Void hover / subtle lift */
+  --bc-space: #0b0f17;        /* Deep Space — panel base */
+  --bc-space-2: #10151f;      /* Space hover */
+  --bc-graphite: #161b22;     /* Graphite — cards */
   --bc-graphite-2: #1f2630;   /* Graphite hover / borders */
-  --bc-ink: #ededed;          /* Primary text on dark */
-  --bc-ink-muted: #a1a1aa;    /* Secondary text */
-  --bc-ink-dim: #71717a;      /* Tertiary text, placeholders */
+  --bc-graphite-3: #2a323d;   /* Graphite pressed */
+  --bc-ink: #ededed;
+  --bc-ink-muted: #a1a1aa;
+  --bc-ink-dim: #71717a;
+  --bc-ink-faint: #52525b;
 
   /* Provider accents */
   --bc-aws: #ff9900;
+  --bc-aws-glow: rgba(255, 153, 0, 0.35);
   --bc-azure: #0078d4;
+  --bc-azure-glow: rgba(0, 120, 212, 0.35);
   --bc-gcp: #4285f4;
+  --bc-gcp-glow: rgba(66, 133, 244, 0.35);
   --bc-ai: #8b5cf6;
+  --bc-ai-glow: rgba(139, 92, 246, 0.45);
+  --bc-ai-bright: #a78bfa;
 
   /* Semantic accents */
   --bc-success: #22c55e;
+  --bc-success-glow: rgba(34, 197, 94, 0.35);
   --bc-warning: #f59e0b;
+  --bc-warning-glow: rgba(245, 158, 11, 0.4);
   --bc-danger: #ef4444;
+  --bc-danger-glow: rgba(239, 68, 68, 0.4);
+  --bc-info: #3b82f6;
+  --bc-info-glow: rgba(59, 130, 246, 0.35);
 
-  /* Motion durations (DESIGN_SYSTEM.md §Motion System) */
+  /* Signature gradients (used across landing scenes + hero) */
+  --bc-grad-aurora:
+    radial-gradient(60% 80% at 20% 10%, rgba(139, 92, 246, 0.35), transparent 60%),
+    radial-gradient(60% 80% at 80% 30%, rgba(0, 120, 212, 0.28), transparent 60%),
+    radial-gradient(80% 60% at 50% 100%, rgba(255, 153, 0, 0.18), transparent 60%);
+  --bc-grad-nebula:
+    radial-gradient(70% 60% at 30% 20%, rgba(139, 92, 246, 0.18), transparent 55%),
+    radial-gradient(50% 40% at 80% 70%, rgba(66, 133, 244, 0.14), transparent 55%),
+    linear-gradient(180deg, #050505 0%, #0a0a12 100%);
+  --bc-grad-provider:
+    linear-gradient(135deg, var(--bc-aws) 0%, var(--bc-ai) 50%, var(--bc-gcp) 100%);
+  --bc-grad-shimmer:
+    linear-gradient(
+      110deg,
+      transparent 0%,
+      transparent 40%,
+      rgba(255, 255, 255, 0.08) 50%,
+      transparent 60%,
+      transparent 100%
+    );
+
+  /* ──────────────────────────────────────────────────────────────────────
+   * CLAYMORPHISM SYSTEM
+   * Soft, elevated, tactile. Two light sources (top-left highlight,
+   * bottom-right shadow). Multi-layer shadows produce the pillowy depth.
+   * ──────────────────────────────────────────────────────────────────── */
+  --clay-bg: #171c26;
+  --clay-bg-2: #1c2230;
+  --clay-bg-3: #232a3a;
+  --clay-bg-hover: #1f2634;
+  --clay-bg-active: #262d3d;
+  --clay-highlight: rgba(255, 255, 255, 0.08);
+  --clay-highlight-strong: rgba(255, 255, 255, 0.14);
+  --clay-shadow-inner: rgba(0, 0, 0, 0.5);
+  --clay-border: rgba(255, 255, 255, 0.06);
+  --clay-border-strong: rgba(255, 255, 255, 0.12);
+
+  /* Radius scale — claymorphism reads as "soft" starting ~14px */
+  --clay-r-sm: 14px;
+  --clay-r-md: 20px;
+  --clay-r-lg: 28px;
+  --clay-r-xl: 36px;
+  --clay-r-full: 9999px;
+
+  /* Shadow ladder (elevation 1..5) — dual light source pillow effect */
+  --clay-shadow-1:
+    0 1px 2px rgba(0, 0, 0, 0.3),
+    0 2px 6px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.35);
+  --clay-shadow-2:
+    0 2px 4px rgba(0, 0, 0, 0.3),
+    0 6px 14px rgba(0, 0, 0, 0.4),
+    0 12px 24px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.4);
+  --clay-shadow-3:
+    0 4px 8px rgba(0, 0, 0, 0.35),
+    0 12px 24px rgba(0, 0, 0, 0.4),
+    0 24px 48px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 -2px 0 rgba(0, 0, 0, 0.45);
+  --clay-shadow-4:
+    0 8px 16px rgba(0, 0, 0, 0.4),
+    0 24px 48px rgba(0, 0, 0, 0.45),
+    0 48px 96px rgba(0, 0, 0, 0.4),
+    inset 0 2px 0 rgba(255, 255, 255, 0.12),
+    inset 0 -3px 0 rgba(0, 0, 0, 0.5);
+  --clay-shadow-5:
+    0 16px 32px rgba(0, 0, 0, 0.45),
+    0 48px 96px rgba(0, 0, 0, 0.5),
+    0 96px 192px rgba(0, 0, 0, 0.45),
+    inset 0 3px 0 rgba(255, 255, 255, 0.14),
+    inset 0 -4px 0 rgba(0, 0, 0, 0.55);
+
+  /* Provider-glowed clay shadows (used on hover/active for cloud nodes) */
+  --clay-shadow-aws:
+    0 4px 12px rgba(0, 0, 0, 0.4),
+    0 12px 32px var(--bc-aws-glow),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  --clay-shadow-azure:
+    0 4px 12px rgba(0, 0, 0, 0.4),
+    0 12px 32px var(--bc-azure-glow),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  --clay-shadow-gcp:
+    0 4px 12px rgba(0, 0, 0, 0.4),
+    0 12px 32px var(--bc-gcp-glow),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  --clay-shadow-ai:
+    0 4px 12px rgba(0, 0, 0, 0.4),
+    0 12px 32px var(--bc-ai-glow),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+
+  /* Pressed / inset variants — for toggles and depressed states */
+  --clay-shadow-inset:
+    inset 0 2px 4px rgba(0, 0, 0, 0.5),
+    inset 0 6px 12px rgba(0, 0, 0, 0.3),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.04);
+  --clay-shadow-inset-strong:
+    inset 0 4px 8px rgba(0, 0, 0, 0.6),
+    inset 0 12px 24px rgba(0, 0, 0, 0.4),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.03);
+
+  /* ──────────────────────────────────────────────────────────────────────
+   * GLASSMORPHISM SYSTEM — floating controls, HUDs, toolbars
+   * ──────────────────────────────────────────────────────────────────── */
+  --glass-bg: rgba(22, 27, 34, 0.55);
+  --glass-bg-strong: rgba(22, 27, 34, 0.75);
+  --glass-bg-tint-ai: rgba(139, 92, 246, 0.08);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-border-strong: rgba(255, 255, 255, 0.18);
+  --glass-blur-sm: blur(8px) saturate(140%);
+  --glass-blur-md: blur(16px) saturate(160%);
+  --glass-blur-lg: blur(24px) saturate(180%);
+  --glass-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    0 1px 0 rgba(255, 255, 255, 0.06) inset,
+    0 -1px 0 rgba(0, 0, 0, 0.2) inset;
+
+  /* ──────────────────────────────────────────────────────────────────────
+   * BRUTALISM SYSTEM — warnings, alerts, critical actions only
+   * ──────────────────────────────────────────────────────────────────── */
+  --brut-border: 2px solid var(--bc-ink);
+  --brut-shadow: 4px 4px 0 var(--bc-void), 8px 8px 0 var(--bc-graphite-2);
+  --brut-shadow-danger: 4px 4px 0 var(--bc-danger);
+  --brut-shadow-warning: 4px 4px 0 var(--bc-warning);
+  --brut-radius: 4px;
+
+  /* ──────────────────────────────────────────────────────────────────────
+   * MOTION SYSTEM (DESIGN_SYSTEM §Motion System)
+   * Durations tuned to categorical intent, easings to spring physics.
+   * ──────────────────────────────────────────────────────────────────── */
+  --motion-fast: 120ms;
   --motion-interaction: 200ms;   /* 150–250ms — hover, buttons */
   --motion-structural: 450ms;    /* 300–600ms — panels, layout shifts */
   --motion-navigation: 800ms;    /* 500–1200ms — page/camera transitions */
   --motion-cinematic: 1400ms;    /* 1000ms+ — onboarding, reveals */
+  --motion-epic: 2400ms;         /* landing scene beats */
 
-  /* Motion easing */
+  /* Easing — physics-shaped */
   --ease-emphasized: cubic-bezier(0.2, 0, 0, 1);
   --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-decel: cubic-bezier(0, 0, 0.2, 1);
+  --ease-accel: cubic-bezier(0.4, 0, 1, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);       /* overshoots */
+  --ease-spring-soft: cubic-bezier(0.22, 1, 0.36, 1);     /* smooth spring */
+  --ease-expo-out: cubic-bezier(0.16, 1, 0.3, 1);         /* cinematic */
+  --ease-anticipate: cubic-bezier(0.68, -0.55, 0.27, 1.55); /* windup */
 
   /* Radii */
   --radius: 0.625rem;
+
+  /* Grid rhythm — 4/8/12/16/24/32/48/64/96 */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 24px;
+  --sp-6: 32px;
+  --sp-7: 48px;
+  --sp-8: 64px;
+  --sp-9: 96px;
+  --sp-10: 128px;
+
+  /* View-transition tokens (Next 16 native) */
+  --vt-duration-exit: 200ms;
+  --vt-duration-enter: 320ms;
+  --vt-slide-offset: 80px;
 }
 
-/* ── shadcn semantic tokens — LIGHT (fallback) ── */
+/* ── shadcn semantic tokens — LIGHT (fallback for completeness) ─────────── */
 :root {
   --background: #ffffff;
   --foreground: #0b0f17;
@@ -71,7 +257,7 @@
   --ring: #a1a1aa;
 }
 
-/* ── shadcn semantic tokens — DARK (default for MVP) ── */
+/* ── shadcn semantic tokens — DARK (BlackCloud default) ─────────────────── */
 .dark {
   --background: var(--bc-void);
   --foreground: var(--bc-ink);
@@ -94,7 +280,7 @@
   --ring: var(--bc-ai);
 }
 
-/* ── Tailwind v4 theme mapping ── */
+/* ── Tailwind v4 theme mapping ──────────────────────────────────────────── */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -116,18 +302,36 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
 
-  /* Brand palette utility exposure — `bg-void`, `text-aws`, etc. */
+  /* Brand palette utility exposure */
   --color-void: var(--bc-void);
+  --color-void-2: var(--bc-void-2);
   --color-space: var(--bc-space);
+  --color-space-2: var(--bc-space-2);
   --color-graphite: var(--bc-graphite);
+  --color-graphite-2: var(--bc-graphite-2);
+  --color-graphite-3: var(--bc-graphite-3);
+  --color-ink: var(--bc-ink);
+  --color-ink-muted: var(--bc-ink-muted);
+  --color-ink-dim: var(--bc-ink-dim);
+  --color-ink-faint: var(--bc-ink-faint);
   --color-aws: var(--bc-aws);
   --color-azure: var(--bc-azure);
   --color-gcp: var(--bc-gcp);
   --color-ai: var(--bc-ai);
+  --color-ai-bright: var(--bc-ai-bright);
   --color-success: var(--bc-success);
   --color-warning: var(--bc-warning);
   --color-danger: var(--bc-danger);
+  --color-info: var(--bc-info);
 
+  /* Clay surface exposure */
+  --color-clay: var(--clay-bg);
+  --color-clay-2: var(--clay-bg-2);
+  --color-clay-3: var(--clay-bg-3);
+  --color-clay-hover: var(--clay-bg-hover);
+  --color-clay-active: var(--clay-bg-active);
+
+  /* Font stacks — layout.tsx injects .variable custom props */
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-jetbrains-mono), ui-monospace, SFMono-Regular, monospace;
@@ -136,18 +340,34 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  --radius-clay-sm: var(--clay-r-sm);
+  --radius-clay: var(--clay-r-md);
+  --radius-clay-lg: var(--clay-r-lg);
+  --radius-clay-xl: var(--clay-r-xl);
 
-  /* Responsive breakpoints (DESIGN_SYSTEM.md §Breakpoints).
-   * Tailwind default `md`=768 aligns with "tablet"; we ALSO expose semantic
-   * names so utilities read `tablet:`, `desktop:`, `ultra:` and stay tied
-   * to the design language instead of raw viewport widths.
-   */
+  /* Responsive breakpoints (DESIGN_SYSTEM.md §Breakpoints) */
   --breakpoint-tablet: 768px;
   --breakpoint-desktop: 1280px;
   --breakpoint-ultra: 1920px;
+
+  /* Custom shadow utilities — used by clay-* Tailwind classes */
+  --shadow-clay-1: var(--clay-shadow-1);
+  --shadow-clay-2: var(--clay-shadow-2);
+  --shadow-clay-3: var(--clay-shadow-3);
+  --shadow-clay-4: var(--clay-shadow-4);
+  --shadow-clay-5: var(--clay-shadow-5);
+  --shadow-clay-inset: var(--clay-shadow-inset);
+  --shadow-clay-inset-strong: var(--clay-shadow-inset-strong);
+  --shadow-clay-aws: var(--clay-shadow-aws);
+  --shadow-clay-azure: var(--clay-shadow-azure);
+  --shadow-clay-gcp: var(--clay-shadow-gcp);
+  --shadow-clay-ai: var(--clay-shadow-ai);
+  --shadow-glass: var(--glass-shadow);
 }
 
-/* ── Base layer ── */
+/* ═══════════════════════════════════════════════════════════════════════════
+ * BASE LAYER
+ * ═════════════════════════════════════════════════════════════════════════ */
 @layer base {
   * {
     border-color: var(--border);
@@ -155,19 +375,48 @@
 
   html {
     color-scheme: dark;
-    /* ponytail: dark-first; no light-mode toggle in MVP */
+    scroll-behavior: smooth;
   }
 
   body {
     background: var(--background);
     color: var(--foreground);
     font-family: var(--font-sans);
-    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11", "ss01", "ss03";
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
+    /* Universe backdrop — subtle nebula tint at the root */
+    background-image: var(--bc-grad-nebula);
+    background-attachment: fixed;
   }
 
-  /* Reduced-motion: DESIGN_SYSTEM + MVP a11y requirement */
+  /* Selection — provider gradient accent */
+  ::selection {
+    background: var(--bc-ai);
+    color: var(--bc-void);
+  }
+
+  /* Scrollbar — futuristic, thin */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--bc-graphite-2);
+    border-radius: 999px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--bc-graphite-3);
+    background-clip: padding-box;
+    border: 2px solid transparent;
+  }
+
+  /* Reduced-motion — respected globally */
   @media (prefers-reduced-motion: reduce) {
     *,
     *::before,
@@ -177,28 +426,230 @@
       transition-duration: 0.01ms !important;
       scroll-behavior: auto !important;
     }
+    ::view-transition-old(*),
+    ::view-transition-new(*),
+    ::view-transition-group(*) {
+      animation-duration: 0s !important;
+      animation-delay: 0s !important;
+    }
   }
 
-  /* Focus-visible: keyboard a11y (MVP.md §Accessibility) */
   :focus-visible {
     outline: 2px solid var(--ring);
     outline-offset: 2px;
     border-radius: var(--radius-sm);
   }
 
-  /* Hide native cursor when custom cursor is active — keep on inputs. */
+  /* Custom cursor discipline */
   html.has-custom-cursor,
   html.has-custom-cursor a,
   html.has-custom-cursor button {
     cursor: none;
   }
   html.has-custom-cursor input,
-  html.has-custom-cursor textarea {
+  html.has-custom-cursor textarea,
+  html.has-custom-cursor [contenteditable] {
     cursor: text;
+  }
+
+  /* Display font at hero scale */
+  .font-display {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+    font-feature-settings: "ss01", "ss02";
   }
 }
 
-/* ── Marquee keyframes (Tailwind v4 flat: define at root) ───────────────── */
+/* ═══════════════════════════════════════════════════════════════════════════
+ * COMPONENT UTILITIES — reusable claymorphism / glassmorphism / brutalism
+ * Prefer these over ad-hoc shadows in components.
+ * ═════════════════════════════════════════════════════════════════════════ */
+@layer components {
+  /* ────────────── CLAYMORPHISM SURFACES ─────────────────────────────── */
+  .clay {
+    background: var(--clay-bg);
+    border: 1px solid var(--clay-border);
+    border-radius: var(--clay-r-md);
+    box-shadow: var(--clay-shadow-2);
+    transition:
+      transform var(--motion-interaction) var(--ease-spring-soft),
+      box-shadow var(--motion-interaction) var(--ease-spring-soft),
+      background var(--motion-interaction) var(--ease-standard);
+  }
+  .clay-sm  { border-radius: var(--clay-r-sm); box-shadow: var(--clay-shadow-1); }
+  .clay-lg  { border-radius: var(--clay-r-lg); box-shadow: var(--clay-shadow-3); }
+  .clay-xl  { border-radius: var(--clay-r-xl); box-shadow: var(--clay-shadow-4); }
+  .clay-max { border-radius: var(--clay-r-xl); box-shadow: var(--clay-shadow-5); }
+
+  .clay-hover:hover {
+    background: var(--clay-bg-hover);
+    box-shadow: var(--clay-shadow-3);
+    transform: translateY(-2px);
+  }
+  .clay-hover:active {
+    background: var(--clay-bg-active);
+    box-shadow: var(--clay-shadow-inset);
+    transform: translateY(0);
+  }
+
+  .clay-pressed {
+    background: var(--clay-bg-2);
+    box-shadow: var(--clay-shadow-inset);
+    border-radius: var(--clay-r-md);
+  }
+
+  /* Provider-glowed clay — hero cards, node icons */
+  .clay-aws   { box-shadow: var(--clay-shadow-aws); }
+  .clay-azure { box-shadow: var(--clay-shadow-azure); }
+  .clay-gcp   { box-shadow: var(--clay-shadow-gcp); }
+  .clay-ai    { box-shadow: var(--clay-shadow-ai); }
+
+  /* Claymorphic bump — animated depth on hover, physics-eased */
+  .clay-bump {
+    transition: transform var(--motion-interaction) var(--ease-spring);
+  }
+  .clay-bump:hover { transform: translateY(-4px) scale(1.02); }
+  .clay-bump:active { transform: translateY(-1px) scale(0.99); }
+
+  /* ────────────── GLASSMORPHISM FLOATERS ────────────────────────────── */
+  .glass {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur-md);
+    -webkit-backdrop-filter: var(--glass-blur-md);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--glass-shadow);
+  }
+  .glass-strong {
+    background: var(--glass-bg-strong);
+    backdrop-filter: var(--glass-blur-lg);
+    -webkit-backdrop-filter: var(--glass-blur-lg);
+    border-color: var(--glass-border-strong);
+  }
+  .glass-ai {
+    background:
+      linear-gradient(135deg, var(--glass-bg-tint-ai), var(--glass-bg));
+    backdrop-filter: var(--glass-blur-md);
+    -webkit-backdrop-filter: var(--glass-blur-md);
+    border: 1px solid var(--bc-ai-glow);
+    box-shadow:
+      0 0 40px var(--bc-ai-glow),
+      var(--glass-shadow);
+  }
+
+  /* ────────────── BRUTALISM ALERTS ──────────────────────────────────── */
+  .brut {
+    background: var(--bc-void);
+    border: var(--brut-border);
+    border-radius: var(--brut-radius);
+    box-shadow: var(--brut-shadow);
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .brut-danger  { border-color: var(--bc-danger); box-shadow: var(--brut-shadow-danger); }
+  .brut-warning { border-color: var(--bc-warning); box-shadow: var(--brut-shadow-warning); }
+
+  /* ────────────── AURORA / NEBULA / SHIMMER OVERLAYS ────────────────── */
+  .aurora {
+    position: relative;
+    isolation: isolate;
+  }
+  .aurora::before {
+    content: "";
+    position: absolute;
+    inset: -20%;
+    z-index: -1;
+    background: var(--bc-grad-aurora);
+    filter: blur(80px) saturate(140%);
+    animation: aurora-drift 24s ease-in-out infinite;
+    pointer-events: none;
+  }
+
+  .nebula {
+    position: relative;
+    isolation: isolate;
+  }
+  .nebula::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: var(--bc-grad-nebula);
+    pointer-events: none;
+  }
+
+  .shimmer {
+    position: relative;
+    overflow: hidden;
+  }
+  .shimmer::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--bc-grad-shimmer);
+    background-size: 200% 100%;
+    animation: shimmer 3s linear infinite;
+    pointer-events: none;
+  }
+
+  /* Provider gradient text */
+  .text-gradient-provider {
+    background: var(--bc-grad-provider);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-size: 200% 200%;
+    animation: gradient-shift 8s ease-in-out infinite;
+  }
+
+  /* Glow rings — used on interactive claymorphic elements */
+  .glow-ai::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: inherit;
+    background: linear-gradient(135deg, var(--bc-ai), var(--bc-azure), var(--bc-aws));
+    z-index: -1;
+    filter: blur(12px);
+    opacity: 0;
+    transition: opacity var(--motion-interaction) var(--ease-standard);
+  }
+  .glow-ai:hover::before { opacity: 0.6; }
+
+  /* Grid lines — engineering blueprint feel */
+  .grid-lines {
+    background-image:
+      linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+  .grid-lines-fine {
+    background-image:
+      linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    background-size: 16px 16px;
+  }
+
+  /* Halo — radial glow behind hero elements */
+  .halo {
+    position: relative;
+    isolation: isolate;
+  }
+  .halo::before {
+    content: "";
+    position: absolute;
+    inset: -40%;
+    z-index: -1;
+    background: radial-gradient(closest-side, var(--bc-ai-glow), transparent 70%);
+    filter: blur(40px);
+    pointer-events: none;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+ * KEYFRAMES
+ * ═════════════════════════════════════════════════════════════════════════ */
 @keyframes marquee {
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }
@@ -214,4 +665,120 @@
 @keyframes shimmer {
   0%   { background-position: -200% 50%; }
   100% { background-position: 200% 50%; }
+}
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50%      { background-position: 100% 50%; }
+}
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 currentColor; opacity: 1; }
+  50%      { box-shadow: 0 0 24px 4px currentColor; opacity: 0.9; }
+}
+@keyframes float-y {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-8px); }
+}
+@keyframes orbit {
+  from { transform: rotate(0) translateX(60px) rotate(0); }
+  to   { transform: rotate(360deg) translateX(60px) rotate(-360deg); }
+}
+@keyframes packet-flow {
+  from { offset-distance: 0%; }
+  to   { offset-distance: 100%; }
+}
+@keyframes ping-slow {
+  0%      { transform: scale(1); opacity: 0.7; }
+  75%,100% { transform: scale(2.4); opacity: 0; }
+}
+@keyframes text-reveal {
+  from { transform: translateY(100%); }
+  to   { transform: translateY(0); }
+}
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+ * VIEW TRANSITIONS (Next 16 native — enabled in next.config)
+ *
+ * Named transitions:
+ *   .morph      shared-element morph (thumbnail→hero)
+ *   .nav-fwd    forward navigation slide
+ *   .nav-back   back navigation slide
+ *   .slide-up   Suspense reveal
+ *   .slide-down Suspense skeleton exit
+ *   site-header pinned during all transitions
+ * ═════════════════════════════════════════════════════════════════════════ */
+
+/* Shared-element morph — softened with mid-flight blur */
+::view-transition-group(.morph) {
+  animation-duration: 480ms;
+  animation-timing-function: var(--ease-expo-out);
+}
+::view-transition-image-pair(.morph) {
+  animation-name: via-blur;
+  animation-duration: 480ms;
+}
+@keyframes via-blur {
+  30% { filter: blur(4px); }
+}
+
+/* Suspense reveal — skeleton down, content up */
+::view-transition-old(.slide-down) {
+  animation:
+    var(--vt-duration-exit) ease-out both vt-fade reverse,
+    var(--vt-duration-exit) ease-out both vt-slide-y reverse;
+}
+::view-transition-new(.slide-up) {
+  animation:
+    var(--vt-duration-enter) ease-in var(--vt-duration-exit) both vt-fade,
+    420ms ease-in both vt-slide-y;
+}
+
+/* Directional navigation slides */
+::view-transition-old(.nav-fwd) {
+  --slide-offset: -60px;
+  animation:
+    var(--vt-duration-exit) ease-in both vt-fade reverse,
+    420ms var(--ease-emphasized) both vt-slide-x reverse;
+}
+::view-transition-new(.nav-fwd) {
+  --slide-offset: 60px;
+  animation:
+    var(--vt-duration-enter) ease-out var(--vt-duration-exit) both vt-fade,
+    420ms var(--ease-emphasized) both vt-slide-x;
+}
+::view-transition-old(.nav-back) {
+  --slide-offset: 60px;
+  animation:
+    var(--vt-duration-exit) ease-in both vt-fade reverse,
+    420ms var(--ease-emphasized) both vt-slide-x reverse;
+}
+::view-transition-new(.nav-back) {
+  --slide-offset: -60px;
+  animation:
+    var(--vt-duration-enter) ease-out var(--vt-duration-exit) both vt-fade,
+    420ms var(--ease-emphasized) both vt-slide-x;
+}
+
+/* Site header — anchor point during all navigations */
+::view-transition-group(site-header) {
+  animation: none;
+  z-index: 100;
+}
+::view-transition-old(site-header) { display: none; }
+::view-transition-new(site-header) { animation: none; }
+
+@keyframes vt-fade {
+  from { filter: blur(4px); opacity: 0; }
+  to   { filter: blur(0); opacity: 1; }
+}
+@keyframes vt-slide-y {
+  from { transform: translateY(12px); }
+  to   { transform: translateY(0); }
+}
+@keyframes vt-slide-x {
+  from { translate: var(--slide-offset); }
+  to   { translate: 0; }
 }

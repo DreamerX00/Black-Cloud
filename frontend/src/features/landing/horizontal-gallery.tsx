@@ -136,10 +136,15 @@ function Panel({ panel }: { panel: (typeof PANELS)[number] }) {
       </div>
 
       {/* Accent orb */}
-      <div
+      <motion.div
         aria-hidden
         className="pointer-events-none absolute -left-24 -top-24 h-64 w-64 rounded-full opacity-30 blur-3xl"
         style={{ background: panel.color }}
+        animate={{ rotate: 360, y: [0, 8, 0] }}
+        transition={{
+          rotate: { duration: 20, repeat: Infinity, ease: "linear" },
+          y: { duration: 4, repeat: Infinity },
+        }}
       />
 
       <header className="relative z-10 flex items-center justify-between">

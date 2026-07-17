@@ -62,24 +62,26 @@ export function Chapter({
           align === "right" && "tablet:order-2",
         )}
       >
-        <Reveal>
-          <span
-            className="inline-block rounded-full border border-border/60 bg-graphite/40 px-3 py-1 text-[10px] uppercase tracking-[0.3em] text-muted-foreground"
-            style={accent ? { color: accent, borderColor: `${accent}55` } : undefined}
-          >
-            {eyebrow}
-          </span>
-        </Reveal>
+        <div className="flex max-w-lg flex-col gap-4">
+          <Reveal delay={0}>
+            <span
+              className="inline-block rounded-full border border-border/60 bg-graphite/40 px-3 py-1 text-[10px] uppercase tracking-[0.3em] text-muted-foreground"
+              style={accent ? { color: accent, borderColor: `${accent}55` } : undefined}
+            >
+              {eyebrow}
+            </span>
+          </Reveal>
 
-        <h2 className="mt-6 font-display text-4xl font-semibold leading-[1.03] tracking-[-0.02em] tablet:text-6xl desktop:text-7xl">
-          <SplitText text={headline} />
-        </h2>
+          <h2 className="font-display text-4xl font-semibold leading-[1.03] tracking-[-0.02em] tablet:text-6xl desktop:text-7xl">
+            <SplitText text={headline} delay={0.08} />
+          </h2>
 
-        <Reveal delay={0.15}>
-          <p className="mt-6 max-w-lg text-lg text-muted-foreground tablet:text-xl">
-            {body}
-          </p>
-        </Reveal>
+          <Reveal delay={0.15}>
+            <p className="text-lg text-muted-foreground tablet:text-xl">
+              {body}
+            </p>
+          </Reveal>
+        </div>
       </motion.div>
 
       <motion.div
@@ -89,7 +91,7 @@ export function Chapter({
           align === "right" && "tablet:order-1",
         )}
       >
-        <TiltCard className="w-full">
+        <TiltCard className="w-full max-w-lg">
           <div className="group relative flex items-center justify-center">
             {visual}
             {/* Spotlight follow — reads --mx/--my set by TiltCard. */}
