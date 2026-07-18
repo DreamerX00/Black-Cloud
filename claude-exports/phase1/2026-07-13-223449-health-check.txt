@@ -1,0 +1,1136 @@
+╭─── Claude Code v2.1.154 ─────────────────────────────────────────────────────╮
+│                                      │ Tips for getting started              │
+│             Welcome back!            │ Run /init to create a CLAUDE.md file… │
+│                                      │ ───────────────────────────────────── │
+│                ▐▛███▜▌               │ What's new                            │
+│               ▝▜█████▛▘              │ Auto mode is now available without `… │
+│                 ▘▘ ▝▝                │ Fixed the terminal freezing and keys… │
+│                                      │ Fixed remote managed settings from a… │
+│   cobalt-heron · API Usage Billing   │ /release-notes for more               │
+│           ~/Black-Cloud-1            │                                       │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+   Opus 4.8 is now available! · /model to switch
+  ⎿  SessionStart:startup says: # claude-mem status
+
+     This project has no memory yet. The current session will seed it; subsequent sessions will receive auto-injected context for relevant past work.
+
+     Memory injection starts on your second session in a project.
+
+     `/learn-codebase` is available if the user wants to front-load the entire repo into memory in a single pass (~5 minutes on a typical repo, optional). Otherwise memory builds passively as work happens.
+
+     Live activity: http://localhost:37700
+     How it works: `/how-it-works`
+
+     This message disappears once the first observation lands.
+
+     View Observations Live @ http://localhost:37700
+
+❯ health check                                                                  
+
+● ✅ Healthy.
+
+✻ Churned for 6s
+
+❯ You are the Lead Staff Engineer for the BlackCloud project.                   
+                                                                                
+  Before making any code changes, thoroughly analyze the repository, including  
+  all files inside the Plans directory such as:                                 
+                                                                                
+  * PLAN.md                                                                     
+  * ROADMAP.md                                                                  
+  * MVP.md                                                                      
+  * DESIGN_SYSTEM.md                                                            
+  * ARCHITECTURE.md                                                             
+  * TECH_STACK.md                                                               
+  * and any related planning documents                                          
+                                                                                
+  Your objective is to transform these planning documents into a real           
+  production-ready implementation while maintaining strict engineering          
+  discipline.                                                                   
+                                                                                
+  Rules:                                                                        
+                                                                                
+  1. Do not attempt to build the entire vision at once.                         
+  2. Follow MVP.md as the source of truth for implementation scope.             
+  3. Use ARCHITECTURE.md as the source of truth for technical structure.        
+  4. Use DESIGN_SYSTEM.md as the source of truth for UI, UX, motion, layout,    
+  accessibility, and visual consistency.                                        
+  5. Use TECH_STACK.md as the source of truth for libraries and frameworks.     
+  6. Ignore future roadmap items unless required by the MVP.                    
+  7. Never introduce libraries that conflict with TECH_STACK.md.                
+  8. Never create placeholder implementations unless explicitly necessary.      
+  9. Never generate mock architecture that cannot be implemented.               
+  10. Prioritize maintainability, scalability, performance, and developer       
+  experience.                                                                   
+                                                                                
+  Execution Process:                                                            
+                                                                                
+  Phase 1:                                                                      
+                                                                                
+  * Scan and understand the entire repository.                                  
+  * Produce a detailed implementation report.                                   
+  * Identify what is already implemented.                                       
+  * Identify what is missing.                                                   
+  * Identify architectural inconsistencies.                                     
+  * Identify technical debt.                                                    
+  * Identify blockers.                                                          
+  * Create a dependency graph of required work.                                 
+                                                                                
+  Phase 2:                                                                      
+                                                                                
+  * Create a prioritized implementation roadmap based on MVP.md.                
+  * Break work into milestones.                                                 
+  * Break milestones into tasks.                                                
+  * Estimate complexity for each task.                                          
+  * Determine critical path items.                                              
+                                                                                
+  Phase 3:                                                                      
+                                                                                
+  * Begin implementation from highest-priority MVP features only.               
+  * Work incrementally.                                                         
+  * After each major implementation, verify:                                    
+                                                                                
+    * TypeScript correctness                                                    
+    * Build success                                                             
+    * Lint success                                                              
+    * Runtime stability                                                         
+    * Responsive behavior                                                       
+    * Accessibility compliance                                                  
+                                                                                
+  Phase 4:                                                                      
+                                                                                
+  * Continuously compare implementation against:                                
+                                                                                
+    * MVP.md                                                                    
+    * DESIGN_SYSTEM.md                                                          
+    * ARCHITECTURE.md                                                           
+                                                                                
+  Do not deviate from documented requirements.                                  
+                                                                                
+  Frontend Requirements:                                                        
+                                                                                
+  * Follow Next.js App Router conventions.                                      
+  * Use TypeScript strictly.                                                    
+  * Use ShadCN UI where appropriate.                                            
+  * Use React Flow for graph architecture features.                             
+  * Use Motion for animations.                                                  
+  * Use Three.js only where justified.                                          
+  * Optimize for 60 FPS interactions.                                           
+  * Ensure mobile, tablet, and desktop responsiveness.                          
+                                                                                
+  Backend Requirements:                                                         
+                                                                                
+  * Follow FastAPI architecture.                                                
+  * Use PostgreSQL models that align with MVP requirements.                     
+  * Maintain clean service boundaries.                                          
+  * Prefer modular monolith architecture.                                       
+                                                                                
+  Output Requirements:                                                          
+                                                                                
+  Before writing any code, generate:                                            
+                                                                                
+  1. Repository Analysis Report                                                 
+  2. MVP Gap Analysis                                                           
+  3. Implementation Roadmap                                                     
+  4. Proposed File Structure                                                    
+  5. Task Execution Plan                                                        
+                                                                                
+  Only after those documents are generated and approved should implementation   
+  begin.                                                                        
+                                                                                
+  Your goal is not to generate code quickly.                                    
+                                                                                
+  Your goal is to build BlackCloud correctly., make sure to stop when you reach 
+  90% of context window                                                         
+
+● I'll start with Phase 1: repository analysis. Let me scan the codebase before
+  producing any documents.
+
+  Read 1 file, listed 3 directories (ctrl+o to expand)
+
+● Now the plan documents. Let me read all of them in parallel.
+
+  Read 4 files (ctrl+o to expand)
+
+● I'll set up task tracking for the four analysis documents this task requires
+  before implementation.
+
+● Let me finish reading the remaining plan documents and check the AWS/GCP icon
+  inventory before drafting the reports.
+
+  Read 3 files, listed 1 directory (ctrl+o to expand)
+
+● I have a comprehensive picture. Task documents live in plan/ (not Plans/). The
+  user's brief referenced TECH_STACK.md which doesn't exist as a standalone
+  file — the tech stack is embedded in MVP.md/ARCHITECTURE.md/ROADMAP.md. There
+  is no PLAN.md. I'll note this and proceed.
+
+  Let me check icon inventory counts (matters for node library) and detect a
+  critical dependency conflict — the plan mentions httpx but pyproject has
+  httpx2.
+
+  Listed 1 directory (ctrl+o to expand)
+
+● I have everything I need. Producing the four analysis documents now — plain
+  markdown in the response (no code changes yet; per the brief, implementation
+  is gated on approval).
+
+  ★ Insight ─────────────────────────────────────
+  - The repo is at Phase 0 (Foundation) — ~15% complete. Frontend has
+  scaffolding + rich asset inventory (1,220 AWS SVGs, 19 GCP). Backend backend/
+  and documents/ are empty directories despite pyproject.toml declaring the full
+  FastAPI dep tree.
+  - Two blocking inconsistencies: (1) pyproject.toml requires Python 3.14, which
+  is not yet released and will break uv sync on most machines — plan says
+  3.14.6 which doesn't exist as of 2026-07. (2) It declares httpx2>=2.5.0 which
+  is not a real PyPI package — the intended dep is httpx. These must be resolved
+  before any backend code lands.
+  - plan/ (not Plans/) is the docs folder; TECH_STACK.md and PLAN.md referenced
+  in your brief don't exist — the stack is embedded in MVP.md/ARCHITECTURE.md.
+  I'll treat those as the tech source of truth.
+  ─────────────────────────────────────────────────
+
+  ---
+  1. Repository Analysis Report
+
+  1.1 Repository Layout (actual, today)
+
+  Black-Cloud-1/
+  ├── backend/                    EMPTY DIR
+  ├── documents/                  EMPTY DIR
+  ├── credentials/                EMPTY DIR
+  ├── frontend/                   Next.js 16 scaffold (create-next-app default)
+  │   ├── app/                    layout.tsx + page.tsx + globals.css (template)
+  │   ├── public/AWS-ICONS/       1,220 official AWS SVGs (Arch + Category +
+  Resource)
+  │   ├── public/GCP-ICON/        19 official GCP SVGs (partial coverage)
+  │   ├── package.json            deps declared, node_modules installed
+  │   └── (no components, features, hooks, store, services, lib, styles, types)
+  ├── plan/                       7 planning docs (MVP, ARCH, DS, ROADMAP,
+  VISION, STRATEGIC, TESTING)
+  ├── main.py                     Placeholder `Hello from black-cloud!`
+  ├── pyproject.toml              FastAPI stack declared — but nothing imports
+  it
+  ├── uv.lock                     Present
+  ├── docker-compose.yml          0 bytes (empty)
+  ├── .dockerignore               0 bytes (empty)
+  └── README.md                   Vision-only, no dev instructions
+
+  1.2 What is Already Implemented
+
+  Area: Frontend scaffold
+  Status: ✅ done
+  Evidence: next@16.2.10, react@19.2.4, Tailwind v4, TS strict, ESLint next
+    config
+  ────────────────────────────────────────
+  Area: Frontend deps aligned to plan
+  Status: ✅ done
+  Evidence: @xyflow/react, motion, zustand, @tanstack/react-query, three,
+    @react-three/fiber, drei, gsap, theatre, pixi.js, zod, react-hook-form,
+    next-themes, sonner, class-variance-authority, tailwind-merge, lucide-react
+  ────────────────────────────────────────
+  Area: AWS icon library
+  Status: ✅ complete
+  Evidence: Official Q4 2026 pack — Architecture-Service-Icons + Resource-Icons
+  +
+    Category-Icons
+  ────────────────────────────────────────
+  Area: GCP icon library
+  Status: ⚠️ partial
+  Evidence: 19 SVGs only; MVP needs 5 services (Compute Engine, Cloud Run, GKE,
+    Cloud SQL, Cloud Storage) — Compute Engine and Cloud SQL folders present,
+    missing Cloud Run, GKE, Cloud Storage
+  ────────────────────────────────────────
+  Area: Azure icon library
+  Status: ❌ missing
+  Evidence: No AZURE-ICONS folder at all — MVP needs 5 services
+  ────────────────────────────────────────
+  Area: Planning docs
+  Status: ✅ thorough
+  Evidence: 7 docs, ~60KB, internally coherent
+  ────────────────────────────────────────
+  Area: Backend
+  Status: ❌ nothing
+  Evidence: Empty backend/ directory; main.py is a placeholder print
+  ────────────────────────────────────────
+  Area: Docker infra
+  Status: ❌ nothing
+  Evidence: docker-compose.yml is 0 bytes
+  ────────────────────────────────────────
+  Area: CI/CD
+  Status: ❌ nothing
+  Evidence: No .github/workflows/
+  ────────────────────────────────────────
+  Area: Auth (email/OAuth)
+  Status: ❌ nothing
+  Evidence: Not started
+  ────────────────────────────────────────
+  Area: DB schema
+  Status: ❌ nothing
+  Evidence: No models, no migrations, no Alembic
+  ────────────────────────────────────────
+  Area: Canvas / node library
+  Status: ❌ nothing
+  Evidence: app/page.tsx is the CNA template
+  ────────────────────────────────────────
+  Area: Validation engine
+  Status: ❌ nothing
+  Evidence:
+  ────────────────────────────────────────
+  Area: Export system
+  Status: ❌ nothing
+  Evidence:
+  ────────────────────────────────────────
+  Area: AI assistant
+  Status: ❌ nothing
+  Evidence: LLM deps declared but no code
+  ────────────────────────────────────────
+  Area: Tests
+  Status: ❌ nothing
+  Evidence: No tests/ on either side
+
+  1.3 Architectural Inconsistencies & Blockers (must fix before code)
+
+  #: B1
+  Issue: pyproject.toml requires python>=3.14; Python 3.14 is not GA on most dev
+
+    machines (July 2026, RC only). .python-version also pins 3.14.
+  Severity: 🔴 blocker
+  Fix: Downgrade to >=3.12 (matches plan intent, unblocks uv sync). Plan claims
+    "3.14.6" which is not a real release — treat as aspirational.
+  ────────────────────────────────────────
+  #: B2
+  Issue: httpx2>=2.5.0 — not a PyPI package. Real dep is httpx.
+  Severity: 🔴 blocker
+  Fix: Replace httpx2 → httpx>=0.27 throughout (deps + TESTING-STRATEGY.md
+    example).
+  ────────────────────────────────────────
+  #: B3
+  Issue: docker-compose.yml and .dockerignore are 0 bytes. ROADMAP claims Docker
+
+    is Phase 0.
+  Severity: 🟡 debt
+  Fix: Author real compose for frontend, api, postgres, redis.
+  ────────────────────────────────────────
+  #: B4
+  Issue: ARCHITECTURE.md shows apps/web + apps/api monorepo layout; actual repo
+    is flat (frontend/ + backend/). No workspace tool (Turborepo, Nx, pnpm
+    workspaces).
+  Severity: 🟡 pick one
+  Fix: Keep flat frontend/ + backend/ (simpler, ponytail-approved). Update ARCH
+    doc to match, OR migrate to apps/*. Recommend: stay flat.
+  ────────────────────────────────────────
+  #: B5
+  Issue: Frontend AGENTS.md warns Next.js 16 has breaking changes — assume App
+    Router conventions differ from training data. Confirmed: next.config.ts,
+    eslint.config.mjs flat config, Tailwind v4 uses @import "tailwindcss" (no
+    tailwind.config.js).
+  Severity: 🟢 note
+  Fix: Read frontend/node_modules/next/dist/docs/ before writing routes.
+  ────────────────────────────────────────
+  #: B6
+  Issue: bun.lock in frontend/ — Bun is the declared runtime. No package-manager
+
+    pin in repo root.
+  Severity: 🟢 note
+  Fix: Add "packageManager": "bun@x" in frontend/package.json; document in root
+    README.
+  ────────────────────────────────────────
+  #: B7
+  Issue: credentials/ folder tracked in git but gitignored contents — dangerous
+    pattern.
+  Severity: 🟢 debt
+  Fix: Empty the folder or delete; use .env + secret manager as ARCH.md says.
+  ────────────────────────────────────────
+  #: B8
+  Issue: TESTING-STRATEGY.md references httpx2 (same as B2) and Python 3.14.
+  Severity: 🟡 debt
+  Fix: Update once B1/B2 are fixed.
+  ────────────────────────────────────────
+  #: B9
+  Issue: ShadCN not initialized. Plan mandates it. No components.json, no
+    lib/utils.ts, no components/ui/*.
+  Severity: 🟡 required
+  Fix: Run bunx shadcn init as first frontend task.
+  ────────────────────────────────────────
+  #: B10
+  Issue: Azure icons missing entirely. MVP lists 5 Azure nodes.
+  Severity: 🟡 required
+  Fix: Fetch official Azure icon pack before starting node library.
+  ────────────────────────────────────────
+  #: B11
+  Issue: frontend/app/globals.css uses body { font-family: Arial, Helvetica, 
+    sans-serif } — overrides the Geist font applied via --font-geist-sans in
+    layout. DS mandates Inter as UI font.
+  Severity: 🟢 debt
+  Fix: Replace globals.css with design-token layer using Inter + Space Grotesk +
+
+    JetBrains Mono.
+  ────────────────────────────────────────
+  #: B12
+  Issue: credentials/ and documents/ are empty tracked directories with no
+    .gitkeep intent — confusing.
+  Severity: 🟢 note
+  Fix: Repurpose documents/ or delete.
+
+  1.4 Technical Debt (already present in scaffold)
+
+  - Metadata: layout.tsx has title: "Create Next App" — must change to
+  BlackCloud branding.
+  - Landing page: app/page.tsx is CNA boilerplate — will be replaced by real
+  landing route.
+  - README.md: vision-heavy, zero developer onboarding (bun install, uv sync,
+  docker compose up). Add a "Getting Started" section.
+  - No .env.example anywhere.
+  - No workspace-level scripts — no way to run frontend + backend + db together
+  yet.
+  - main.py at root is dead code; backend entry should be backend/app/main.py.
+
+  1.5 Dependency Graph of Required Work (MVP-scoped)
+
+                      ┌─────────────────────────────────┐
+                      │ M0: Foundation Fixes (blockers) │
+                      │  Python ver, httpx, compose,    │
+                      │  shadcn init, DS tokens         │
+                      └───────────────┬─────────────────┘
+                                      │
+          ┌───────────────────────────┼──────────────────────────┐
+          ▼                           ▼                          ▼
+   ┌──────────────┐          ┌───────────────┐         ┌──────────────────┐
+   │ M1: Backend  │          │ M1: Frontend  │         │ M1: Infra        │
+   │ skeleton     │          │ shell + auth  │         │ Docker Compose   │
+   │ (FastAPI +   │          │ UI shell +    │         │ Postgres + Redis │
+   │  DB + auth)  │          │ dashboard     │         │ + GH Actions CI  │
+   └──────┬───────┘          └───────┬───────┘         └──────────────────┘
+          │                          │
+          └────────────┬─────────────┘
+                       ▼
+            ┌──────────────────────┐
+            │ M2: Project domain   │
+            │ CRUD projects,       │
+            │ nodes, edges         │
+            └──────────┬───────────┘
+                       ▼
+            ┌──────────────────────┐
+            │ M3: Cloud Playground │
+            │ React Flow canvas,   │
+            │ node library, edges  │
+            └──────────┬───────────┘
+                       ▼
+          ┌────────────┼────────────┐
+          ▼            ▼            ▼
+   ┌────────────┐ ┌──────────┐ ┌───────────┐
+   │ M4: Save/  │ │ M5: Val- │ │ M6: In-   │
+   │ Load +     │ │ idation  │ │ spector + │
+   │ autosave   │ │ engine   │ │ Search    │
+   └─────┬──────┘ └────┬─────┘ └─────┬─────┘
+         └──────┬──────┴─────────────┘
+                ▼
+         ┌───────────────┐
+         │ M7: Export    │
+         │ PNG/SVG/JSON  │
+         └──────┬────────┘
+                ▼
+         ┌───────────────┐
+         │ M8: AI Assist │
+         │ (explain +    │
+         │  suggest)     │
+         └──────┬────────┘
+                ▼
+         ┌───────────────────┐
+         │ M9: Sharing +     │
+         │ Responsive polish │
+         │ + A11y + Perf     │
+         └──────┬────────────┘
+                ▼
+         ┌───────────────┐
+         │ MVP-Complete  │
+         │ Exit Criteria │
+         └───────────────┘
+
+  Critical path: M0 → M1 → M2 → M3 → (M4 || M5 || M6) → M7 → M9. M8 (AI) can
+  slip; it's declared "Limited" in MVP.md.
+
+  ---
+  2. MVP Gap Analysis
+
+  Legend: ✅ done · 🟡 partial (asset exists / dep declared) · ❌ missing
+
+  MVP.md requirement: Auth: Email
+  Status: ❌
+  Notes: No backend, no forms
+  ────────────────────────────────────────
+  MVP.md requirement: Auth: Google OAuth
+  Status: ❌
+  Notes:
+  ────────────────────────────────────────
+  MVP.md requirement: User profiles
+  Status: ❌
+  Notes:
+  ────────────────────────────────────────
+  MVP.md requirement: Dashboard: project list / recent / create / delete
+  Status: ❌
+  Notes:
+  ────────────────────────────────────────
+  MVP.md requirement: Infinite canvas (pan/zoom/drag/multi-select)
+  Status: 🟡
+  Notes: @xyflow/react installed; no canvas route
+  ────────────────────────────────────────
+  MVP.md requirement: AWS node library (13 services)
+  Status: 🟡
+  Notes: All icons present; no node components, no palette, no registry
+  ────────────────────────────────────────
+  MVP.md requirement: Azure node library (5 services)
+  Status: ❌
+  Notes: Icons absent
+  ────────────────────────────────────────
+  MVP.md requirement: GCP node library (5 services)
+  Status: 🟡
+  Notes: Only Compute Engine + Cloud SQL folders exist; missing Cloud Run, GKE,
+    Cloud Storage
+  ────────────────────────────────────────
+  MVP.md requirement: Node ops: add/move/duplicate/delete/rename
+  Status: ❌
+  Notes:
+  ────────────────────────────────────────
+  MVP.md requirement: Connections: create/remove/modify
+  Status: ❌
+  Notes:
+  ────────────────────────────────────────
+  MVP.md requirement: Canvas features: grid, snap, minimap, fit-to-screen, 
+    undo/redo, shortcuts
+  Status: ❌
+  Notes: React Flow ships grid+minimap; undo/redo must be custom
+  ────────────────────────────────────────
+  MVP.md requirement: Validation engine
+  Status: ❌
+  Notes: No rule model exists
+  ────────────────────────────────────────
+  MVP.md requirement: Inspector panel (name/type/config/status/tags/connections)
+  Status: ❌
+  Notes:
+  ────────────────────────────────────────
+  MVP.md requirement: Export: PNG
+  Status: ❌
+  Notes: Will need html-to-image or similar (add to deps)
+  ────────────────────────────────────────
+  MVP.md requirement: Export: SVG
+  Status: ❌
+  Notes: React Flow supports SVG via toSvg
+  ────────────────────────────────────────
+  MVP.md requirement: Export: JSON
+  Status: ❌
+  Notes: trivial once schema exists
+  ────────────────────────────────────────
+  MVP.md requirement: Save/rename/reopen project
+  Status: ❌
+  Notes: Requires M1 + M2
+  ────────────────────────────────────────
+  MVP.md requirement: Search: name / provider / category
+  Status: ❌
+  Notes: Client-side (cmdk installed? — NO, must add)
+  ────────────────────────────────────────
+  MVP.md requirement: AI assistant: explain service / connection / suggest
+  Status: ❌
+  Notes: langchain, langgraph, provider SDKs installed; no /ai endpoint
+  ────────────────────────────────────────
+  MVP.md requirement: Responsive: desktop + tablet full, mobile read-only
+  Status: ❌
+  Notes:
+  ────────────────────────────────────────
+  MVP.md requirement: Perf: 100 nodes / 200 edges without lag
+  Status: ❌
+  Notes: Needs measurement harness
+  ────────────────────────────────────────
+  MVP.md requirement: A11y: keyboard nav / focus / ARIA / reduced motion
+  Status: ❌
+  Notes:
+  ────────────────────────────────────────
+  MVP.md requirement: UI polish (Linear/Framer/Vercel feel)
+  Status: ❌
+  Notes: Current page is CNA boilerplate
+  ────────────────────────────────────────
+  MVP.md requirement: DB entities: Users, Projects, Nodes, Edges, SavedLayouts
+  Status: ❌
+  Notes: No models
+  ────────────────────────────────────────
+  MVP.md requirement: Sharing (read-only)
+  Status: ❌
+  Notes: Listed under MVP Goals, absent from Scope — treat as stretch
+
+  Gap summary: 0/25 MVP items code-complete. ~5/25 have supporting assets or
+  declared deps. Full MVP build required.
+
+  ---
+  3. Implementation Roadmap
+
+  10 milestones, sized for a single senior engineer. Complexity: S ≤ 0.5d, M
+  0.5–2d, L 2–5d, XL 5–10d.
+
+  M0 — Foundation Fixes ✱ BLOCKER  ·  ~1.5d
+
+  ┌───────┬─────────────────────────────────────────────────────┬────────────┐
+  │   #   │                        Task                         │ Complexity │
+  ├───────┼─────────────────────────────────────────────────────┼────────────┤
+  │ M0.1  │ Fix pyproject.toml: python >=3.12, httpx2 → httpx,  │ S          │
+  │       │ add ruff config target py312                        │            │
+  ├───────┼─────────────────────────────────────────────────────┼────────────┤
+  │ M0.2  │ Update .python-version → 3.12                       │ S          │
+  ├───────┼─────────────────────────────────────────────────────┼────────────┤
+  │ M0.3  │ Fix TESTING-STRATEGY.md to match (httpx2 → httpx)   │ S          │
+  ├───────┼─────────────────────────────────────────────────────┼────────────┤
+  │ M0.4  │ Write real docker-compose.yml (postgres:16,         │ M          │
+  │       │ redis:7, api, web) + .dockerignore                  │            │
+  ├───────┼─────────────────────────────────────────────────────┼────────────┤
+  │ M0.5  │ bunx shadcn@latest init in frontend/ (dark theme,   │ S          │
+  │       │ Inter font, base tokens)                            │            │
+  ├───────┼─────────────────────────────────────────────────────┼────────────┤
+  │       │ Rewrite frontend/app/globals.css with DS tokens     │            │
+  │ M0.6  │ (colors from DS.md, Inter/Space Grotesk/JetBrains   │ M          │
+  │       │ Mono via next/font)                                 │            │
+  ├───────┼─────────────────────────────────────────────────────┼────────────┤
+  │ M0.7  │ Rewrite frontend/app/layout.tsx (metadata, fonts,   │ S          │
+  │       │ theme provider, next-themes, sonner toaster)        │            │
+  ├───────┼─────────────────────────────────────────────────────┼────────────┤
+  │ M0.8  │ Root README.md — "Getting Started" section          │ S          │
+  │       │ (install, run, test)                                │            │
+  ├───────┼─────────────────────────────────────────────────────┼────────────┤
+  │ M0.9  │ Add .env.example (root and frontend/)               │ S          │
+  ├───────┼─────────────────────────────────────────────────────┼────────────┤
+  │ M0.10 │ GitHub Actions test.yml (lint + typecheck +         │ M          │
+  │       │ placeholder tests, both stacks)                     │            │
+  └───────┴─────────────────────────────────────────────────────┴────────────┘
+
+  M1 — Backend Skeleton + Auth  ·  ~4d
+
+  ┌──────┬──────────────────────────────────────────────────────┬────────────┐
+  │  #   │                         Task                         │ Complexity │
+  ├──────┼──────────────────────────────────────────────────────┼────────────┤
+  │ M1.1 │ Create backend/app/ structure per §4 below           │ S          │
+  ├──────┼──────────────────────────────────────────────────────┼────────────┤
+  │ M1.2 │ backend/app/main.py — FastAPI app, CORS, health,     │ M          │
+  │      │ structured logging                                   │            │
+  ├──────┼──────────────────────────────────────────────────────┼────────────┤
+  │ M1.3 │ Config: backend/app/core/config.py                   │ S          │
+  │      │ (pydantic-settings)                                  │            │
+  ├──────┼──────────────────────────────────────────────────────┼────────────┤
+  │ M1.4 │ DB: async SQLAlchemy engine + session, Alembic init  │ M          │
+  ├──────┼──────────────────────────────────────────────────────┼────────────┤
+  │ M1.5 │ Models: User, Project, Node, Edge (deferred:         │ M          │
+  │      │ Version, SavedLayout)                                │            │
+  ├──────┼──────────────────────────────────────────────────────┼────────────┤
+  │ M1.6 │ Auth service: password hash (argon2), JWT (pyjwt),   │ L          │
+  │      │ email register/login endpoints                       │            │
+  ├──────┼──────────────────────────────────────────────────────┼────────────┤
+  │ M1.7 │ Google OAuth (auth code flow, PKCE)                  │ L          │
+  ├──────┼──────────────────────────────────────────────────────┼────────────┤
+  │ M1.8 │ /users/me endpoint                                   │ S          │
+  ├──────┼──────────────────────────────────────────────────────┼────────────┤
+  │ M1.9 │ pytest scaffolding + first API tests (auth happy     │ M          │
+  │      │ path + error case)                                   │            │
+  └──────┴──────────────────────────────────────────────────────┴────────────┘
+
+  M1(parallel) — Frontend Shell + Auth UI  ·  ~3d
+
+  ┌───────┬─────────────────────────────────────────────────────┬────────────┐
+  │   #   │                        Task                         │ Complexity │
+  ├───────┼─────────────────────────────────────────────────────┼────────────┤
+  │ M1F.1 │ frontend/src/ migration; tsconfig.json paths (@/* → │ S          │
+  │       │  ./src/*)                                           │            │
+  ├───────┼─────────────────────────────────────────────────────┼────────────┤
+  │ M1F.2 │ Directory layout per §4                             │ S          │
+  ├───────┼─────────────────────────────────────────────────────┼────────────┤
+  │ M1F.3 │ API client (fetch wrapper + TanStack Query          │ M          │
+  │       │ provider)                                           │            │
+  ├───────┼─────────────────────────────────────────────────────┼────────────┤
+  │ M1F.4 │ Zustand session store + auth guards (middleware.ts) │ M          │
+  ├───────┼─────────────────────────────────────────────────────┼────────────┤
+  │ M1F.5 │ Routes: /login, /register, /oauth/callback, /       │ M          │
+  │       │ (marketing shell)                                   │            │
+  ├───────┼─────────────────────────────────────────────────────┼────────────┤
+  │ M1F.6 │ Auth forms (RHF + Zod, ShadCN Input/Button/Card)    │ M          │
+  ├───────┼─────────────────────────────────────────────────────┼────────────┤
+  │ M1F.7 │ Vitest setup + first store test                     │ M          │
+  └───────┴─────────────────────────────────────────────────────┴────────────┘
+
+  M2 — Project Domain (Backend + Dashboard UI)  ·  ~3d
+
+  ┌──────┬──────────────────────────────────────────────────────┬────────────┐
+  │  #   │                         Task                         │ Complexity │
+  ├──────┼──────────────────────────────────────────────────────┼────────────┤
+  │ M2.1 │ POST /projects GET /projects GET /projects/{id}      │ M          │
+  │      │ PATCH /projects/{id} DELETE /projects/{id}           │            │
+  ├──────┼──────────────────────────────────────────────────────┼────────────┤
+  │ M2.2 │ Nodes/edges nested endpoints (/projects/{id}/graph)  │ M          │
+  │      │ — read + full-replace write                          │            │
+  ├──────┼──────────────────────────────────────────────────────┼────────────┤
+  │ M2.3 │ Pydantic schemas + service layer                     │ M          │
+  ├──────┼──────────────────────────────────────────────────────┼────────────┤
+  │ M2.4 │ Dashboard route /dashboard — recent + all projects   │ M          │
+  │      │ (TanStack Query)                                     │            │
+  ├──────┼──────────────────────────────────────────────────────┼────────────┤
+  │ M2.5 │ Create / rename / delete project dialogs (ShadCN     │ M          │
+  │      │ Dialog + RHF)                                        │            │
+  ├──────┼──────────────────────────────────────────────────────┼────────────┤
+  │ M2.6 │ Project card component (motion hover, DS glass/clay  │ M          │
+  │      │ surfaces)                                            │            │
+  └──────┴──────────────────────────────────────────────────────┴────────────┘
+
+  M3 — Cloud Playground (canvas + node library)  ·  ~7d
+
+  ┌───────┬─────────────────────────────────────────────────────┬────────────┐
+  │   #   │                        Task                         │ Complexity │
+  ├───────┼─────────────────────────────────────────────────────┼────────────┤
+  │       │ Node registry (lib/nodes/registry.ts) — 13 AWS + 5  │            │
+  │ M3.1  │ Azure + 5 GCP with icon path, category,             │ L          │
+  │       │ allowed-connections metadata                        │            │
+  ├───────┼─────────────────────────────────────────────────────┼────────────┤
+  │ M3.2  │ Azure icon pack: fetch + place under                │ S          │
+  │       │ public/AZURE-ICONS/                                 │            │
+  ├───────┼─────────────────────────────────────────────────────┼────────────┤
+  │ M3.3  │ GCP fills: Cloud Run, GKE, Cloud Storage SVGs       │ S          │
+  ├───────┼─────────────────────────────────────────────────────┼────────────┤
+  │ M3.4  │ Canvas route /projects/[id] — React Flow container, │ M          │
+  │       │  grid background, minimap, fit-to-screen, snap      │            │
+  ├───────┼─────────────────────────────────────────────────────┼────────────┤
+  │       │ Custom node component                               │            │
+  │ M3.5  │ (components/canvas/CloudNode.tsx) with states       │ L          │
+  │       │ (default/hover/selected/error/warning) per DS       │            │
+  │       │ §Nodes                                              │            │
+  ├───────┼─────────────────────────────────────────────────────┼────────────┤
+  │ M3.6  │ Custom edge component (colored by validation        │ M          │
+  │       │ status)                                             │            │
+  ├───────┼─────────────────────────────────────────────────────┼────────────┤
+  │       │ Node palette drawer                                 │            │
+  │ M3.7  │ (components/canvas/NodePalette.tsx) — grouped by    │ L          │
+  │       │ provider, drag-out to canvas                        │            │
+  ├───────┼─────────────────────────────────────────────────────┼────────────┤
+  │ M3.8  │ Canvas Zustand store (store/canvas.ts) with nodes,  │ L          │
+  │       │ edges, selection, history stack                     │            │
+  ├───────┼─────────────────────────────────────────────────────┼────────────┤
+  │ M3.9  │ Undo/redo (immer + history middleware or custom     │ M          │
+  │       │ past/future stacks)                                 │            │
+  ├───────┼─────────────────────────────────────────────────────┼────────────┤
+  │ M3.10 │ Keyboard shortcuts (delete, duplicate ⌘D, undo ⌘Z,  │ M          │
+  │       │ redo ⇧⌘Z, fit ⇧1, ⌘K palette)                       │            │
+  ├───────┼─────────────────────────────────────────────────────┼────────────┤
+  │ M3.11 │ Multi-select + marquee (built into React Flow,      │ S          │
+  │       │ needs wiring)                                       │            │
+  └───────┴─────────────────────────────────────────────────────┴────────────┘
+
+  M4 — Save / Load / Autosave  ·  ~1.5d
+
+  ┌──────┬────────────────────────────────────────────────────┬────────────┐
+  │  #   │                        Task                        │ Complexity │
+  ├──────┼────────────────────────────────────────────────────┼────────────┤
+  │ M4.1 │ useProjectGraph(projectId) — load + hydrate store  │ M          │
+  ├──────┼────────────────────────────────────────────────────┼────────────┤
+  │ M4.2 │ Debounced autosave (5s idle) via TanStack mutation │ M          │
+  ├──────┼────────────────────────────────────────────────────┼────────────┤
+  │ M4.3 │ "Saved · N min ago" indicator, offline queue       │ M          │
+  └──────┴────────────────────────────────────────────────────┴────────────┘
+
+  M5 — Validation Engine  ·  ~3d
+
+  ┌──────┬──────────────────────────────────────────────────────┬────────────┐
+  │  #   │                         Task                         │ Complexity │
+  ├──────┼──────────────────────────────────────────────────────┼────────────┤
+  │ M5.1 │ Rule DSL: { from: 'ALB', to: 'RDS' → invalid,        │ M          │
+  │      │ suggest: ['ECS'] }                                   │            │
+  ├──────┼──────────────────────────────────────────────────────┼────────────┤
+  │ M5.2 │ Backend POST /projects/{id}/validate returns         │ M          │
+  │      │ [{edgeId, severity, message, suggestions[]}]         │            │
+  ├──────┼──────────────────────────────────────────────────────┼────────────┤
+  │ M5.3 │ Client-side mirror for instant feedback (same rules, │ M          │
+  │      │  shared JSON)                                        │            │
+  ├──────┼──────────────────────────────────────────────────────┼────────────┤
+  │ M5.4 │ Edge colouring + inspector warnings panel            │ M          │
+  ├──────┼──────────────────────────────────────────────────────┼────────────┤
+  │ M5.5 │ Test suite: at least ALB→RDS, EC2 outside VPC,       │ M          │
+  │      │ Lambda→RDS without VPC config, S3 public warning     │            │
+  └──────┴──────────────────────────────────────────────────────┴────────────┘
+
+  M6 — Inspector Panel + Search  ·  ~2d
+
+  ┌──────┬──────────────────────────────────────────────────────┬────────────┐
+  │  #   │                         Task                         │ Complexity │
+  ├──────┼──────────────────────────────────────────────────────┼────────────┤
+  │ M6.1 │ Right sidebar <Inspector> — sheet on tablet, split   │ M          │
+  │      │ on desktop                                           │            │
+  ├──────┼──────────────────────────────────────────────────────┼────────────┤
+  │ M6.2 │ Fields: name (editable), type, status badge, tags,   │ M          │
+  │      │ connected services list                              │            │
+  ├──────┼──────────────────────────────────────────────────────┼────────────┤
+  │ M6.3 │ Command palette (cmdk — needs adding) ⌘K — search    │ M          │
+  │      │ services by name/provider/category                   │            │
+  └──────┴──────────────────────────────────────────────────────┴────────────┘
+
+  M7 — Export System  ·  ~1.5d
+
+  ┌──────┬────────────────────────────────────────────┬────────────┐
+  │  #   │                    Task                    │ Complexity │
+  ├──────┼────────────────────────────────────────────┼────────────┤
+  │ M7.1 │ Add html-to-image to frontend/package.json │ S          │
+  ├──────┼────────────────────────────────────────────┼────────────┤
+  │ M7.2 │ Export PNG (React Flow → canvas → blob)    │ M          │
+  ├──────┼────────────────────────────────────────────┼────────────┤
+  │ M7.3 │ Export SVG (React Flow toSvg)              │ S          │
+  ├──────┼────────────────────────────────────────────┼────────────┤
+  │ M7.4 │ Export JSON (serialize store)              │ S          │
+  ├──────┼────────────────────────────────────────────┼────────────┤
+  │ M7.5 │ Export dialog + download UX                │ M          │
+  └──────┴────────────────────────────────────────────┴────────────┘
+
+  M8 — AI Assistant (Limited)  ·  ~3d
+
+  ┌──────┬──────────────────────────────────────────────────────┬────────────┐
+  │  #   │                         Task                         │ Complexity │
+  ├──────┼──────────────────────────────────────────────────────┼────────────┤
+  │ M8.1 │ backend/app/ai/gateway.py — provider selection       │ M          │
+  │      │ (Anthropic default, prompt caching enabled)          │            │
+  ├──────┼──────────────────────────────────────────────────────┼────────────┤
+  │ M8.2 │ POST /ai/explain-service POST /ai/explain-connection │ M          │
+  │      │  POST /ai/suggest                                    │            │
+  ├──────┼──────────────────────────────────────────────────────┼────────────┤
+  │ M8.3 │ Prompt templates + validation-rule context injection │ M          │
+  ├──────┼──────────────────────────────────────────────────────┼────────────┤
+  │ M8.4 │ Streaming SSE endpoint                               │ M          │
+  ├──────┼──────────────────────────────────────────────────────┼────────────┤
+  │ M8.5 │ Frontend AI panel (right dock) with streaming        │ M          │
+  │      │ message rendering                                    │            │
+  └──────┴──────────────────────────────────────────────────────┴────────────┘
+
+  M9 — Sharing + Responsive + A11y + Perf  ·  ~3d
+
+  ┌──────┬──────────────────────────────────────────────────────┬────────────┐
+  │  #   │                         Task                         │ Complexity │
+  ├──────┼──────────────────────────────────────────────────────┼────────────┤
+  │ M9.1 │ Share link (read-only): GET                          │ M          │
+  │      │ /projects/{id}?share_token=…                         │            │
+  ├──────┼──────────────────────────────────────────────────────┼────────────┤
+  │ M9.2 │ Responsive: tablet layout (collapsible palette),     │ M          │
+  │      │ mobile read-only view                                │            │
+  ├──────┼──────────────────────────────────────────────────────┼────────────┤
+  │ M9.3 │ Keyboard nav across canvas nodes (arrow keys move    │ M          │
+  │      │ focus)                                               │            │
+  ├──────┼──────────────────────────────────────────────────────┼────────────┤
+  │ M9.4 │ Reduced motion (prefers-reduced-motion gates all     │ S          │
+  │      │ Motion animations)                                   │            │
+  ├──────┼──────────────────────────────────────────────────────┼────────────┤
+  │ M9.5 │ Perf sweep: react-flow onlyRenderVisibleElements,    │ M          │
+  │      │ memoize node components; benchmark 100/200 target    │            │
+  ├──────┼──────────────────────────────────────────────────────┼────────────┤
+  │ M9.6 │ Playwright: 3 critical flows (auth, canvas CRUD,     │ L          │
+  │      │ export)                                              │            │
+  └──────┴──────────────────────────────────────────────────────┴────────────┘
+
+  Total (estimated senior-eng days): M0 1.5 + M1 4 (+ M1F 3 parallel) + M2 3 +
+  M3 7 + M4 1.5 + M5 3 + M6 2 + M7 1.5 + M8 3 + M9 3 = ~29 days serial, ~26 days
+  with M1/M1F parallelism.
+
+  Critical path: M0 → M1 → M2 → M3 → M5 → M9.
+
+  ---
+  4. Proposed File Structure
+
+  Flat monorepo (rejecting the apps/* idea from ARCH.md — B4 above). Justified:
+  two-language stacks are already isolated by top-level dir; no dependency
+  between them beyond an OpenAPI contract; adding Turbo/Nx now is speculative
+  complexity (ponytail: skipped, add when a shared TS package appears).
+
+  4.1 Backend — backend/
+
+  backend/
+  ├── alembic.ini
+  ├── alembic/
+  │   └── versions/
+  ├── app/
+  │   ├── __init__.py
+  │   ├── main.py                 FastAPI factory, middleware, router mount
+  │   ├── core/
+  │   │   ├── config.py           pydantic-settings, env vars
+  │   │   ├── security.py         argon2, JWT encode/decode
+  │   │   ├── logging.py          structlog config
+  │   │   └── deps.py             get_db, get_current_user
+  │   ├── db/
+  │   │   ├── base.py             Declarative Base + async engine + session
+  │   │   └── session.py
+  │   ├── models/                 SQLAlchemy ORM
+  │   │   ├── user.py
+  │   │   ├── project.py
+  │   │   ├── node.py
+  │   │   └── edge.py
+  │   ├── schemas/                Pydantic v2
+  │   │   ├── auth.py
+  │   │   ├── user.py
+  │   │   ├── project.py
+  │   │   └── graph.py            NodeIn/Out, EdgeIn/Out, GraphSnapshot
+  │   ├── api/
+  │   │   ├── __init__.py         api_router aggregator (/v1)
+  │   │   └── v1/
+  │   │       ├── auth.py         /auth/register, /auth/login,
+  /auth/oauth/google
+  │   │       ├── users.py        /users/me
+  │   │       ├── projects.py     /projects CRUD
+  │   │       ├── graph.py        /projects/{id}/graph, /validate
+  │   │       ├── ai.py           /ai/explain-service, /explain-connection,
+  /suggest
+  │   │       └── exports.py      /projects/{id}/export
+  │   ├── services/               Business logic (thin, testable)
+  │   │   ├── auth_service.py
+  │   │   ├── project_service.py
+  │   │   ├── graph_service.py
+  │   │   └── validation/
+  │   │       ├── __init__.py
+  │   │       ├── rules.py        Rule DSL + rule table
+  │   │       └── engine.py       run(graph) → findings
+  │   ├── ai/
+  │   │   ├── gateway.py          Anthropic default, prompt caching
+  │   │   ├── prompts.py
+  │   │   └── streaming.py        SSE
+  │   └── utils/
+  │       └── ids.py
+  └── tests/
+      ├── conftest.py
+      ├── test_api/
+      │   ├── test_auth.py
+      │   ├── test_projects.py
+      │   └── test_graph.py
+      └── test_services/
+          └── test_validation.py
+
+  Deferred (per plan §Out of Scope): migration/, workers/, exports/ heavy
+  engine, analytics/. Directories not created until needed. Ponytail: skipped 
+  scaffolding, add when tickets land.
+
+  4.2 Frontend — frontend/
+
+  frontend/
+  ├── app/                        Next.js App Router (routes only)
+  │   ├── layout.tsx              Root layout, fonts, ThemeProvider, Sonner
+  │   ├── globals.css             Tailwind v4 @import + DS tokens
+  │   ├── page.tsx                Marketing / redirect to /dashboard if authed
+  │   ├── (auth)/
+  │   │   ├── login/page.tsx
+  │   │   ├── register/page.tsx
+  │   │   └── oauth/callback/page.tsx
+  │   ├── (app)/
+  │   │   ├── layout.tsx          Auth-guard, top nav
+  │   │   ├── dashboard/page.tsx
+  │   │   └── projects/
+  │   │       └── [id]/
+  │   │           ├── page.tsx    Playground shell
+  │   │           └── layout.tsx  Split-pane, palette + canvas + inspector
+  │   └── api/                    Route handlers only if truly frontend-only
+  (e.g., OG images) — MVP: none
+  ├── src/                        All non-routing code lives here
+  │   ├── components/
+  │   │   ├── ui/                 shadcn primitives (Button, Input, Dialog,
+  Card, Sheet, Tooltip, DropdownMenu, Command, Skeleton)
+  │   │   ├── layout/             AppShell, TopNav, ThemeToggle
+  │   │   ├── auth/               LoginForm, RegisterForm, OAuthButtons
+  │   │   ├── dashboard/          ProjectCard, ProjectGrid, NewProjectDialog
+  │   │   └── canvas/
+  │   │       ├── Canvas.tsx      React Flow container
+  │   │       ├── CloudNode.tsx   Custom node
+  │   │       ├── CloudEdge.tsx   Custom edge (validation-coloured)
+  │   │       ├── NodePalette.tsx
+  │   │       ├── Inspector.tsx
+  │   │       ├── Toolbar.tsx     Undo/redo/fit/export
+  │   │       └── CommandPalette.tsx
+  │   ├── features/               (thin — most logic in components/store; folder
+  ready for growth)
+  │   │   ├── auth/
+  │   │   ├── projects/
+  │   │   ├── playground/
+  │   │   └── ai/
+  │   ├── hooks/
+  │   │   ├── useAuth.ts
+  │   │   ├── useProjectGraph.ts
+  │   │   ├── useKeyboardShortcuts.ts
+  │   │   └── useReducedMotion.ts
+  │   ├── store/                  Zustand
+  │   │   ├── session.ts
+  │   │   └── canvas.ts           nodes/edges/selection/history
+  │   ├── services/               API client
+  │   │   ├── api.ts              fetch wrapper + auth header
+  │   │   ├── auth.ts
+  │   │   ├── projects.ts
+  │   │   ├── graph.ts
+  │   │   └── ai.ts
+  │   ├── lib/
+  │   │   ├── utils.ts            cn(), formatters
+  │   │   ├── nodes/
+  │   │   │   ├── registry.ts     Full node catalog (id, provider, category,
+  iconPath, defaultConfig)
+  │   │   │   └── categories.ts
+  │   │   ├── validation/
+  │   │   │   ├── rules.ts        Shared with backend (via generated types
+  eventually)
+  │   │   │   └── run.ts          Client-side rerun for instant feedback
+  │   │   └── export/
+  │   │       ├── png.ts
+  │   │       ├── svg.ts
+  │   │       └── json.ts
+  │   ├── styles/
+  │   │   └── tokens.css          Design tokens (colors, elevation, motion
+  durations)
+  │   └── types/
+  │       ├── api.ts              Response DTOs
+  │       └── graph.ts            Node, Edge, GraphSnapshot
+  ├── public/                     (existing icons)
+  ├── tests/
+  │   ├── setup.ts
+  │   ├── components/
+  │   ├── store/
+  │   └── lib/validation/
+  ├── tests-e2e/
+  │   ├── auth.spec.ts
+  │   ├── canvas.spec.ts
+  │   └── export.spec.ts
+  ├── components.json             shadcn config
+  ├── vitest.config.ts
+  ├── playwright.config.ts
+  └── package.json
+
+  tsconfig.json paths update: "@/*": ["./src/*"] for src/, plus keep "@app/*": 
+  ["./app/*"] if needed. Ponytail: one paths entry only unless a collision
+  forces the second.
+
+  4.3 Root
+
+  Black-Cloud-1/
+  ├── .github/workflows/          test.yml (lint + typecheck + unit + e2e-smoke)
+  ├── backend/                    (per §4.1)
+  ├── frontend/                   (per §4.2)
+  ├── plan/                       docs (read-only)
+  ├── docker-compose.yml          web + api + postgres + redis
+  ├── .dockerignore
+  ├── .env.example
+  ├── .python-version             3.12
+  ├── pyproject.toml              (fixed)
+  ├── uv.lock
+  ├── README.md                   Dev getting-started
+  └── (delete main.py, delete credentials/, delete documents/)
+
+  ---
+  5. Task Execution Plan (Sprint 1 — approve before I write code)
+
+  I will execute only the M0 milestone in Sprint 1. This is small,
+  high-leverage, and unblocks everything else. Every subsequent milestone
+  requires its own approval so we don't over-build past the ladder.
+
+  Sprint 1 — M0 Foundation Fixes (target: unblock the repo)
+
+  Order: 1
+  Task: Fix Python version & deps
+  File(s) touched: pyproject.toml, .python-version, plan/TESTING-STRATEGY.md
+  Verify: uv sync succeeds
+  ────────────────────────────────────────
+  Order: 2
+  Task: Write docker-compose.yml (postgres+redis only for now — api/web images
+    added when they exist)
+  File(s) touched: docker-compose.yml, .dockerignore
+  Verify: docker compose up postgres redis starts
+  ────────────────────────────────────────
+  Order: 3
+  Task: Initialize shadcn in frontend
+  File(s) touched: frontend/components.json, frontend/src/lib/utils.ts,
+    frontend/src/components/ui/*
+  Verify: bun run build succeeds
+  ────────────────────────────────────────
+  Order: 4
+  Task: Design token layer
+  File(s) touched: frontend/app/globals.css, frontend/src/styles/tokens.css
+  Verify: Tokens visible via CSS vars
+  ────────────────────────────────────────
+  Order: 5
+  Task: Rewrite root layout with fonts (Inter, Space Grotesk, JetBrains Mono via
+
+    next/font), next-themes provider, sonner Toaster, real metadata
+  File(s) touched: frontend/app/layout.tsx
+  Verify: Homepage renders in dark mode
+  ────────────────────────────────────────
+  Order: 6
+  Task: Replace app/page.tsx with a minimal branded landing (no CNA boilerplate)
+
+    — a placeholder route only, real landing later
+  File(s) touched: frontend/app/page.tsx
+  Verify: Lint + build clean
+  ────────────────────────────────────────
+  Order: 7
+  Task: Root README.md — Getting Started section
+  File(s) touched: README.md
+  Verify: Human-readable
+  ────────────────────────────────────────
+  Order: 8
+  Task: .env.example at root and frontend/
+  File(s) touched: 2 files
+  Verify: Referenced from README
+  ────────────────────────────────────────
+  Order: 9
+  Task: GitHub Actions test.yml — lint + typecheck skeleton (tests come later)
+  File(s) touched: .github/workflows/test.yml
+  Verify: CI green on push
+  ────────────────────────────────────────
+  Order: 10
+  Task: Delete main.py, empty credentials/, empty documents/; commit .gitkeep
+    where needed
+  File(s) touched: —
+  Verify: Cleaner tree
+
+  Sprint 1 verification checklist (mandatory before Sprint 2 starts):
+  - [ ] uv sync — no errors
+  - [ ] bun install && bun run build — no errors
+  - [ ] bun run lint — 0 warnings on our code
+  - [ ] tsc --noEmit — 0 errors
+  - [ ] Homepage responds at localhost:3000 in dark mode with real branding
+  - [ ] docker compose up postgres redis — both healthy
+  - [ ] CI job runs on a test branch
+
+  Sprint 2+ (preview, not committed)
+
+  - Sprint 2: M1 backend skeleton (models, migrations, auth endpoints) + M1F
+  frontend auth UI — parallel.
+  - Sprint 3: M2 project CRUD end-to-end.
+  - Sprint 4: M3 playground (largest sprint — canvas + node library).
+  - Sprint 5: M4 + M5 + M6 concurrent.
+  - Sprint 6: M7 + M8.
+  - Sprint 7: M9 (polish, a11y, perf, sharing, E2E) → MVP exit.
+
+  What I am NOT doing (deferred per MVP.md §Out of Scope)
+
+  Migration Ground, AI Architecture Generator, Failure Simulator, Cost
+  Simulator, multi-user collab, version history, Terraform/CFN/Pulumi import,
+  SAML/SSO, team workspaces, billing, analytics, 3D landing galaxy, Theatre.js
+  cinematics, PixiJS traffic viz, mascots, Blueprint Exchange, Live Twin, Cloud
+  Academy — none of these get one line of code until MVP exits.
+
+  Ponytail: the strategic doc's Live Twin / PR Bot / Blast Radius / Health Score
+  are all deferred. They're excellent ideas — but they're Phase 3+ and building
+  them now is exactly the "scope creep" the doc itself warns about.
+
+  ---
+  Approval Gate
+
+  Before I write any code, please confirm:
+
+  1. Approve M0 execution as scoped above? (Sprint 1 only.)
+  2. Layout decision: keep flat frontend/ + backend/ (my recommendation), or
+  migrate to apps/*?
+  3. Python version: pin >=3.12 (real, GA) instead of the aspirational 3.14.6?
+  4. documents/ and credentials/ folders: delete both?
+  5. Sharing feature (read-only link): keep in MVP (it's in MVP Goals but absent
+  from Scope), or defer?
+
+● ★ Insight ─────────────────────────────────────
+  - The four required documents (Analysis, Gap, Roadmap, File Structure) + the
+  Task Execution Plan are all delivered above as markdown — no code has been
+  written yet, in line with your gating instruction.
+  - I stopped at ~35% context — well under your 90% ceiling — leaving room to
+  execute Sprint 1 immediately upon approval without re-priming.
+  - Awaiting your answers to the 5 approval-gate questions before touching a
+  single file.
+  ─────────────────────────────────────────────────
+✻ Churned for 4m 21s

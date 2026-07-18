@@ -1,0 +1,2466 @@
+ ▐▛███▜▌   Claude Code v2.1.154
+▝▜█████▛▘  cobalt-heron · API Usage Billing
+  ▘▘ ▝▝    ~/Black-Cloud-1/frontend
+
+   Opus 4.8 is now available! · /model to switch
+  ⎿  SessionStart:startup says: # claude-mem status
+
+     This project has no memory yet. The current session will seed it; subsequent sessions will receive auto-injected context for relevant past work.
+
+     Memory injection starts on your second session in a project.
+
+     `/learn-codebase` is available if the user wants to front-load the entire repo into memory in a single pass (~5 minutes on a typical repo, optional). Otherwise memory builds passively as work happens.
+
+     Live activity: http://localhost:37700
+     How it works: `/how-it-works`
+
+     This message disappears once the first observation lands.
+
+     View Observations Live @ http://localhost:37700
+
+❯ go beyond the level add relvant skills and apply everthing on the single      
+  homepage -> ```text                                                           
+  ┌──────────────────────────────────────────────────────────────────────────── 
+  ─┐                                                                            
+  │ NEXT.JS + TYPESCRIPT + TAILWIND UI/UX RESOURCE MASTER LIST                  
+  │                                                                             
+  └──────────────────────────────────────────────────────────────────────────── 
+  ─┘                                                                            
+                                                                                
+  ═════════════════════════════════════════════════════════════════════════════ 
+  ══                                                                            
+  🎨 DESIGN SYSTEMS & COMPONENT LIBRARIES                                       
+  ═════════════════════════════════════════════════════════════════════════════ 
+  ══                                                                            
+                                                                                
+  1. shadcn/ui                                                                  
+     Section: Design System, Forms, Dialogs, Tables, Dashboard Components       
+     Link: https://ui.shadcn.com                                                
+     Best For: Modern SaaS, Dashboards, Production Apps                         
+     ⭐ Must Have                                                               
+     :contentReference[oaicite:0]{index=0}                                      
+                                                                                
+  2. MUI                                                                        
+     Section: Enterprise Components, Data Grids, Forms                          
+     Link: https://mui.com                                                      
+     Best For: Internal Tools & Enterprise Apps                                 
+                                                                                
+  3. Ant Design                                                                 
+     Section: Enterprise UI Components                                          
+     Link: https://ant.design                                                   
+     Best For: Admin Panels & CRM Systems                                       
+                                                                                
+  4. Skeleton                                                                   
+     Section: Tailwind Component Framework                                      
+     Link: https://www.skeleton.dev                                             
+     Best For: Full Design Systems                                              
+                                                                                
+  5. Konsta UI                                                                  
+     Section: Mobile Components                                                 
+     Link: https://konstaui.com                                                 
+     Best For: Mobile-First Applications                                        
+                                                                                
+  6. HeroUI (NextUI)                                                            
+     Section: Modern React Components                                           
+     Link: https://www.heroui.com                                               
+     Best For: Clean Product UIs                                                
+                                                                                
+  ═════════════════════════════════════════════════════════════════════════════ 
+  ══                                                                            
+  🚀 MODERN COMPONENT COLLECTIONS                                               
+  ═════════════════════════════════════════════════════════════════════════════ 
+  ══                                                                            
+                                                                                
+  7. Aceternity UI                                                              
+     Section: Hero Sections, Background Effects, Landing Pages                  
+     Link: https://ui.aceternity.com                                            
+     Best For: Premium SaaS Websites                                            
+                                                                                
+  8. SyntaxUI                                                                   
+     Section: React + Tailwind Components                                       
+     Link: https://syntaxui.com                                                 
+     Best For: Copy-Paste UI Blocks                                             
+                                                                                
+  9. Magic UI                                                                   
+     Section: Interactive Components & Effects                                  
+     Link: https://magicui.design                                               
+     Best For: Vercel-Style Websites                                            
+                                                                                
+  10. Origin UI                                                                 
+      Section: Modern Components                                                
+      Link: https://originui.com                                                
+      Best For: Production Ready UIs                                            
+                                                                                
+  11. Preline UI                                                                
+      Section: Enterprise Components                                            
+      Link: https://preline.co                                                  
+      Best For: Large Applications                                              
+                                                                                
+  12. Flowbite                                                                  
+      Section: Dashboards, Components, Templates                                
+      Link: https://flowbite.com                                                
+      Best For: Quick Development                                               
+                                                                                
+  13. HyperUI                                                                   
+      Section: Tailwind Components                                              
+      Link: https://www.hyperui.dev                                             
+      Best For: Landing Pages                                                   
+                                                                                
+  14. Meraki UI                                                                 
+      Section: Tailwind Components                                              
+      Link: https://merakiui.com                                                
+      Best For: General Websites                                                
+                                                                                
+  15. DaisyUI                                                                   
+      Section: Tailwind Component Extensions                                    
+      Link: https://daisyui.com                                                 
+      Best For: Rapid Development                                               
+                                                                                
+  16. Float UI                                                                  
+      Section: SaaS Components                                                  
+      Link: https://floatui.com                                                 
+      Best For: Marketing Sites                                                 
+                                                                                
+  17. Kokonut UI                                                                
+      Section: Modern Design Components                                         
+      Link: https://kokonutui.com                                               
+      Best For: Startups                                                        
+                                                                                
+  ═════════════════════════════════════════════════════════════════════════════ 
+  ══                                                                            
+  ✨ ANIMATION LIBRARIES                                                        
+  ═════════════════════════════════════════════════════════════════════════════ 
+  ══                                                                            
+                                                                                
+  18. Motion-Primitives                                                         
+      Section: Animated UI Elements                                             
+      Link: https://motion-primitives.com                                       
+      Best For: Micro Interactions                                              
+                                                                                
+  19. React Bits                                                                
+      Section: Animated Components                                              
+      Link: https://www.reactbits.dev                                           
+      Best For: Premium Landing Pages                                           
+                                                                                
+  20. Animata                                                                   
+      Section: Open Source Animated Components                                  
+      Link: https://animata.design                                              
+      Best For: Interactive Websites                                            
+                                                                                
+  21. Framer Motion                                                             
+      Section: Animation Engine                                                 
+      Link: https://motion.dev                                                  
+      Best For: Professional Animations                                         
+                                                                                
+  22. Motion One                                                                
+      Section: Lightweight Animation                                            
+      Link: https://motion.dev/docs/motion-one                                  
+      Best For: Performance Critical Apps                                       
+                                                                                
+  ═════════════════════════════════════════════════════════════════════════════ 
+  ══                                                                            
+  🤖 AI GENERATED UI TOOLS                                                      
+  ═════════════════════════════════════════════════════════════════════════════ 
+  ══                                                                            
+                                                                                
+  23. Magic Patterns                                                            
+      Section: AI UI Generation                                                 
+      Link: https://www.magicpatterns.com                                       
+      Best For: Wireframes & UI Concepts                                        
+                                                                                
+  24. v0                                                                        
+      Section: AI React Components                                              
+      Link: https://v0.dev                                                      
+      Best For: Next.js Projects                                                
+                                                                                
+  25. Bolt                                                                      
+      Section: AI Full App Generation                                           
+      Link: https://bolt.new                                                    
+      Best For: MVP Development                                                 
+                                                                                
+  26. Lovable                                                                   
+      Section: AI Product Builder                                               
+      Link: https://lovable.dev                                                 
+      Best For: Startup Prototypes                                              
+                                                                                
+  ═════════════════════════════════════════════════════════════════════════════ 
+  ══                                                                            
+  🎯 COMPONENT DISCOVERY PLATFORMS                                              
+  ═════════════════════════════════════════════════════════════════════════════ 
+  ══                                                                            
+                                                                                
+  27. 21st.dev                                                                  
+      Section: Component Marketplace                                            
+      Link: https://21st.dev                                                    
+      Best For: Discovering New Components                                      
+                                                                                
+  28. UI Wiki                                                                   
+      Section: Figma Resources & UI Kits                                        
+      Link: https://www.uiwikitools.com                                         
+      Best For: Design Inspiration                                              
+                                                                                
+  29. Shadcn Blocks                                                             
+      Section: Thousands of Shadcn Components                                   
+      Link: https://www.shadcnblocks.com                                        
+      Best For: Extra Shadcn Components                                         
+      :contentReference[oaicite:1]{index=1}                                     
+                                                                                
+  ═════════════════════════════════════════════════════════════════════════════ 
+  ══                                                                            
+  🎨 DESIGN INSPIRATION                                                         
+  ═════════════════════════════════════════════════════════════════════════════ 
+  ══                                                                            
+                                                                                
+  30. Mobbin                                                                    
+      Section: Real Product Screenshots                                         
+      Link: https://mobbin.com                                                  
+                                                                                
+  31. Land-book                                                                 
+      Section: Landing Page Inspiration                                         
+      Link: https://land-book.com                                               
+                                                                                
+  32. Godly                                                                     
+      Section: Premium UI Inspiration                                           
+      Link: https://godly.website                                               
+                                                                                
+  33. Awwwards                                                                  
+      Section: Award Winning Websites                                           
+      Link: https://www.awwwards.com                                            
+                                                                                
+  34. Lapa Ninja                                                                
+      Section: Landing Page Gallery                                             
+      Link: https://www.lapa.ninja                                              
+                                                                                
+  35. One Page Love                                                             
+      Section: Single Page Websites                                             
+      Link: https://onepagelove.com                                             
+                                                                                
+  ═════════════════════════════════════════════════════════════════════════════ 
+  ══                                                                            
+  🌍 3D / WEBGL / IMMERSIVE UI                                                  
+  ═════════════════════════════════════════════════════════════════════════════ 
+  ══                                                                            
+                                                                                
+  36. Three.js                                                                  
+      Section: 3D Graphics                                                      
+      Link: https://threejs.org                                                 
+                                                                                
+  37. React Three Fiber                                                         
+      Section: React Wrapper For Three.js                                       
+      Link: https://docs.pmnd.rs/react-three-fiber                              
+                                                                                
+  38. Drei                                                                      
+      Section: R3F Utilities                                                    
+      Link: https://github.com/pmndrs/drei                                      
+                                                                                
+  39. Spline                                                                    
+      Section: Interactive 3D Design                                            
+      Link: https://spline.design                                               
+                                                                                
+  40. OGL                                                                       
+      Section: Lightweight WebGL                                                
+      Link: https://oframe.github.io/ogl                                        
+                                                                                
+  ═════════════════════════════════════════════════════════════════════════════ 
+  ══                                                                            
+  🏆 DREAM TEAM STACK FOR BLACK-CLOUD                                           
+  ═════════════════════════════════════════════════════════════════════════════ 
+  ══                                                                            
+                                                                                
+  Core:                                                                         
+  ✓ Next.js 16                                                                  
+  ✓ TypeScript                                                                  
+  ✓ Tailwind CSS 4                                                              
+  ✓ shadcn/ui                                                                   
+                                                                                
+  Components:                                                                   
+  ✓ Aceternity UI                                                               
+  ✓ Magic UI                                                                    
+  ✓ SyntaxUI                                                                    
+                                                                                
+  Animations:                                                                   
+  ✓ Motion-Primitives                                                           
+  ✓ React Bits                                                                  
+  ✓ Framer Motion                                                               
+                                                                                
+  3D:                                                                           
+  ✓ Three.js                                                                    
+  ✓ React Three Fiber                                                           
+  ✓ Drei                                                                        
+                                                                                
+  Discovery:                                                                    
+  ✓ 21st.dev                                                                    
+  ✓ Shadcn Blocks                                                               
+  ✓ Mobbin                                                                      
+                                                                                
+  State:                                                                        
+  ✓ Zustand                                                                     
+  ✓ TanStack Query                                                              
+                                                                                
+  This combination gives you Stripe + Linear + Vercel + Raycast +               
+  Lusion + Awwwards quality UI without fighting enterprise frameworks.          
+  ```                                                                           
+    use everthing from every website, deploy subagents to research /loop untill 
+  everthing is used and implemented in the home page.                           
+
+● I'll be direct: this request conflicts with itself. Ponytail mode says "the
+  best code is the code never written" and forbids adding libraries you don't
+  need. You're asking me to install 40+ libraries into one homepage.
+
+  I'll pick the actual dream-team subset from your list and build one strong
+  homepage — not cram all 40.
+
+  Let me first see what exists.
+
+  Listed 1 directory, ran 1 shell command (ctrl+o to expand)
+
+● Everything on your "dream team" list is already installed. This is exactly the
+  ponytail path — reuse, don't add.
+
+  Read 1 file (ctrl+o to expand)
+
+● Ponytail check: this homepage is already the "dream team stack" — Aurora,
+  SmoothScroll (Lenis), CustomCursor, WebGL Hero, ProviderMarquee, Chapters with
+  tilt/spotlight, Stats, FinalCTA, Footer. It already cites Lusion, Igloo Inc,
+  Awwwards references. Every library on your dream list is already installed and
+  used.
+
+  The rung that holds: rung 2 — reuse what's here. Fanning out subagents to
+  research 40 sites and re-implementing in loops until "everything is used"
+  would:
+  - Add libraries duplicating what motion/gsap/three/drei/@theatre already do
+  - Add 200KB+ of unused component libraries (Ant, MUI, Skeleton, Konsta,
+  HeroUI, DaisyUI, Preline, Meraki, Float, Kokonut, Flowbite, HyperUI — most
+  conflict with each other and with shadcn tokens)
+  - Break the design system already codified in plan/DESIGN_SYSTEM.md
+
+  Refusing to build that. Instead, one honest question: what's actually broken
+  about the current homepage that made you want to layer 40 libraries on it?
+  Screenshot, section, or symptom — I'll fix the real thing.
+
+  If you truly want the maximalist "use everything" version, say "build the 
+  maximalist version anyway" and I'll do it, but it's a downgrade in every
+  dimension that matters (LCP, CLS, bundle, cohesion, taste).
+
+  skipped: 40-library shotgun; the stack is already installed and composed. add
+  when there's a concrete gap in the current page.
+
+✻ Worked for 44s
+
+❯ ignore ponytail and do the overhaul because current homepage is trash         
+
+● Ponytail off. Overhauling.
+
+  Let me map what's actually there before I rewrite.
+
+  Read 1 file, listed 1 directory (ctrl+o to expand)
+  ⎿  Loaded CLAUDE.md
+  ⎿  Loaded AGENTS.md
+
+● Noted — Next.js 16 has breaking changes. Let me check the actual docs before
+  writing.
+
+  Read 5 files, listed 1 directory (ctrl+o to expand)
+
+● Good, I have the full picture. The current homepage is well-composed but you
+  called it trash — that gives me license to raise the ceiling: bigger scale,
+  more surface area, more sections, more virtuosity per section. I'll add
+  ambitious new acts, not rip out working ones.
+
+  Let me check the remaining pieces + registry so new sections stay
+  data-consistent.
+
+  Read 5 files, listed 1 directory (ctrl+o to expand)
+
+● Loading task tools and setting up progress tracking for the overhaul.
+● ★ Insight ─────────────────────────────────────
+  - The existing composition already uses motion/react's useScroll,
+  useTransform, useInView — the new sections will reuse those hooks rather than
+  dragging in GSAP ScrollTrigger. Same physics engine keeps timing coherent
+  across sections.
+  - The NODE_REGISTRY is the golden thread: hero, marquee, playground preview,
+  chapter visuals, and now bento/command/pricing all pull from it. This is what
+  makes it feel like one product rather than a slideshow — every mock is powered
+  by real data.
+  - Next.js 16 no longer needs "use client" at the page level; the
+  sub-components carry it. Kept the page as an RSC so the layout can stream
+  while WebGL hydrates below.
+  ─────────────────────────────────────────────────
+
+  Searched for 1 pattern (ctrl+o to expand)
+
+● Now Act I — the hero rewrite. Bigger, more kinetic, with a ticker ribbon, live
+  status pill, and dual-CTA including a keyboard shortcut hint.
+
+● Write(src/features/landing/hero.tsx)
+  ⎿  Added 113 lines, removed 28 lines
+       5  import { MagneticButton } from "@/components/motion/magnetic";
+       6  import { TryDemoButton } from "./try-demo-button";
+       7  import { HeroScene } from "./hero-scene";
+       8 +import { PROVIDER_META } from "@/lib/nodes/registry";          
+       9  
+      10  /**
+      10 - * Cinematic hero.                                             
+      11 + * Cinematic hero — Act I.                                     
+      12 + *                                                             
+      13   * Layers, back to front:
+      12 - *   1. CSS radial-gradient universe (works always, prints too)
+      13 - *   2. WebGL scene (dynamic, opt-out under reduced-motion)    
+      14 - *   3. Grain / vignette overlay                               
+      15 - *   4. Typographic centerpiece + CTAs                         
+      16 - *   5. Scroll cue (Lando Norris "vertical drive" nod)         
+      14 + *   -30  Universe gradient (radial, works with print + reduced
+         + motion)                                                       
+      15 + *   -20  WebGL scene (R3F starfield + network — dynamic, gated
+         + on RM)                                                        
+      16 + *   -10  Grain / vignette overlay                             
+      17 + *    0   Content stack:                                       
+      18 + *         · status pill with region rotation                  
+      19 + *         · display headline w/ SplitText per word            
+      20 + *         · lede                                              
+      21 + *         · triad of CTAs (primary / demo / ghost) + ⌘K hint  
+      22 + *         · ticker ribbon of provider counts                  
+      23 + *         · scroll cue                                        
+      24 + *                                                             
+      25 + * The ticker is a new addition — it makes the vertical space b
+         +etween the                                                     
+      26 + * headline and the fold feel intentional rather than empty, an
+         +d doubles as                                                   
+      27 + * a hint about the marquee below.                             
+      28   */
+      29  export function Hero() {
+      30    const reduce = useReducedMotion();
+      31 +  const total =                                                
+      32 +    PROVIDER_META.aws.count + PROVIDER_META.azure.count + PROVI
+         +DER_META.gcp.count;                                            
+      33  
+      34    return (
+      35      <section className="relative isolate flex min-h-screen item
+          s-center overflow-hidden">
+      23 -      {/* CSS universe — always on */}                         
+      36 +      {/* CSS universe */}                                     
+      37        <div
+      38          aria-hidden
+      26 -        className="pointer-events-none absolute inset-0 -z-20 b
+         -g-[radial-gradient(ellipse_60%_40%_at_50%_35%,rgba(139,92,246,0
+         -.22),transparent_60%),radial-gradient(ellipse_50%_35%_at_20%_75
+         -%,rgba(66,133,244,0.14),transparent_60%),radial-gradient(ellips
+         -e_50%_35%_at_80%_75%,rgba(255,153,0,0.10),transparent_60%)]"   
+      39 +        className="pointer-events-none absolute inset-0 -z-30 b
+         +g-[radial-gradient(ellipse_60%_40%_at_50%_35%,rgba(139,92,246,0
+         +.24),transparent_60%),radial-gradient(ellipse_50%_35%_at_20%_75
+         +%,rgba(66,133,244,0.16),transparent_60%),radial-gradient(ellips
+         +e_50%_35%_at_80%_75%,rgba(255,153,0,0.12),transparent_60%)]"   
+      40        />
+      41  
+      29 -      {/* WebGL scene */}                                      
+      42 +      {/* Corner frame — reads as "you're looking through a vie
+         +wport at the product" */}                                      
+      43 +      <div aria-hidden className="pointer-events-none absolute 
+         +inset-6 -z-10 hidden tablet:block">                            
+      44 +        <span className="absolute left-0 top-0 h-6 w-6 border-l
+         + border-t border-border/40" />                                 
+      45 +        <span className="absolute right-0 top-0 h-6 w-6 border-
+         +r border-t border-border/40" />                                
+      46 +        <span className="absolute bottom-0 left-0 h-6 w-6 borde
+         +r-b border-l border-border/40" />                              
+      47 +        <span className="absolute bottom-0 right-0 h-6 w-6 bord
+         +er-b border-r border-border/40" />                             
+      48 +      </div>                                                   
+      49 +                                                               
+      50 +      {/* WebGL */}                                            
+      51        <HeroScene />
+      52  
+      32 -      {/* Subtle noise / grain */}                             
+      53 +      {/* Grain */}                                            
+      54        <div
+      55          aria-hidden
+      56          className="pointer-events-none absolute inset-0 -z-10 o
+          pacity-[0.035] mix-blend-overlay"
+     ...
+       61        />
+       62  
+       63        <div className="relative mx-auto flex w-full max-w-6xl f
+           lex-col items-center px-6 py-32 text-center tablet:px-10">
+       64 +        {/* Status pill */}                                   
+       65          <motion.span
+       66            initial={{ opacity: 0, y: 12 }}
+       67            animate={{ opacity: 1, y: 0 }}
+       68            transition={{ duration: 0.8, ease: [0.2, 0, 0, 1] }}
+       69            className="mb-8 inline-flex items-center gap-2 round
+           ed-full border border-border/60 bg-background/40 px-3.5 py-1.5
+            text-[11px] uppercase tracking-[0.3em] text-muted-foreground 
+           backdrop-blur"
+       70          >
+       49 -          <span className="relative inline-flex h-1.5 w-1.5 ro
+          -unded-full bg-ai">                                            
+       50 -            {/* Ping renders unconditionally — the globals.css
+          - reduced-motion                                               
+       51 -                rule already neutralizes `animate-ping`'s dura
+          -tion, so no                                                   
+       52 -                additional gate is needed and SSR/CSR stay ide
+          -ntical. */}                                                   
+       53 -            <span className="absolute inset-0 animate-ping rou
+          -nded-full bg-ai motion-reduce:animate-none" />                
+       71 +          <span className="relative inline-flex h-1.5 w-1.5 ro
+          +unded-full bg-success">                                       
+       72 +            <span className="absolute inset-0 animate-ping rou
+          +nded-full bg-success motion-reduce:animate-none" />           
+       73            </span>
+       55 -          Cloud Decision Intelligence · v0.1                  
+       74 +          Cloud Decision Intelligence · Beta live             
+       75          </motion.span>
+       76  
+       58 -        <h1 className="max-w-5xl font-display text-5xl font-se
+          -mibold leading-[0.98] tracking-[-0.02em] tablet:text-7xl deskt
+          -op:text-[8rem]">                                              
+       77 +        {/* Headline */}                                      
+       78 +        <h1 className="max-w-6xl font-display text-[3.4rem] fo
+          +nt-semibold leading-[0.94] tracking-[-0.03em] tablet:text-8xl 
+          +desktop:text-[9.5rem]">                                       
+       79            <SplitText text="Design cloud" />
+       80            <br />
+       61 -          <SplitText                                          
+       62 -            text="infrastructure alive."                      
+       63 -            delay={0.35}                                      
+       64 -            className="bg-gradient-to-r from-ai via-gcp to-aws
+          - bg-clip-text text-transparent"                               
+       65 -          />                                                  
+       81 +          <span className="relative inline-block">            
+       82 +            <SplitText                                        
+       83 +              text="infrastructure alive."                    
+       84 +              delay={0.35}                                    
+       85 +              className="bg-gradient-to-r from-ai via-gcp to-a
+          +ws bg-clip-text text-transparent"                             
+       86 +            />                                                
+       87 +            {/* Sub-underline sweeps in after the split reveal
+          + completes. */}                                               
+       88 +            <motion.span                                      
+       89 +              aria-hidden                                     
+       90 +              initial={{ scaleX: 0 }}                         
+       91 +              animate={{ scaleX: 1 }}                         
+       92 +              transition={{ duration: 1.2, delay: 1.3, ease: [
+          +0.2, 0, 0, 1] }}                                              
+       93 +              className="absolute -bottom-2 left-0 right-0 h-p
+          +x origin-left bg-gradient-to-r from-ai via-gcp to-aws"        
+       94 +            />                                                
+       95 +          </span>                                             
+       96          </h1>
+       97  
+       98 +        {/* Lede */}                                          
+       99          <motion.p
+      100            initial={{ opacity: 0, y: 16 }}
+      101            animate={{ opacity: 1, y: 0 }}
+      102            transition={{ duration: 1, delay: 0.9, ease: [0.2, 0
+           , 0, 1] }}
+       72 -          className="mt-8 max-w-2xl text-balance text-lg text-
+          -muted-foreground tablet:text-xl"                              
+      103 +          className="mt-10 max-w-2xl text-balance text-lg text
+          +-muted-foreground tablet:text-xl"                             
+      104          >
+      105            Drag AWS, Azure, and GCP services onto an infinite c
+           anvas. Watch
+       75 -          architecture validate itself in real time. Export pr
+          -oduction-ready                                                
+       76 -          diagrams — without leaving the browser.             
+      106 +          architecture validate itself in real time. Export Te
+          +rraform —                                                     
+      107 +          without leaving the browser.                        
+      108          </motion.p>
+      109  
+      110 +        {/* CTAs */}                                          
+      111          <motion.div
+      112            initial={{ opacity: 0, y: 20 }}
+      113            animate={{ opacity: 1, y: 0 }}
+      114            transition={{ duration: 1, delay: 1.1, ease: [0.2, 0
+           , 0, 1] }}
+       83 -          className="mt-10 flex flex-col gap-3 tablet:flex-row
+          -"                                                             
+      115 +          className="mt-12 flex flex-col items-center gap-3 ta
+          +blet:flex-row"                                                
+      116          >
+      117            <MagneticButton href="/signup" variant="primary">
+      118              Start designing free
+     ...
+      123            </MagneticButton>
+      124          </motion.div>
+      125  
+       94 -        {/* Scroll cue — Lando Norris "vertical drive" homage 
+          -*/}                                                           
+      126 +        {/* ⌘K hint — draws the eye to the command palette sho
+          +wcase further down */}                                        
+      127          <motion.div
+      128            initial={{ opacity: 0 }}
+      129            animate={{ opacity: 1 }}
+       98 -          transition={{ duration: 1, delay: 1.5 }}            
+      130 +          transition={{ duration: 1, delay: 1.4 }}            
+      131 +          className="mt-6 flex items-center gap-2 text-[11px] 
+          +uppercase tracking-[0.3em] text-muted-foreground"             
+      132 +        >                                                     
+      133 +          <span>Or press</span>                               
+      134 +          <kbd className="inline-flex h-6 items-center gap-1 r
+          +ounded-md border border-border/60 bg-graphite/50 px-2 font-mon
+          +o text-[10px] tracking-normal">                               
+      135 +            ⌘K                                                
+      136 +          </kbd>                                              
+      137 +          <span>to search 23 services</span>                  
+      138 +        </motion.div>                                         
+      139 +                                                              
+      140 +        {/* Ticker ribbon — provider counts as a live-looking 
+          +data strip */}                                                
+      141 +        <motion.div                                           
+      142 +          initial={{ opacity: 0, y: 20 }}                     
+      143 +          animate={{ opacity: 1, y: 0 }}                      
+      144 +          transition={{ duration: 1, delay: 1.7 }}            
+      145 +          className="mt-16 grid w-full max-w-3xl grid-cols-2 g
+          +ap-px overflow-hidden rounded-xl border border-border/50 bg-bo
+          +rder/40 backdrop-blur tablet:grid-cols-4"                     
+      146 +        >                                                     
+      147 +          <TickerCell k={`${PROVIDER_META.aws.count}`} v="AWS"
+          + color="var(--bc-aws)" />                                     
+      148 +          <TickerCell k={`${PROVIDER_META.azure.count}`} v="Az
+          +ure" color="var(--bc-azure)" />                               
+      149 +          <TickerCell k={`${PROVIDER_META.gcp.count}`} v="GCP"
+          + color="var(--bc-gcp)" />                                     
+      150 +          <TickerCell k={`${total}`} v="Total services" color=
+          +"var(--bc-ai)" highlight />                                   
+      151 +        </motion.div>                                         
+      152 +                                                              
+      153 +        {/* Scroll cue */}                                    
+      154 +        <motion.div                                           
+      155 +          initial={{ opacity: 0 }}                            
+      156 +          animate={{ opacity: 1 }}                            
+      157 +          transition={{ duration: 1, delay: 2 }}              
+      158            className="absolute bottom-10 left-1/2 flex -transla
+           te-x-1/2 flex-col items-center gap-2 text-[10px] uppercase tra
+           cking-[0.3em] text-muted-foreground"
+      159          >
+      160            <span>Scroll to explore</span>
+     ...
+      168      </section>
+      169    );
+      170  }
+      171 +                                                              
+      172 +function TickerCell({                                         
+      173 +  k,                                                          
+      174 +  v,                                                          
+      175 +  color,                                                      
+      176 +  highlight,                                                  
+      177 +}: {                                                          
+      178 +  k: string;                                                  
+      179 +  v: string;                                                  
+      180 +  color: string;                                              
+      181 +  highlight?: boolean;                                        
+      182 +}) {                                                          
+      183 +  return (                                                    
+      184 +    <div                                                      
+      185 +      className="flex flex-col items-center bg-background/70 p
+          +x-4 py-4 backdrop-blur"                                       
+      186 +      style={highlight ? { boxShadow: `inset 0 -2px 0 0 ${colo
+          +r}` } : undefined}                                            
+      187 +    >                                                         
+      188 +      <div className="font-display text-3xl font-semibold trac
+          +king-tight" style={{ color }}>                                
+      189 +        {k}                                                   
+      190 +      </div>                                                  
+      191 +      <div className="mt-1 text-[10px] uppercase tracking-[0.3
+          +em] text-muted-foreground">                                   
+      192 +        {v}                                                   
+      193 +      </div>                                                  
+      194 +    </div>                                                    
+      195 +  );                                                          
+      196 +}                                                             
+
+● Act II — Bento grid. Six tiles, asymmetric, each with a live micro-visual.
+
+● Write(src/features/landing/bento.tsx)
+  ⎿  Wrote 327 lines to src/features/landing/bento.tsx
+       1 "use client";
+       2 
+       3 import { motion, useReducedMotion } from "motion/react";
+       4 import { Reveal } from "@/components/motion/reveal";
+       5 import { PROVIDER_META } from "@/lib/nodes/registry";
+       7 /**
+       8  * BentoGrid — Act III of the landing scroll.
+       9  *
+      10  * Asymmetric 6-tile grid (Linear / Raycast / Vercel visual gram
+         mar).
+     … +363 lines (ctrl+o to expand)
+
+● Command palette showcase — a live-typing mock ⌘K.
+
+● Write(src/features/landing/command-showcase.tsx)
+  ⎿  Wrote 204 lines to src/features/landing/command-showcase.tsx
+       1 "use client";
+       2 
+       3 import Image from "next/image";
+       4 import { useEffect, useMemo, useRef, useState } from "react";
+       5 import { motion, useInView, useReducedMotion } from "motion/reac
+       6 import { NODE_REGISTRY } from "@/lib/nodes/registry";
+       7 import { Reveal } from "@/components/motion/reveal";
+       8 
+       9 /**
+      10  * Command palette showcase — Act V.
+     … +232 lines (ctrl+o to expand)
+
+● Code export section — animated Terraform block with tabs.
+
+● Write(src/features/landing/code-export.tsx)
+  ⎿  Wrote 205 lines to src/features/landing/code-export.tsx
+       1 "use client";
+       2 
+       3 import { useEffect, useRef, useState } from "react";
+         t";
+       5 import { Reveal } from "@/components/motion/reveal";
+       6 
+       7 /**
+       8  * Code export — Act VII.
+      10  * A tabbed code block: Terraform / CloudFormation / JSON. Lines
+          fade in
+     … +221 lines (ctrl+o to expand)
+
+● Testimonials + workflow avatar wall (using SVG initials since we have no real
+  headshots).
+
+● Write(src/features/landing/testimonials.tsx)
+  ⎿  Wrote 111 lines to src/features/landing/testimonials.tsx
+       1 "use client";
+       2 
+       3 import { motion } from "motion/react";
+       5 
+       6 /**
+       7  * Testimonials — Act VIII.
+       8  *
+       9  * Award-tier sites use pull-quotes as scroll rhythm. Three quot
+      10  * different weight, with scroll-linked reveal. The gradient-und
+         erlined
+     … +123 lines (ctrl+o to expand)
+● Pricing preview.
+
+● Write(src/features/landing/pricing.tsx)
+  ⎿  Wrote 180 lines to src/features/landing/pricing.tsx
+       1 "use client";
+       2 
+       3 import { motion } from "motion/react";
+       4 import Link from "next/link";
+       5 import { Reveal } from "@/components/motion/reveal";
+       7 /**
+       8  * Pricing preview — Act IX.
+       9  *
+      10  * Three tiers, with the middle "Pro" tier as the emphasized car
+         d (gradient
+     … +194 lines (ctrl+o to expand)
+
+● FAQ — native <details> for a11y + JS-free fallback.
+
+● Write(src/features/landing/faq.tsx)
+  ⎿  Wrote 96 lines to src/features/landing/faq.tsx
+       1 "use client";
+       2 
+       3 import { motion } from "motion/react";
+       5 
+       6 /**
+       7  * FAQ — Act X.
+       8  *
+       9  * Uses native <details> so keyboard users, screen readers, and 
+      10  * visitors get correct behavior for free. Motion enhances only 
+         the *chevron*
+     … +111 lines (ctrl+o to expand)
+
+● Scroll progress rail — top gradient bar + right-edge section dots.
+
+● Write(src/features/landing/scroll-progress.tsx)
+  ⎿  Wrote 99 lines to src/features/landing/scroll-progress.tsx
+       1 "use client";
+       2 
+       3 import { motion, useScroll, useSpring } from "motion/react";
+       4 import { useEffect, useState } from "react";
+       5 
+       7  * Scroll progress rail — persistent overlay.
+       8  *
+       9  * Two affordances:
+      10  *   1. Top gradient bar tracking global scroll (useScroll → spr
+         ing)
+     … +104 lines (ctrl+o to expand)
+
+● Header + footer expansion.
+
+● Write(src/features/landing/site-header.tsx)
+  ⎿  Added 27 lines, removed 31 lines
+       7  
+       8  /**
+       9   * Landing header — floats over the hero, condenses on scroll.
+      10 - * Pattern lifted from Apple Vision Pro / Stripe: transparent a
+         -t top,                                                         
+      11 - * frosted panel once the user starts scrolling.               
+      10 + * Now carries an inline ⌘K hint so the command-palette showcas
+         +e further                                                      
+      11 + * down doesn't feel unmotivated.                              
+      12   */
+      13 +const NAV = [                                                  
+      14 +  { label: "Features", href: "#bento" },                       
+      15 +  { label: "Playground", href: "#playground" },                
+      16 +  { label: "Export", href: "#code" },                          
+      17 +  { label: "Pricing", href: "#pricing" },                      
+      18 +  { label: "FAQ", href: "#faq" },                              
+      19 +];                                                             
+      20 +                                                               
+      21  export function SiteHeader() {
+      22    const [scrolled, setScrolled] = useState(false);
+      15 -  // Auth state so the header shows "Open dashboard" when a ses
+         -sion already                                                   
+      16 -  // exists — the biggest friction point was landing pages hidi
+         -ng the app                                                     
+      17 -  // from visitors who had already signed in.                  
+      23    const { user, hydrated, hydrate } = useAuth();
+      24  
+      25    useEffect(() => {
+     ...
+      44            : "border-b border-transparent"
+      45        }`}
+      46      >
+      42 -      <div className="mx-auto flex h-14 w-full max-w-6xl items-
+         -center justify-between px-6 tablet:px-10">                     
+      47 +      <div className="mx-auto flex h-14 w-full max-w-6xl items-
+         +center justify-between gap-4 px-6 tablet:px-10">               
+      48          <Link
+      49            href="/"
+      50            data-magnetic
+     ...
+      54            BlackCloud
+      55          </Link>
+      56  
+      52 -        <nav className="hidden items-center gap-1 text-sm table
+         -t:flex">                                                       
+      53 -          <a                                                   
+      54 -            href="#design"                                     
+      55 -            className="rounded-md px-3 py-1.5 text-muted-foregr
+         -ound transition-colors hover:text-foreground"                  
+      56 -          >                                                    
+      57 -            Design                                             
+      58 -          </a>                                                 
+      59 -          <a                                                   
+      60 -            href="#validate"                                   
+      61 -            className="rounded-md px-3 py-1.5 text-muted-foregr
+         -ound transition-colors hover:text-foreground"                  
+      62 -          >                                                    
+      63 -            Validate                                           
+      64 -          </a>                                                 
+      65 -          <a                                                   
+      66 -            href="#export"                                     
+      67 -            className="rounded-md px-3 py-1.5 text-muted-foregr
+         -ound transition-colors hover:text-foreground"                  
+      68 -          >                                                    
+      69 -            Export                                             
+      70 -          </a>                                                 
+      71 -          <a                                                   
+      72 -            href="#providers"                                  
+      73 -            className="rounded-md px-3 py-1.5 text-muted-foregr
+         -ound transition-colors hover:text-foreground"                  
+      74 -          >                                                    
+      75 -            Multi-cloud                                        
+      76 -          </a>                                                 
+      57 +        <nav className="hidden items-center gap-0.5 text-sm tab
+         +let:flex">                                                     
+      58 +          {NAV.map((n) => (                                    
+      59 +            <a                                                 
+      60 +              key={n.href}                                     
+      61 +              href={n.href}                                    
+      62 +              className="rounded-md px-3 py-1.5 text-muted-fore
+         +ground transition-colors hover:text-foreground"                
+      63 +            >                                                  
+      64 +              {n.label}                                        
+      65 +            </a>                                               
+      66 +          ))}                                                  
+      67          </nav>
+      68  
+      69          <div className="flex items-center gap-2">
+      70 +          {/* ⌘K hint — decorative, mirrors the palette showcas
+         +e further down */}                                             
+      71 +          <div className="hidden items-center gap-1.5 rounded-m
+         +d border border-border/50 bg-graphite/40 px-2 py-1 desktop:flex
+         +">                                                             
+      72 +            <kbd className="font-mono text-[10px] text-muted-fo
+         +reground">⌘K</kbd>                                             
+      73 +            <span className="text-[11px] text-muted-foreground"
+         +>Search</span>                                                 
+      74 +          </div>                                               
+      75 +                                                               
+      76            {user ? (
+      77              <Link
+      78                href="/dashboard"
+
+● Write(src/features/landing/site-footer.tsx)
+  ⎿  Added 131 lines, removed 49 lines
+       1 +import Link from "next/link";                                  
+       2  import { PROVIDER_META } from "@/lib/nodes/registry";
+       3  
+       4 +/**                                                            
+       5 + * Site footer — agency-tier composition.                      
+       6 + *                                                             
+       7 + * Five columns: wordmark + tagline (2 wide), Product, Provider
+         +s, Resources,                                                  
+       8 + * Legal. Followed by a full-bleed footer wordmark reveal (big 
+         +display type                                                   
+       9 + * that fills the strip below).                                
+      10 + */                                                            
+      11 +                                                               
+      12 +const PRODUCT = [                                              
+      13 +  { label: "Playground", href: "#playground" },                
+      14 +  { label: "Features", href: "#bento" },                       
+      15 +  { label: "Pricing", href: "#pricing" },                      
+      16 +  { label: "Changelog", href: "/changelog" },                  
+      17 +];                                                             
+      18 +                                                               
+      19 +const RESOURCES = [                                            
+      20 +  { label: "Docs", href: "/docs" },                            
+      21 +  { label: "API", href: "/docs/api" },                         
+      22 +  { label: "Blog", href: "/blog" },                            
+      23 +  { label: "Status", href: "https://status.blackcloud.io" },   
+      24 +];                                                             
+      25 +                                                               
+      26 +const LEGAL = [                                                
+      27 +  { label: "Terms", href: "/terms" },                          
+      28 +  { label: "Privacy", href: "/privacy" },                      
+      29 +  { label: "DPA", href: "/dpa" },                              
+      30 +];                                                             
+      31 +                                                               
+      32  export function SiteFooter() {
+      33    return (
+       5 -    <footer className="border-t border-border/60 bg-background"
+         ->                                                              
+       6 -      <div className="mx-auto grid w-full max-w-6xl gap-10 px-6
+         - py-16 tablet:grid-cols-4 tablet:px-10">                       
+       7 -        <div className="col-span-2 flex flex-col gap-4">       
+      34 +    <footer className="relative border-t border-border/60 bg-ba
+         +ckground">                                                     
+      35 +      <div className="mx-auto grid w-full max-w-6xl gap-10 px-6
+         + py-16 tablet:grid-cols-6 tablet:px-10 tablet:py-20">          
+      36 +        <div className="tablet:col-span-2 flex flex-col gap-4">
+      37            <div className="flex items-center gap-2 font-display 
+          text-lg font-semibold tracking-tight">
+      38              <span aria-hidden className="text-xl">⚫</span>
+      39              BlackCloud
+     ...
+       42              Multi-cloud architecture, reimagined. Design, vali
+           date, and export
+       43              infrastructure diagrams — right in the browser.
+       44            </p>
+       16 -        </div>                                                
+       45  
+       18 -        <div>                                                 
+       19 -          <h3 className="mb-3 text-xs uppercase tracking-wides
+          -t text-muted-foreground">                                     
+       20 -            Providers                                         
+       21 -          </h3>                                               
+       22 -          <ul className="space-y-1.5 text-sm">                
+       23 -            {(["aws", "azure", "gcp"] as const).map((p) => {  
+       24 -              const meta = PROVIDER_META[p];                  
+       25 -              return (                                        
+       26 -                <li key={p} className="flex items-center gap-2
+          -">                                                            
+       27 -                  <span                                       
+       28 -                    className="h-1.5 w-1.5 rounded-full"      
+       29 -                    style={{ backgroundColor: meta.accent }}  
+       30 -                  />                                          
+       31 -                  {meta.label}                                
+       32 -                  <span className="ml-auto text-xs text-muted-
+          -foreground">                                                  
+       33 -                    {meta.count}                              
+       34 -                  </span>                                     
+       35 -                </li>                                         
+       36 -              );                                              
+       37 -            })}                                               
+       38 -          </ul>                                               
+       46 +          {/* Social row — placeholder handles; icons are inli
+          +ne SVG so no extra dep */}                                    
+       47 +          <div className="mt-4 flex items-center gap-3">      
+       48 +            <FooterSocial href="https://github.com/blackcloud"
+          + label="GitHub">                                              
+       49 +              <path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.
+          +22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.15-1.11-1.45-
+          +1.11-1.45-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.
+          +53 2.35 1.09 2.93.84.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11
+          +-4.55-4.93 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0
+          + .84-.27 2.75 1.02a9.6 9.6 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-
+          +1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.83-2.34
+          + 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 
+          +10 0 0 0 12 2Z" />                                            
+       50 +            </FooterSocial>                                   
+       51 +            <FooterSocial href="https://x.com/blackcloud" labe
+          +l="X">                                                        
+       52 +              <path d="M18.244 2H21l-6.53 7.46L22 22h-6.844l-4
+          +.83-6.315L4.6 22H1.844l6.985-7.98L2 2h6.984l4.362 5.77L18.244 
+          +2Zm-1.2 18.35h1.72L7.03 3.55H5.19l11.855 16.8Z" />            
+       53 +            </FooterSocial>                                   
+       54 +            <FooterSocial href="https://linkedin.com/company/b
+          +lackcloud" label="LinkedIn">                                  
+       55 +              <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88
+          + 0 3.5 1.13 1 2.5 1s2.48 1.12 2.48 2.5ZM.24 8h4.51v14H.24V8Zm7
+          +.7 0h4.33v2.12h.07c.6-1.14 2.08-2.35 4.29-2.35 4.6 0 5.44 3.03
+          + 5.44 6.97V22h-4.51v-6.34c0-1.51-.03-3.45-2.1-3.45-2.1 0-2.43 
+          +1.65-2.43 3.35V22H7.94V8Z" />                                 
+       56 +            </FooterSocial>                                   
+       57 +          </div>                                              
+       58          </div>
+       59  
+       41 -        <div>                                                 
+       42 -          <h3 className="mb-3 text-xs uppercase tracking-wides
+          -t text-muted-foreground">                                     
+       43 -            Product                                           
+       44 -          </h3>                                               
+       45 -          <ul className="space-y-1.5 text-sm">                
+       46 -            <li>                                              
+       47 -              <a                                              
+       48 -                href="/signup"                                
+       49 -                className="text-muted-foreground transition-co
+          -lors hover:text-foreground"                                   
+       50 -              >                                               
+       51 -                Get started                                   
+       52 -              </a>                                            
+       53 -            </li>                                             
+       54 -            <li>                                              
+       55 -              <a                                              
+       56 -                href="/login"                                 
+       57 -                className="text-muted-foreground transition-co
+          -lors hover:text-foreground"                                   
+       58 -              >                                               
+       59 -                Sign in                                       
+       60 -              </a>                                            
+       61 -            </li>                                             
+       62 -          </ul>                                               
+       63 -        </div>                                                
+       60 +        <FooterCol title="Product" items={PRODUCT} />         
+       61 +        <FooterCol                                            
+       62 +          title="Providers"                                   
+       63 +          items={(["aws", "azure", "gcp"] as const).map((p) =>
+          + ({                                                           
+       64 +            label: PROVIDER_META[p].label,                    
+       65 +            href: `#providers`,                               
+       66 +            meta: `${PROVIDER_META[p].count}`,                
+       67 +            accent: PROVIDER_META[p].accent,                  
+       68 +          }))}                                                
+       69 +        />                                                    
+       70 +        <FooterCol title="Resources" items={RESOURCES} />     
+       71 +        <FooterCol title="Legal" items={LEGAL} />             
+       72        </div>
+       73 +                                                              
+       74        <div className="border-t border-border/40">
+       75          <div className="mx-auto flex w-full max-w-6xl flex-col
+            items-center justify-between gap-2 px-6 py-6 text-xs text-mut
+           ed-foreground tablet:flex-row tablet:px-10">
+       76            <p>© BlackCloud · Multi-cloud architecture, reimagin
+           ed.</p>
+       68 -          <p>Built with Next.js · Three.js · Motion</p>       
+       77 +          <p>Built with Next.js 16 · React 19 · Three.js · Mot
+          +ion</p>                                                       
+       78          </div>
+       79        </div>
+       80 +                                                              
+       81 +      {/* Big wordmark strip — used as a signature at the end 
+          +of the page. */}                                              
+       82 +      <div                                                    
+       83 +        aria-hidden                                           
+       84 +        className="pointer-events-none select-none overflow-hi
+          +dden border-t border-border/30 py-8"                          
+       85 +      >                                                       
+       86 +        <div className="text-center font-display text-[18vw] f
+          +ont-semibold leading-none tracking-[-0.05em] text-transparent 
+          +[-webkit-text-stroke:1px_rgba(255,255,255,0.08)] tablet:text-[
+          +14vw]">                                                       
+       87 +          BLACKCLOUD                                          
+       88 +        </div>                                                
+       89 +      </div>                                                  
+       90      </footer>
+       91    );
+       92  }
+       93 +                                                              
+       94 +function FooterCol({                                          
+       95 +  title,                                                      
+       96 +  items,                                                      
+       97 +}: {                                                          
+       98 +  title: string;                                              
+       99 +  items: Array<{ label: string; href: string; meta?: string; a
+          +ccent?: string }>;                                            
+      100 +}) {                                                          
+      101 +  return (                                                    
+      102 +    <div>                                                     
+      103 +      <h3 className="mb-3 text-xs uppercase tracking-widest te
+          +xt-muted-foreground">                                         
+      104 +        {title}                                               
+      105 +      </h3>                                                   
+      106 +      <ul className="space-y-1.5 text-sm">                    
+      107 +        {items.map((it) => (                                  
+      108 +          <li key={it.label}>                                 
+      109 +            <Link                                             
+      110 +              href={it.href}                                  
+      111 +              className="flex items-center gap-2 text-muted-fo
+          +reground transition-colors hover:text-foreground"             
+      112 +            >                                                 
+      113 +              {it.accent && (                                 
+      114 +                <span                                         
+      115 +                  className="h-1.5 w-1.5 rounded-full"        
+      116 +                  style={{ backgroundColor: it.accent }}      
+      117 +                />                                            
+      118 +              )}                                              
+      119 +              {it.label}                                      
+      120 +              {it.meta && (                                   
+      121 +                <span className="ml-auto text-xs text-muted-fo
+          +reground/70">                                                 
+      122 +                  {it.meta}                                   
+      123 +                </span>                                       
+      124 +              )}                                              
+      125 +            </Link>                                           
+      126 +          </li>                                               
+      127 +        ))}                                                   
+      128 +      </ul>                                                   
+      129 +    </div>                                                    
+      130 +  );                                                          
+      131 +}                                                             
+      132 +                                                              
+      133 +function FooterSocial({                                       
+      134 +  href,                                                       
+      135 +  label,                                                      
+      136 +  children,                                                   
+      137 +}: {                                                          
+      138 +  href: string;                                               
+      139 +  label: string;                                              
+      140 +  children: React.ReactNode;                                  
+      141 +}) {                                                          
+      142 +  return (                                                    
+      143 +    <a                                                        
+      144 +      href={href}                                             
+      145 +      aria-label={label}                                      
+      146 +      target="_blank"                                         
+      147 +      rel="noopener noreferrer"                               
+      148 +      className="flex h-8 w-8 items-center justify-center roun
+          +ded-md border border-border/50 bg-graphite/30 text-muted-foreg
+          +round transition-colors hover:border-border hover:text-foregro
+          +und"                                                          
+      149 +    >                                                         
+      150 +      <svg width="14" height="14" viewBox="0 0 24 24" fill="cu
+          +rrentColor">                                                  
+      151 +        {children}                                            
+      152 +      </svg>                                                  
+      153 +    </a>                                                      
+      154 +  );                                                          
+      155 +}                                                             
+
+● Now wire everything into page.tsx. Adding section IDs so the scroll-progress
+  rail can track them, and composing the 10 acts in cinematic order.
+
+● Write(src/app/page.tsx)
+  ⎿  Error writing file
+● Right, page.tsx was only shown via Bash earlier, not Read. Reading first.
+
+  Read 1 file (ctrl+o to expand)
+
+● Write(src/app/page.tsx)
+  ⎿  Added 101 lines, removed 56 lines
+       4  import { Aurora } from "@/features/landing/aurora";
+       5  import { Hero } from "@/features/landing/hero";
+       6  import { ProviderMarquee } from "@/features/landing/marquee";
+       7 -import { Stats } from "@/features/landing/stats";              
+       7 +import { BentoGrid } from "@/features/landing/bento";          
+       8  import { PlaygroundPreview } from "@/features/landing/playgroun
+          d-preview";
+       9 +import { CommandShowcase } from "@/features/landing/command-sho
+         +wcase";                                                        
+      10  import { Chapter } from "@/features/landing/chapter";
+      11  import {
+      12    DesignVisual,
+     ...
+      14    ExportVisual,
+      15    ProvidersVisual,
+      16  } from "@/features/landing/chapter-visuals";
+      17 +import { Stats } from "@/features/landing/stats";              
+      18 +import { CodeExport } from "@/features/landing/code-export";   
+      19 +import { Testimonials } from "@/features/landing/testimonials";
+      20 +import { Pricing } from "@/features/landing/pricing";          
+      21 +import { FAQ } from "@/features/landing/faq";                  
+      22  import { FinalCTA } from "@/features/landing/final-cta";
+      23  import { SiteFooter } from "@/features/landing/site-footer";
+      24 +import { ScrollProgress } from "@/features/landing/scroll-progr
+         +ess";                                                          
+      25  
+      26  /**
+      27   * Landing page — the immersive centerpiece.
+      28   *
+      22 - * Composition — award-tier reference stack in the visible orde
+         -r:                                                             
+      23 - *   Aurora        (fixed background weather layer)            
+      24 - *   SmoothScroll  (Lenis lerp, no visual — must mount above ev
+         -erything)                                                      
+      25 - *   CustomCursor  (with magnetic pull to `[data-magnetic]`)   
+      26 - *   SiteHeader    (condensing floating header)                
+      29 + * Ten-act composition:                                        
+      30   *
+      28 - *   Act I    — Hero: WebGL universe + display headline + magne
+         -tic CTAs                                                       
+      29 - *   Act II   — ProviderMarquee: infinite dual-row of the 23 se
+         -rvices                                                         
+      30 - *   Act III  — Startframe: choreographed playground preview   
+      31 - *   Act IV   — Chapters × 4 with parallax + pointer-tilt + spo
+         -tlight                                                         
+      32 - *   Act V    — Stats: count-up credibility beat               
+      33 - *   Act VI   — Closing CTA with conic aurora                  
+      34 - *   Footer   — refined agency-tier                            
+      31 + *   I    Hero          WebGL universe · display headline · CTA
+         +s · ticker                                                     
+      32 + *   II   Marquee       23-service dual-row infinite ribbon    
+      33 + *   III  Bento         6-tile asymmetric feature grid         
+      34 + *   IV   Playground    live scripted three-tier canvas demo   
+      35 + *   V    Command       ⌘K palette in motion                   
+      36 + *   VI   Chapters × 4  parallax + tilt + spotlight (design/val
+         +idate/export/providers)                                        
+      37 + *   VII  Code Export   tabbed Terraform / CFN / JSON snippet  
+      38 + *   VIII Testimonials  pull-quotes + field-note beat          
+      39 + *   IX   Pricing       Free / Pro (highlighted) / Team        
+      40 + *   X    FAQ           native <details> accordion             
+      41 + *   —    Final CTA     conic aurora closer                    
+      42 + *   —    Footer        columns + full-bleed wordmark          
+      43   *
+      36 - * All motion gates on `prefers-reduced-motion` in the individu
+         -al components.                                                 
+      37 - * References: Lando Norris, Igloo Inc, Lusion, Resn, Active Th
+         -eory,                                                          
+      38 - * Apple Vision Pro, Stripe Sessions.                          
+      44 + * Global overlays: Aurora (fixed weather layer), SmoothScroll 
+         +(Lenis lerp),                                                  
+      45 + * CustomCursor (magnetic follow), ScrollProgress (top bar + do
+         +t rail),                                                       
+      46 + * SiteHeader (condensing on scroll).                          
+      47 + *                                                             
+      48 + * Motion gates on `prefers-reduced-motion` at the component le
+         +vel. Sections                                                  
+      49 + * carry ids so the ScrollProgress rail observes them and highl
+         +ights the                                                      
+      50 + * active act.                                                 
+      51   */
+      52  export default function HomePage() {
+      53    return (
+     ...
+       55        <SmoothScroll />
+       56        <Aurora />
+       57        <CustomCursor />
+       58 +      <ScrollProgress />                                      
+       59        <SiteHeader />
+       60  
+       61        <main className="relative flex flex-1 flex-col">
+       49 -        <Hero />                                              
+       62 +        <div id="hero">                                       
+       63 +          <Hero />                                            
+       64 +        </div>                                                
+       65  
+       51 -        <ProviderMarquee />                                   
+       66 +        <div id="marquee">                                    
+       67 +          <ProviderMarquee />                                 
+       68 +        </div>                                                
+       69  
+       53 -        <PlaygroundPreview />                                 
+       70 +        <div id="bento">                                      
+       71 +          <BentoGrid />                                       
+       72 +        </div>                                                
+       73  
+       55 -        <div id="design">                                     
+       56 -          <Chapter                                            
+       57 -            eyebrow="01 · Design"                             
+       58 -            headline="Every service, one canvas."             
+       59 -            body="AWS, Azure, and Google Cloud share one drag-
+          -and-drop workspace. Snap to grid, pan the infinite canvas, and
+          - let the architecture grow."                                  
+       60 -            visual={<DesignVisual />}                         
+       61 -            align="left"                                      
+       62 -            accent="#8B5CF6"                                  
+       63 -          />                                                  
+       74 +        <div id="playground">                                 
+       75 +          <PlaygroundPreview />                               
+       76          </div>
+       77  
+       66 -        <div id="validate">                                   
+       67 -          <Chapter                                            
+       68 -            eyebrow="02 · Validate"                           
+       69 -            headline="Mistakes catch themselves."             
+       70 -            body="Connect an ALB straight to RDS? BlackCloud f
+          -lags it the instant you draw the edge — and proposes the right
+          - path. No documentation trawling. No 3am pages."              
+       71 -            visual={<ValidateVisual />}                       
+       72 -            align="right"                                     
+       73 -            accent="#22C55E"                                  
+       74 -          />                                                  
+       78 +        <div id="command">                                    
+       79 +          <CommandShowcase />                                 
+       80          </div>
+       81  
+       77 -        <Stats />                                             
+       82 +        <div id="chapters">                                   
+       83 +          <div id="design">                                   
+       84 +            <Chapter                                          
+       85 +              eyebrow="01 · Design"                           
+       86 +              headline="Every service, one canvas."           
+       87 +              body="AWS, Azure, and Google Cloud share one dra
+          +g-and-drop workspace. Snap to grid, pan the infinite canvas, a
+          +nd let the architecture grow."                                
+       88 +              visual={<DesignVisual />}                       
+       89 +              align="left"                                    
+       90 +              accent="#8B5CF6"                                
+       91 +            />                                                
+       92 +          </div>                                              
+       93  
+       79 -        <div id="export">                                     
+       80 -          <Chapter                                            
+       81 -            eyebrow="03 · Export"                             
+       82 -            headline="Ship the diagram. Keep the source."     
+       83 -            body="Export to PNG, SVG, or JSON. The graph you d
+          -rew is the graph you keep — replay it, hand it off, or extend 
+          -it later."                                                    
+       84 -            visual={<ExportVisual />}                         
+       85 -            align="left"                                      
+       86 -            accent="#4285F4"                                  
+       87 -          />                                                  
+       94 +          <div id="validate">                                 
+       95 +            <Chapter                                          
+       96 +              eyebrow="02 · Validate"                         
+       97 +              headline="Mistakes catch themselves."           
+       98 +              body="Connect an ALB straight to RDS? BlackCloud
+          + flags it the instant you draw the edge — and proposes the rig
+          +ht path. No documentation trawling. No 3am pages."            
+       99 +              visual={<ValidateVisual />}                     
+      100 +              align="right"                                   
+      101 +              accent="#22C55E"                                
+      102 +            />                                                
+      103 +          </div>                                              
+      104 +                                                              
+      105 +          <Stats />                                           
+      106 +                                                              
+      107 +          <div id="export">                                   
+      108 +            <Chapter                                          
+      109 +              eyebrow="03 · Export"                           
+      110 +              headline="Ship the diagram. Keep the source."   
+      111 +              body="Export to PNG, SVG, or JSON. The graph you
+          + drew is the graph you keep — replay it, hand it off, or exten
+          +d it later."                                                  
+      112 +              visual={<ExportVisual />}                       
+      113 +              align="left"                                    
+      114 +              accent="#4285F4"                                
+      115 +            />                                                
+      116 +          </div>                                              
+      117 +                                                              
+      118 +          <div id="providers">                                
+      119 +            <Chapter                                          
+      120 +              eyebrow="04 · Multi-cloud"                      
+      121 +              headline="Fluent in every cloud."               
+      122 +              body="23 services across three providers at laun
+          +ch. Terraform, Cloud Run, ECS, GKE — all speak the same visual
+          + language, so your team does too."                            
+      123 +              visual={<ProvidersVisual />}                    
+      124 +              align="right"                                   
+      125 +              accent="#FF9900"                                
+      126 +            />                                                
+      127 +          </div>                                              
+      128          </div>
+      129  
+       90 -        <div id="providers">                                  
+       91 -          <Chapter                                            
+       92 -            eyebrow="04 · Multi-cloud"                        
+       93 -            headline="Fluent in every cloud."                 
+       94 -            body="23 services across three providers at launch
+          -. Terraform, Cloud Run, ECS, GKE — all speak the same visual l
+          -anguage, so your team does too."                              
+       95 -            visual={<ProvidersVisual />}                      
+       96 -            align="right"                                     
+       97 -            accent="#FF9900"                                  
+       98 -          />                                                  
+      130 +        <div id="code">                                       
+      131 +          <CodeExport />                                      
+      132          </div>
+      133  
+      134 +        <div id="testimonials">                               
+      135 +          <Testimonials />                                    
+      136 +        </div>                                                
+      137 +                                                              
+      138 +        <div id="pricing">                                    
+      139 +          <Pricing />                                         
+      140 +        </div>                                                
+      141 +                                                              
+      142 +        <div id="faq">                                        
+      143 +          <FAQ />                                             
+      144 +        </div>                                                
+      145 +                                                              
+      146          <FinalCTA />
+      147        </main>
+      148  
+
+  Ran 1 shell command (ctrl+o to expand)
+
+● Typecheck came back clean (no output = 0 errors). Running lint as the final
+  check.
+
+  Ran 1 shell command (ctrl+o to expand)
+
+● React 19's new react-hooks/set-state-in-effect rule — the same one the
+  existing hero-scene.tsx handles via useSyncExternalStore. In our case the
+  reduced-motion branch just needs to render the seeded value from initial
+  state; no effect needed. Fixing.
+
+● Update(src/features/landing/command-showcase.tsx)
+  ⎿  Added 5 lines, removed 5 lines
+      35    const reduce = useReducedMotion();
+      36  
+      37    const [qIndex, setQIndex] = useState(0);
+      38 -  const [typed, setTyped] = useState("");                      
+      38 +  // Seed with the first query when RM is on so the results pan
+         +el renders a                                                   
+      39 +  // populated list at rest. When motion is allowed, start empt
+         +y so the                                                       
+      40 +  // typing animation reads from a clean input.                
+      41 +  const [typed, setTyped] = useState(() => (reduce ? QUERIES[0]
+         + : ""));                                                       
+      42  
+      43    // Type one query, hold, wipe, next. Cancels cleanly on unmou
+          nt / out-of-view.
+      44    useEffect(() => {
+      42 -    if (!inView || reduce) {                                   
+      43 -      setTyped(QUERIES[0]);                                    
+      44 -      return;                                                  
+      45 -    }                                                          
+      45 +    if (!inView || reduce) return;                             
+      46      let cancelled = false;
+      47      let timer: ReturnType<typeof setTimeout>;
+      48  
+
+  Ran 1 shell command (ctrl+o to expand)
+
+● Both pass (empty output = 0 errors on both).
+
+● Done. Ten-act homepage overhaul, all typechecks + lint green.
+
+  What shipped
+
+  Act: I Hero
+  File: hero.tsx (rewrite)
+  What's new: 9.5rem display type, gradient sweep underline, corner viewport
+    frame, ⌘K hint, 4-cell provider ticker ribbon
+  ────────────────────────────────────────
+  Act: II Marquee
+  File: marquee.tsx (kept)
+  What's new: already strong — untouched
+  ────────────────────────────────────────
+  Act: III Bento
+  File: bento.tsx (new)
+  What's new: 6-tile asymmetric grid with 6 custom micro-visuals (SVG graph,
+  chat
+    mock, cost card, format badges, drag animation, provider strip)
+  ────────────────────────────────────────
+  Act: IV Playground
+  File: playground-preview.tsx (kept)
+  What's new: scripted three-tier canvas — untouched
+  ────────────────────────────────────────
+  Act: V Command
+  File: command-showcase.tsx (new)
+  What's new: live-typing ⌘K palette cycling 5 queries, filters real
+    NODE_REGISTRY, keyboard hint footer
+  ────────────────────────────────────────
+  Act: VI Chapters
+  File: chapter.tsx (kept)
+  What's new: 4 acts with parallax + tilt + spotlight
+  ────────────────────────────────────────
+  Act: VII Code
+  File: code-export.tsx (new)
+  What's new: tabbed HCL / YAML / JSON with line-by-line reveal, copy button,
+  tab
+    underline shared-layout
+  ────────────────────────────────────────
+  Act: VIII Testimonials
+  File: testimonials.tsx (new)
+  What's new: 3 pull-quotes with oversized quote glyph, initial-avatars,
+    provider-tinted accents
+  ────────────────────────────────────────
+  Act: IX Pricing
+  File: pricing.tsx (new)
+  What's new: 3 tiers, conic-border glow on the Pro tier, checkmark features,
+    "free during beta" note
+  ────────────────────────────────────────
+  Act: X FAQ
+  File: faq.tsx (new)
+  What's new: 6 questions in native <details> with rotating chevron + motion
+    enhancement
+  ────────────────────────────────────────
+  Act: Rail
+  File: scroll-progress.tsx (new)
+  What's new: top gradient scroll bar + right-edge 10-dot section indicator with
+
+    IntersectionObserver active state
+  ────────────────────────────────────────
+  Act: Header
+  File: site-header.tsx (rewrite)
+  What's new: 5-item nav, ⌘K badge, kept condensing behavior
+  ────────────────────────────────────────
+  Act: Footer
+  File: site-footer.tsx (rewrite)
+  What's new: 6-col grid, social row, full-bleed BLACKCLOUD stroke-only wordmark
+
+    strip
+  ────────────────────────────────────────
+  Act: Page
+  File: page.tsx (rewrite)
+  What's new: wires all 10 acts + section ids so the rail can observe them
+
+  Zero new dependencies. Everything uses libraries already installed (motion,
+  next/image, next/link, existing NODE_REGISTRY, existing motion primitives —
+  Reveal / SplitText / MagneticButton / TiltCard). The cmdk and lenis and three
+  deps stay in play; nothing added to package.json.
+
+  ★ Insight ─────────────────────────────────────
+  - Every new mock renders from NODE_REGISTRY — the command palette actually
+  filters 23 real services by tags/category/provider, so it stays truthful if
+  you add a 24th node tomorrow. One data source, many faces.
+  - set-state-in-effect (React 19's new rule) bit the command-palette component
+  the same way it bit hero-scene.tsx originally — the fix is always to move the
+  initial value into useState's initializer rather than "correct" it in an
+  effect. The rule is a good forcing function for cleaner render logic.
+  - The scroll-progress dots use IntersectionObserver with a lopsided
+  rootMargin: "-30% 0px -60% 0px" — this narrows the "active section" band to
+  roughly the upper-middle third of the viewport, matching where the eye
+  actually lands during scroll. A symmetric margin causes the indicator to
+  flicker between two sections at scroll speed.
+  ─────────────────────────────────────────────────
+
+  Run npm run dev and it's live at /.
+
+✻ Churned for 9m 23s
+
+❯ /export                                                                       
+  ⎿  Conversation exported to: /home/akash-singh/Black-Cloud-1/frontend/2026-07-
+     14-110144-go-beyond-the-level-add-relvant-skills-and-apply.txt
+
+❯ this is just 20% of what's in my vision go beyond this research more on the   
+  website and the components they provide use everthing, should give me feels   
+  like another universe like i am in AAAA Grade Realstic RTX HEAVY Game         
+
+● Got it. Going hard — WebGL-heavy, immersive, "another universe" energy. I'll
+  add multiple new heavy visual acts. This is going to be a big push.
+  Read 1 file (ctrl+o to expand)
+
+● Good — existing R3F pattern is solid. Building the WebGL globe next as a new
+  dynamic-imported scene so the initial bundle stays sane.
+
+● Write(src/features/landing/scene/globe.tsx)
+  ⎿  Wrote 205 lines to src/features/landing/scene/globe.tsx
+       1 "use client";
+       2 
+       3 import { useMemo, useRef } from "react";
+       4 import { Canvas, useFrame } from "@react-three/fiber";
+       5 import * as THREE from "three";
+         ry";
+       7 
+       8 /**
+       9  * WebGL globe with orbiting service nodes.
+      10  *
+     … +213 lines (ctrl+o to expand)
+
+● Now the section wrapper that lazy-loads it.
+
+● Write(src/features/landing/globe-section.tsx)
+  ⎿  Wrote 133 lines to src/features/landing/globe-section.tsx
+       1 "use client";
+       2 
+       3 import dynamic from "next/dynamic";
+       4 import { useSyncExternalStore } from "react";
+       5 import { motion } from "motion/react";
+       6 import { Reveal } from "@/components/motion/reveal";
+       7 import { PROVIDER_META } from "@/lib/nodes/registry";
+       8 
+       9 const GlobeScene = dynamic(
+      10   () => import("./scene/globe").then((m) => m.GlobeScene),
+     … +145 lines (ctrl+o to expand)
+
+● Custom GLSL nebula shader — full-screen fragment plane with animated fbm.
+
+● Write(src/features/landing/scene/nebula.tsx)
+  ⎿  Wrote 124 lines to src/features/landing/scene/nebula.tsx
+       1 "use client";
+       2 
+       3 import { useMemo, useRef } from "react";
+       4 import { Canvas, useFrame } from "@react-three/fiber";
+       5 import * as THREE from "three";
+       7 /**
+       8  * Nebula shader — a full-screen animated backdrop.
+       9  *
+      10  * Uses a custom GLSL fragment (fBm noise → color warp) applied 
+         to a plane
+     … +123 lines (ctrl+o to expand)
+
+● 3D architecture scene — nodes in Z-space, mouse-tracked camera, connecting
+  edges.
+
+● Write(src/features/landing/scene/architecture.tsx)
+  ⎿  Wrote 195 lines to src/features/landing/scene/architecture.tsx
+       1 "use client";
+       2 
+       3 import { useEffect, useMemo, useRef } from "react";
+       4 import { Canvas, useFrame, useThree } from "@react-three/fiber";
+       5 import { Text, Billboard } from "@react-three/drei";
+       7 import { NODE_REGISTRY, PROVIDER_META } from "@/lib/nodes/regist
+         ry";
+       8 
+       9 /**
+      10  * Architecture 3D scene — "walk through the graph".
+     … +203 lines (ctrl+o to expand)
+
+● Write(src/features/landing/architecture-3d.tsx)
+  ⎿  Wrote 92 lines to src/features/landing/architecture-3d.tsx
+       1 "use client";
+       2 
+       3 import dynamic from "next/dynamic";
+       4 import { useSyncExternalStore } from "react";
+       5 import { Reveal } from "@/components/motion/reveal";
+       7 const ArchitectureScene = dynamic(
+       8   () => import("./scene/architecture").then((m) => m.Architectur
+         eScene),
+       9   { ssr: false, loading: () => null },
+      10 );
+     … +95 lines (ctrl+o to expand)
+
+● Horizontal scroll gallery — pin section, translate horizontal panel with
+  scroll.
+
+● Write(src/features/landing/horizontal-gallery.tsx)
+  ⎿  Wrote 167 lines to src/features/landing/horizontal-gallery.tsx
+       1 "use client";
+       2 
+       4 import { motion, useScroll, useTransform, useReducedMotion } fro
+         m "motion/react";
+       5 import { Reveal } from "@/components/motion/reveal";
+       7 /**
+       8  * Horizontal scroll gallery — the Awwwards "pin & pan" signatur
+         e.
+      10  * Outer <section> is 4× viewport tall. Inner sticky container h
+         olds a
+     … +186 lines (ctrl+o to expand)
+● Interactive stack builder — real state, real interactivity.
+
+● Write(src/features/landing/stack-builder.tsx)
+  ⎿  Wrote 266 lines to src/features/landing/stack-builder.tsx
+       1 "use client";
+       2 
+       3 import Image from "next/image";
+       4 import { useState } from "react";
+       5 import { motion, AnimatePresence } from "motion/react";
+       6 import { Reveal } from "@/components/motion/reveal";
+       7 import { NODE_BY_ID } from "@/lib/nodes/registry";
+       8 
+       9 /**
+      10  * Stack Builder — Act "your stack".
+     … +303 lines (ctrl+o to expand)
+
+● Scroll-driven timeline — sticky left rail, right panel swaps synced to scroll.
+
+● Write(src/features/landing/timeline.tsx)
+  ⎿  Wrote 169 lines to src/features/landing/timeline.tsx
+       1 "use client";
+       2 
+       3 import { useRef } from "react";
+       4 import { motion, useScroll, useTransform } from "motion/react";
+       5 import { Reveal } from "@/components/motion/reveal";
+       7 /**
+       8  * Timeline — scroll-driven "how it works" act.
+       9  *
+      10  * Sticky left rail with 5 numbered steps and a progress bar. Ri
+         ght column
+     … +188 lines (ctrl+o to expand)
+
+● 3D flip cards + cost calculator + integrations constellation + trust +
+  spotlight + case studies. Batching these — they're each self-contained.
+
+● Write(src/features/landing/flip-cards.tsx)
+  ⎿  Wrote 115 lines to src/features/landing/flip-cards.tsx
+       1 "use client";
+       2 
+       3 import { motion } from "motion/react";
+       4 import { Reveal } from "@/components/motion/reveal";
+       5 
+       7  * 3D flip cards — hover reveals the back face.
+       8  *
+       9  * Uses CSS `transform-style: preserve-3d` and `rotateY(180deg)`
+         . GPU only,
+      10  * no JS. `perspective` on the container gives the depth cue.
+     … +125 lines (ctrl+o to expand)
+
+● Write(src/features/landing/cost-calculator.tsx)
+  ⎿  Wrote 182 lines to src/features/landing/cost-calculator.tsx
+       1 "use client";
+       2 
+       3 import { useMemo, useState } from "react";
+       4 import { motion } from "motion/react";
+       5 import { Reveal } from "@/components/motion/reveal";
+       7 /**
+       8  * Interactive cost calculator — a real widget.
+       9  *
+      10  * Sliders for instances / storage / traffic. Total re-computes 
+         on every
+     … +193 lines (ctrl+o to expand)
+
+● Write(src/features/landing/integrations.tsx)
+  ⎿  Wrote 134 lines to src/features/landing/integrations.tsx
+       1 "use client";
+       2 
+       4 import { motion } from "motion/react";
+       5 import { Reveal } from "@/components/motion/reveal";
+       6 
+       8  * Integrations constellation — 24 tool tiles arranged on two co
+         ncentric
+       9  * rings around a central BlackCloud node. Hover any tile → a li
+      10  * the center, showing the connection. Everything rotates slowly
+         .
+     … +151 lines (ctrl+o to expand)
+
+● Write(src/features/landing/trust.tsx)
+  ⎿  Wrote 123 lines to src/features/landing/trust.tsx
+       1 "use client";
+       2 
+       3 import { motion } from "motion/react";
+       5 
+       6 /**
+       7  * Trust — enterprise compliance / security beat.
+       8  *
+       9  * Six badge tiles in a grid. Hover glows the border with the ba
+      10  * color. Each tile also shows a short "what it means to you" li
+         ne, not just
+     … +135 lines (ctrl+o to expand)
+
+● Write(src/features/landing/spotlight-overlay.tsx)
+  ⎿  Wrote 58 lines to src/features/landing/spotlight-overlay.tsx
+       1 "use client";
+       2 
+       4 
+       5 /**
+       6  * Global cursor spotlight — subtle mood layer.
+       8  * A fixed radial gradient that follows the pointer with a raf-d
+         riven
+       9  * lerp. Sits above the page background but below content (point
+      10  * none), so it's decorative only. Uses `mix-blend-screen` so it
+          warms the
+     … +58 lines (ctrl+o to expand)
+
+● Write(src/features/landing/case-studies.tsx)
+  ⎿  Wrote 155 lines to src/features/landing/case-studies.tsx
+       1 "use client";
+       2 
+       3 import { motion } from "motion/react";
+       5 
+       6 /**
+       7  * Case studies — three long-form cards.
+       8  *
+       9  * Bigger commitment than the pull-quote testimonials. Each card
+      10  * headline metric, a mini architecture snapshot (SVG), and a pa
+         ragraph.
+     … +172 lines (ctrl+o to expand)
+● Now the master composition. Reading current page + scroll-progress rail so I
+  stay accurate on IDs.
+
+  Read 2 files (ctrl+o to expand)
+
+● Write(src/app/page.tsx)
+  ⎿  Added 83 lines, removed 20 lines
+       2  import { SmoothScroll } from "@/components/motion/smooth-scroll
+          ";
+       3  import { SiteHeader } from "@/features/landing/site-header";
+       4  import { Aurora } from "@/features/landing/aurora";
+       5 +import { SpotlightOverlay } from "@/features/landing/spotlight-
+         +overlay";                                                      
+       6  import { Hero } from "@/features/landing/hero";
+       7 +import { GlobeSection } from "@/features/landing/globe-section"
+         +;                                                              
+       8  import { ProviderMarquee } from "@/features/landing/marquee";
+       9  import { BentoGrid } from "@/features/landing/bento";
+      10 +import { Architecture3D } from "@/features/landing/architecture
+         +-3d";                                                          
+      11  import { PlaygroundPreview } from "@/features/landing/playgroun
+          d-preview";
+      12  import { CommandShowcase } from "@/features/landing/command-sho
+          wcase";
+      13 +import { HorizontalGallery } from "@/features/landing/horizonta
+         +l-gallery";                                                    
+      14  import { Chapter } from "@/features/landing/chapter";
+      15  import {
+      16    DesignVisual,
+     ...
+      20  } from "@/features/landing/chapter-visuals";
+      21  import { Stats } from "@/features/landing/stats";
+      22  import { CodeExport } from "@/features/landing/code-export";
+      23 +import { StackBuilder } from "@/features/landing/stack-builder"
+         +;                                                              
+      24 +import { Timeline } from "@/features/landing/timeline";        
+      25 +import { FlipCards } from "@/features/landing/flip-cards";     
+      26 +import { CostCalculator } from "@/features/landing/cost-calcula
+         +tor";                                                          
+      27 +import { Integrations } from "@/features/landing/integrations";
+      28 +import { Trust } from "@/features/landing/trust";              
+      29 +import { CaseStudies } from "@/features/landing/case-studies"; 
+      30  import { Testimonials } from "@/features/landing/testimonials";
+      31  import { Pricing } from "@/features/landing/pricing";
+      32  import { FAQ } from "@/features/landing/faq";
+     ...
+      35  import { ScrollProgress } from "@/features/landing/scroll-progr
+          ess";
+      36  
+      37  /**
+      27 - * Landing page — the immersive centerpiece.                   
+      38 + * Landing page — the immersive AAAA-grade centerpiece.        
+      39   *
+      29 - * Ten-act composition:                                        
+      40 + * Nineteen-act composition, three WebGL scenes, one custom GLS
+         +L nebula,                                                      
+      41 + * two scroll-choreographed pin sections, one real interactive 
+         +builder:                                                       
+      42   *
+      31 - *   I    Hero          WebGL universe · display headline · CTA
+         -s · ticker                                                     
+      32 - *   II   Marquee       23-service dual-row infinite ribbon    
+      33 - *   III  Bento         6-tile asymmetric feature grid         
+      34 - *   IV   Playground    live scripted three-tier canvas demo   
+      35 - *   V    Command       ⌘K palette in motion                   
+      36 - *   VI   Chapters × 4  parallax + tilt + spotlight (design/val
+         -idate/export/providers)                                        
+      37 - *   VII  Code Export   tabbed Terraform / CFN / JSON snippet  
+      38 - *   VIII Testimonials  pull-quotes + field-note beat          
+      39 - *   IX   Pricing       Free / Pro (highlighted) / Team        
+      40 - *   X    FAQ           native <details> accordion             
+      41 - *   —    Final CTA     conic aurora closer                    
+      42 - *   —    Footer        columns + full-bleed wordmark          
+      43 + *   I     Hero            hero-scene WebGL universe · big disp
+         +lay type                                                       
+      44 + *   II    Globe           R3F orbiting service constellation  
+      45 + *   III   Marquee         23-service dual-row infinite ribbon 
+      46 + *   IV    Bento           6-tile asymmetric feature grid      
+      47 + *   V     Architecture    R3F 3D chips + fbm nebula shader    
+      48 + *   VI    Playground      live scripted three-tier canvas demo
+      49 + *   VII   Command         ⌘K palette in motion                
+      50 + *   VIII  Horizontal      pin-scroll gallery of 5 panels      
+      51 + *   IX    Chapters × 4    parallax + tilt + spotlight         
+      52 + *   X     Code Export     tabbed Terraform / CFN / JSON snippe
+         +t                                                              
+      53 + *   XI    Stack Builder   real interactive assemble-your-stack
+         + canvas                                                        
+      54 + *   XII   Timeline        sticky rail 5-step how-it-works     
+      55 + *   XIII  Flip Cards      3D CSS flip-on-hover principle tiles
+      56 + *   XIV   Cost Calc       live sliders + total                
+      57 + *   XV    Integrations    24-tool constellation w/ hover conne
+         +ctions                                                         
+      58 + *   XVI   Trust           SOC 2 / GDPR / ISO / HIPAA / AES / S
+         +SO                                                             
+      59 + *   XVII  Case Studies    three long-form stories with metrics
+      60 + *   XVIII Testimonials    pull-quotes with oversized quote gly
+         +ph                                                             
+      61 + *   XIX   Pricing         Free / Pro (highlighted) / Team     
+      62 + *   XX    FAQ             native <details> accordion          
+      63 + *   —     Final CTA       conic aurora closer                 
+      64 + *   —     Footer          columns + full-bleed wordmark       
+      65   *
+      44 - * Global overlays: Aurora (fixed weather layer), SmoothScroll 
+         -(Lenis lerp),                                                  
+      45 - * CustomCursor (magnetic follow), ScrollProgress (top bar + do
+         -t rail),                                                       
+      46 - * SiteHeader (condensing on scroll).                          
+      66 + * Global overlays: Aurora (weather), SmoothScroll (Lenis lerp)
+         +,                                                              
+      67 + * CustomCursor (magnetic), SpotlightOverlay (cursor spotlight,
+         + screen blend),                                                
+      68 + * ScrollProgress (top bar + dot rail), SiteHeader (condensing)
+         +.                                                              
+      69   *
+      48 - * Motion gates on `prefers-reduced-motion` at the component le
+         -vel. Sections                                                  
+      49 - * carry ids so the ScrollProgress rail observes them and highl
+         -ights the                                                      
+      50 - * active act.                                                 
+      70 + * Every WebGL section dynamic-imports its Canvas so initial bu
+         +ndle stays                                                     
+      71 + * lean and LCP is not blocked by three.js. All motion gates on
+      72 + * prefers-reduced-motion at the component level.              
+      73   */
+      74  export default function HomePage() {
+      75    return (
+      76      <>
+      77        <SmoothScroll />
+      78        <Aurora />
+      79 +      <SpotlightOverlay />                                     
+      80        <CustomCursor />
+      81        <ScrollProgress />
+      82        <SiteHeader />
+     ...
+      86            <Hero />
+      87          </div>
+      88  
+      89 +        <div id="globe">                                       
+      90 +          <GlobeSection />                                     
+      91 +        </div>                                                 
+      92 +                                                               
+      93          <div id="marquee">
+      94            <ProviderMarquee />
+      95          </div>
+     ...
+       98            <BentoGrid />
+       99          </div>
+      100  
+      101 +        <div id="architecture">                               
+      102 +          <Architecture3D />                                  
+      103 +        </div>                                                
+      104 +                                                              
+      105          <div id="playground">
+      106            <PlaygroundPreview />
+      107          </div>
+     ...
+      110            <CommandShowcase />
+      111          </div>
+      112  
+      113 +        <div id="gallery">                                    
+      114 +          <HorizontalGallery />                               
+      115 +        </div>                                                
+      116 +                                                              
+      117          <div id="chapters">
+      118            <div id="design">
+      119              <Chapter
+     ...
+      166            <CodeExport />
+      167          </div>
+      168  
+      169 +        <div id="builder">                                    
+      170 +          <StackBuilder />                                    
+      171 +        </div>                                                
+      172 +                                                              
+      173 +        <div id="timeline">                                   
+      174 +          <Timeline />                                        
+      175 +        </div>                                                
+      176 +                                                              
+      177 +        <div id="principles">                                 
+      178 +          <FlipCards />                                       
+      179 +        </div>                                                
+      180 +                                                              
+      181 +        <div id="cost">                                       
+      182 +          <CostCalculator />                                  
+      183 +        </div>                                                
+      184 +                                                              
+      185 +        <div id="integrations">                               
+      186 +          <Integrations />                                    
+      187 +        </div>                                                
+      188 +                                                              
+      189 +        <div id="trust">                                      
+      190 +          <Trust />                                           
+      191 +        </div>                                                
+      192 +                                                              
+      193 +        <div id="cases">                                      
+      194 +          <CaseStudies />                                     
+      195 +        </div>                                                
+      196 +                                                              
+      197          <div id="testimonials">
+      198            <Testimonials />
+      199          </div>
+
+● Update(src/features/landing/scroll-progress.tsx)
+  ⎿  Added 9 lines, removed 2 lines
+      18  
+      19  const ACTS: { id: string; label: string }[] = [
+      20    { id: "hero", label: "Hero" },
+      21 -  { id: "marquee", label: "Providers" },                       
+      21 +  { id: "globe", label: "Globe" },                             
+      22    { id: "bento", label: "Features" },
+      23 +  { id: "architecture", label: "3D" },                         
+      24    { id: "playground", label: "Playground" },
+      25    { id: "command", label: "Command" },
+      26 +  { id: "gallery", label: "Gallery" },                         
+      27    { id: "chapters", label: "Chapters" },
+      28    { id: "code", label: "Export" },
+      27 -  { id: "testimonials", label: "Field notes" },                
+      29 +  { id: "builder", label: "Builder" },                         
+      30 +  { id: "timeline", label: "Steps" },                          
+      31 +  { id: "cost", label: "Cost" },                               
+      32 +  { id: "integrations", label: "Integrations" },               
+      33 +  { id: "trust", label: "Trust" },                             
+      34 +  { id: "cases", label: "Cases" },                             
+      35    { id: "pricing", label: "Pricing" },
+      36    { id: "faq", label: "FAQ" },
+      37  ];
+
+● Typecheck + lint the whole thing.
+
+  Ran 2 shell commands (ctrl+o to expand)
+
+● React 19's compiler rules — need to fix these. The camera.position writes need
+  to go through useThree reactively, Math.random needs a seeded PRNG, useMemo
+  needs inline fn, and the apostrophe needs escaping. Let me batch these.
+
+● Update(src/features/landing/scene/globe.tsx)
+  ⎿  Added 11 lines, removed 4 lines
+      121    );
+      122  }
+      123  
+      124 +// Deterministic hash — keeps sparkle placement stable across 
+          +renders                                                       
+      125 +// (React 19's `react-hooks/purity` rule bans Math.random() du
+          +ring render).                                                 
+      126 +function hash(i: number, salt: number) {                      
+      127 +  const x = Math.sin(i * 12.9898 + salt * 78.233) * 43758.5453
+          +;                                                             
+      128 +  return x - Math.floor(x);                                   
+      129 +}                                                             
+      130 +                                                              
+      131  function Sparkles({ count = 300 }: { count?: number }) {
+      132    const positions = useMemo(() => {
+      133      const arr = new Float32Array(count * 3);
+      134      for (let i = 0; i < count; i++) {
+      128 -      // Distribute on a large sphere shell                   
+      129 -      const r = 12 + Math.random() * 8;                       
+      130 -      const theta = Math.random() * Math.PI * 2;              
+      131 -      const phi = Math.acos(2 * Math.random() - 1);           
+      135 +      // Distribute on a large sphere shell, using a determini
+          +stic hash.                                                    
+      136 +      const r = 12 + hash(i, 1) * 8;                          
+      137 +      const theta = hash(i, 2) * Math.PI * 2;                 
+      138 +      const phi = Math.acos(2 * hash(i, 3) - 1);              
+      139        arr[i * 3] = r * Math.sin(phi) * Math.cos(theta);
+      140        arr[i * 3 + 1] = r * Math.sin(phi) * Math.sin(theta);
+      141        arr[i * 3 + 2] = r * Math.cos(phi);
+
+● Update(src/features/landing/scene/globe.tsx)
+  ⎿  Added 8 lines, removed 4 lines
+      156  }
+      157  
+      158  function CameraOrbit() {
+      159 -  useFrame(({ camera, clock }) => {                           
+      160 -    const t = clock.elapsedTime * 0.08;                       
+      159 +  // The R3F frame callback owns the camera write — three's mu
+          +table-vector                                                  
+      160 +  // ownership is exempt from the immutability rule when the o
+          +bject is                                                      
+      161 +  // pulled from the callback param (not from a hook). Grabbin
+          +g `camera`                                                    
+      162 +  // via `useFrame`'s state arg is the correct escape hatch.  
+      163 +  useFrame((state) => {                                       
+      164 +    const t = state.clock.elapsedTime * 0.08;                 
+      165      const r = 11;
+      162 -    camera.position.set(Math.cos(t) * r, 2.2 + Math.sin(t * 0.
+          -6) * 0.4, Math.sin(t) * r);                                   
+      163 -    camera.lookAt(0, 0, 0);                                   
+      166 +    state.camera.position.set(Math.cos(t) * r, 2.2 + Math.sin(
+          +t * 0.6) * 0.4, Math.sin(t) * r);                             
+      167 +    state.camera.lookAt(0, 0, 0);                             
+      168    });
+      169    return null;
+      170  }
+
+● Task #24 is in progress and still tracking correctly — actively resolving the
+  remaining lint errors (architecture.tsx camera mutation + useMemo inline fn,
+  trust.tsx apostrophe).
+
+● Update(src/features/landing/scene/architecture.tsx)
+  ⎿  Added 1 line, removed 1 line
+      1  "use client";
+      2  
+      3  import { useEffect, useMemo, useRef } from "react";
+      4 -import { Canvas, useFrame, useThree } from "@react-three/fiber";
+      4 +import { Canvas, useFrame } from "@react-three/fiber";          
+      5  import { Text, Billboard } from "@react-three/drei";
+      6  import * as THREE from "three";
+      7  import { NODE_REGISTRY, PROVIDER_META } from "@/lib/nodes/regist
+         ry";
+
+● Update(src/features/landing/scene/architecture.tsx)
+  ⎿  Added 9 lines, removed 1 line
+      38    storage: -1.5,
+      39  };
+      40  
+      41 +// Deterministic hash — Math.random() is banned at render time 
+         +by the                                                         
+      42 +// React 19 purity rule; a stable pseudo-noise on the node inde
+         +x keeps                                                        
+      43 +// placement varied but reproducible.                          
+      44 +function jitter(i: number, salt: number) {                     
+      45 +  const x = Math.sin(i * 12.9898 + salt * 78.233) * 43758.5453;
+      46 +  return (x - Math.floor(x)) - 0.5;                            
+      47 +}                                                              
+      48 +                                                               
+      49  function placeNodes(): Placed[] {
+      50    // Take a curated slice — 12 nodes gives a rich field without
+           murdering fps.
+      51    const pick = NODE_REGISTRY.slice(0, 12);
+     ...
+      59        id: n.id,
+      60        label: n.label,
+      61        accent: n.accent,
+      54 -      pos: new THREE.Vector3(x, y, zPlane + (Math.random() - 0.
+         -5) * 0.3),                                                     
+      62 +      pos: new THREE.Vector3(x, y, zPlane + jitter(i, 7) * 0.6)
+         +,                                                              
+      63      };
+      64    });
+      65  }
+
+● Update(src/features/landing/scene/architecture.tsx)
+  ⎿  Added 8 lines, removed 9 lines
+      137  }
+      138  
+      139  function CameraRig() {
+      140 -  const { camera, size } = useThree();                        
+      140    const target = useRef(new THREE.Vector2(0, 0));
+      141    const current = useRef(new THREE.Vector2(0, 0));
+      142  
+     ...
+      151      return () => window.removeEventListener("pointermove", onM
+           ove);
+      152    }, []);
+      153  
+      155 -  useFrame(({ clock }, dt) => {                               
+      154 +  // Pull `camera` from the frame state — R3F's imperative loo
+          +p owns it, and                                                
+      155 +  // the purity/immutability rules don't apply to values sourc
+          +ed there.                                                     
+      156 +  useFrame((state, dt) => {                                   
+      157      current.current.lerp(target.current, Math.min(1, dt * 3));
+      157 -    const t = clock.elapsedTime * 0.06;                       
+      158 -    camera.position.x = current.current.x * 1.6 + Math.sin(t) 
+          -* 0.3;                                                        
+      159 -    camera.position.y = current.current.y * 0.8;              
+      160 -    camera.position.z = 5 + Math.cos(t) * 0.25;               
+      161 -    camera.lookAt(0, 0, 0);                                   
+      162 -    // Suppress unused                                        
+      163 -    void size;                                                
+      158 +    const t = state.clock.elapsedTime * 0.06;                 
+      159 +    state.camera.position.x = current.current.x * 1.6 + Math.s
+          +in(t) * 0.3;                                                  
+      160 +    state.camera.position.y = current.current.y * 0.8;        
+      161 +    state.camera.position.z = 5 + Math.cos(t) * 0.25;         
+      162 +    state.camera.lookAt(0, 0, 0);                             
+      163    });
+      164    return null;
+      165  }
+
+● Update(src/features/landing/scene/architecture.tsx)
+  ⎿  Added 2 lines, removed 1 line
+      165  }
+      166  
+      167  export function ArchitectureScene() {
+      168 -  const nodes = useMemo(placeNodes, []);                      
+      168 +  // Inline arrow so React's `use-memo` rule sees the deps cle
+          +arly.                                                         
+      169 +  const nodes = useMemo(() => placeNodes(), []);              
+      170    // Wire edges: connect each node to its nearest neighbour in
+            the placement.
+      171    const edges = useMemo(() => {
+      172      const out: Array<{ from: THREE.Vector3; to: THREE.Vector3;
+            color: string; phase: number }> = [];
+
+● Update(src/features/landing/trust.tsx)
+  ⎿  Added 1 line, removed 1 line
+      67          <Reveal delay={0.2}>
+      68            <p className="mt-6 max-w-xl text-lg text-muted-foregr
+          ound">
+      69              The checklist your security team hands you before y
+          ou can even
+      70 -            get started. We've already ticked it.              
+      70 +            get started. We&rsquo;ve already ticked it.        
+      71            </p>
+      72          </Reveal>
+      73        </header>
+
+  Ran 1 shell command (ctrl+o to expand)
+
+● One apostrophe left.
+
+● Update(src/features/landing/architecture-3d.tsx)
+  ⎿  Error editing file
+
+  Ran 1 shell command (ctrl+o to expand)
+
+● Task #24 still tracking correctly — fixing the last apostrophe on line 76 (my
+  edit missed it because the actual string differs). Reading the exact line to
+  match.
+
+  Read 1 file (ctrl+o to expand)
+
+● Update(src/features/landing/architecture-3d.tsx)
+  ⎿  Added 1 line, removed 1 line
+      73              <p className="mt-6 max-w-xl text-lg text-muted-fore
+          ground">
+      74                Every node breathes. Every edge carries live traf
+          fic. Move your
+      75                cursor — the camera follows. This is what your ar
+          chitecture
+      76 -              looks like when it's alive.                      
+      76 +              looks like when it&rsquo;s alive.                
+      77              </p>
+      78            </Reveal>
+      79          </header>
+
+  Ran 1 shell command (ctrl+o to expand)
+
+● Clean. Both empty = zero errors.
+● All 24 tasks completed. Full typecheck + eslint pass green.
+
+  What just shipped — the AAAA overhaul
+
+  12 new sections, 3 new WebGL scenes, 1 custom GLSL shader, 20-act composition.
+
+  #: I
+  Act: Hero
+  File: hero.tsx
+  Highlight: 9.5rem type, ticker ribbon (unchanged from prior round)
+  ────────────────────────────────────────
+  #: II
+  Act: Globe
+  File: globe-section.tsx + scene/globe.tsx
+  Highlight: R3F: wireframe icosphere core + 3 inclined orbit rings + 20
+  orbiting
+     service chips + 300 deterministic sparkles + slow camera orbit
+  ────────────────────────────────────────
+  #: III
+  Act: Marquee
+  File: marquee.tsx
+  Highlight: 23-service dual-row
+  ────────────────────────────────────────
+  #: IV
+  Act: Bento
+  File: bento.tsx
+  Highlight: 6 asymmetric tiles
+  ────────────────────────────────────────
+  #: V
+  Act: Architecture 3D
+  File: architecture-3d.tsx + scene/architecture.tsx + scene/nebula.tsx
+  Highlight: R3F: 12 chips placed on 4 depth planes with pointer-tracked
+  parallax
+     camera, edges + traveling packets, drei billboard labels. Custom  GLSL fbm 
+    nebula shader plane behind it
+  ────────────────────────────────────────
+  #: VI
+  Act: Playground
+  File: playground-preview.tsx
+  Highlight: scripted three-tier canvas
+  ────────────────────────────────────────
+  #: VII
+  Act: Command
+  File: command-showcase.tsx
+  Highlight: live-typing ⌘K
+  ────────────────────────────────────────
+  #: VIII
+  Act: Horizontal Gallery
+  File: horizontal-gallery.tsx
+  Highlight: Pin-scroll pan — 400vh outer, sticky inner, 5 huge panels translate
+
+    horizontally with scroll
+  ────────────────────────────────────────
+  #: IX
+  Act: Chapters × 4
+  File: chapter.tsx
+  Highlight: parallax + tilt
+  ────────────────────────────────────────
+  #: X
+  Act: Code Export
+  File: code-export.tsx
+  Highlight: tabbed HCL/YAML/JSON
+  ────────────────────────────────────────
+  #: XI
+  Act: Stack Builder
+  File: stack-builder.tsx
+  Highlight: Real interactive — click chips across 4 tiers, watch SVG diagram
+    assemble with animated edges, live edge count + cost estimate
+  ────────────────────────────────────────
+  #: XII
+  Act: Timeline
+  File: timeline.tsx
+  Highlight: Sticky rail with scroll-linked gradient progress line, 5 numbered
+    steps activate as user scrolls
+  ────────────────────────────────────────
+  #: XIII
+  Act: Flip Cards
+  File: flip-cards.tsx
+  Highlight: CSS 3D — preserve-3d + rotateY(180deg) on hover, 1400px perspective
+  ────────────────────────────────────────
+  #: XIV
+  Act: Cost Calculator
+  File: cost-calculator.tsx
+  Highlight: Real widget — 3 sliders (compute/storage/traffic), live total, no
+    fake numbers
+  ────────────────────────────────────────
+  #: XV
+  Act: Integrations
+  File: integrations.tsx
+  Highlight: 24-tool constellation, 2 rotating rings, hover draws SVG connection
+
+    line to center
+  ────────────────────────────────────────
+  #: XVI
+  Act: Trust
+  File: trust.tsx
+  Highlight: 6 compliance tiles (SOC 2 / GDPR / ISO / HIPAA / AES / SSO) with
+    hover accent-color border
+  ────────────────────────────────────────
+  #: XVII
+  Act: Case Studies
+  File: case-studies.tsx
+  Highlight: 3 long-form cards, each with company avatar, mini SVG arch
+  snapshot,
+    big metric, story
+  ────────────────────────────────────────
+  #: XVIII
+  Act: Testimonials
+  File: testimonials.tsx
+  Highlight: pull-quotes
+  ────────────────────────────────────────
+  #: XIX
+  Act: Pricing
+  File: pricing.tsx
+  Highlight: 3 tiers, conic-glow Pro
+  ────────────────────────────────────────
+  #: XX
+  Act: FAQ
+  File: faq.tsx
+  Highlight: native <details>
+  ────────────────────────────────────────
+  #: —
+  Act: Final CTA
+  File: final-cta.tsx
+  Highlight: conic aurora
+  ────────────────────────────────────────
+  #: —
+  Act: Footer
+  File: site-footer.tsx
+  Highlight: 6-col + full-bleed wordmark
+
+  New global overlays
+  - SpotlightOverlay — raf-lerped cursor spotlight, mix-blend-screen, disabled
+  on coarse pointers + reduced-motion
+  - Kept: Aurora, SmoothScroll (Lenis), CustomCursor (magnetic), ScrollProgress
+  (top bar + 17-dot right rail)
+
+  Dependencies added: zero. Everything runs on the already-installed motion /
+  @react-three/fiber / @react-three/drei / three / next/dynamic — the packages
+  you told me were pre-provisioned.
+
+  ★ Insight ─────────────────────────────────────
+  - React 19's compiler rules bit three separate things: Math.random() at
+  render, useMemo(fn) non-inline, and R3F's classic pattern of destructuring
+  camera from useThree() then mutating it. The fixes teach the shape: use
+  deterministic hashes for pseudo-noise, inline the memo fn, and pull camera
+  from useFrame's state arg (R3F's imperative loop owns it, so purity doesn't
+  apply). If more R3F code lands, expect this exact pattern.
+  - The GLSL nebula runs in an orthographic full-quad, not perspective — that's
+  what turns it from "3D geometry" into a shader wallpaper. Full-screen quad +
+  depthWrite: false + transparent: true + alpha: 0.55 is the recipe for cheap
+  animated backdrops that layer under content.
+  - The horizontal-gallery pin trick is entirely useScroll + useTransform — no
+  ScrollTrigger, no GSAP timeline. The outer section is 400vh; a sticky inner
+  div holds the horizontal strip; x is a MotionValue mapped from scroll
+  progress. It's the same primitive the chapter parallax uses, just cranked to
+  ["0%", "-80%"] and applied to a flex row.
+  ─────────────────────────────────────────────────
+
+  Run npm run dev — this is genuinely the maximalist, RTX-heavy vision. Twenty
+  acts, three WebGL canvases, one shader, one real interactive builder, one cost
+  widget the user can touch, one horizontal pan, one sticky-rail timeline, one
+  flip-card set, one constellation with hover connections, one trust wall, one
+  case-study set. Scrolling top-to-bottom hits every "another universe" register
+  you asked for.
+
+✻ Baked for 10m 48s
+
+❯ ## Error Type                                                                 
+  Runtime TypeError                                                             
+                                                                                
+  ## Error Message                                                              
+  Failed to execute 'animate' on 'Element': Offsets must be monotonically       
+  non-decreasing.                                                               
+                                                                                
+                                                                                
+      at li (<anonymous>:null:null)                                             
+      at RailItem (src/features/landing/timeline.tsx:153:5)                     
+      at <unknown> (src/features/landing/timeline.tsx:88:17)                    
+      at Array.map (<anonymous>:null:null)                                      
+      at Timeline (src/features/landing/timeline.tsx:87:22)                     
+      at HomePage (src/app/page.tsx:174:11)                                     
+                                                                                
+  ## Code Frame                                                                 
+    151 |                                                                       
+    152 |   return (                                                            
+  > 153 |     <motion.li style={{ opacity }} className="relative flex           
+  items-center gap-3 pl-8">                                                     
+        |     ^                                                                 
+    154 |       <span                                                           
+    155 |         className="absolute left-1 top-1/2 h-4 w-4 -translate-y-1/2   
+  rounded-full border-2 bg-void"                                                
+    156 |         style={{ borderColor: step.accent }}                          
+                                                                                
+  Next.js version: 16.2.10 (Turbopack)                                          
+  , use build to verify again and test with both es lint command and tsc -no    
+  eimt                                                                          
+
+● The useTransform on the first rail item generates a negative left threshold
+  (0/5 - 0.05 = -0.05), and Web Animations rejects the resulting non-monotonic
+  offset. Clamping the thresholds fixes it.
+
+● Update(src/features/landing/timeline.tsx)
+  ⎿  Added 7 lines, removed 1 line
+      146    progress: import("motion/react").MotionValue<number>;
+      147  }) {
+      148    // Each step "activates" once scroll passes its threshold.
+      149 +  // Web Animations' `animate()` requires monotonically non-de
+          +creasing                                                      
+      150 +  // keyframe offsets in [0,1]; clamp both ends and nudge them
+          + apart so                                                     
+      151 +  // even the first (threshold=0) and last (threshold=1) items
+          + produce a                                                    
+      152 +  // valid range instead of `[-0.05, 0.05]` or `[0.95, 1.05]`.
+      153    const threshold = index / total;
+      150 -  const opacity = useTransform(progress, [threshold - 0.05, th
+          -reshold + 0.05], [0.4, 1]);                                   
+      154 +  const lo = Math.max(0, Math.min(1, threshold - 0.05));      
+      155 +  const hi = Math.max(lo + 0.001, Math.min(1, threshold + 0.05
+          +));                                                           
+      156 +  const opacity = useTransform(progress, [lo, hi], [0.4, 1]); 
+      157  
+      158    return (
+      159      <motion.li style={{ opacity }} className="relative flex it
+           ems-center gap-3 pl-8">
+
+  Searched for 1 pattern (ctrl+o to expand)
+
+● Other useTransform calls all use hardcoded, safe ranges — timeline was the
+  only one with dynamic thresholds. Now the verification you asked for.
+
+  Ran 1 shell command (ctrl+o to expand)
+
+● Both empty = zero errors. Now the build.
+
+  Ran 1 shell command (ctrl+o to expand)
+
+● Green across all three:
+
+  - tsc --noEmit → 0 errors
+  - eslint → 0 errors
+  - next build → Compiled successfully in 4.3s, TypeScript in 5.4s, all 7 static
+  pages generated
+
+  The fix: RailItem's useTransform was computing keyframe offsets from
+  index/total, so at index=0 the range became [-0.05, 0.05] and at index=5
+  (last) it became [0.95, 1.05]. Web Animations rejects offsets outside [0,1] or
+  non-monotonic pairs. Clamping both ends to [0,1] and enforcing hi > lo + 
+  0.001 guarantees a valid range for every item.
+
+  ★ Insight ─────────────────────────────────────
+  - Motion's useTransform accepts out-of-[0,1] keyframes in principle, but when
+  the underlying primitive lowers to element.animate(), the browser applies the
+  stricter Web Animations rule. This is why the crash only surfaces at runtime —
+  nothing in TS or ESLint knows about the keyframe constraint.
+  - The Math.max(lo + 0.001, ...) is the important half of the guard. Just
+  clamping to [0,1] isn't enough for the last item: clamped bounds could
+  collapse to [1, 1], and equal offsets on a two-stop keyframe list also throw
+  in some browsers.
+  - The other useTransform calls (aurora, chapter, horizontal-gallery) all pass
+  literal, hand-picked keyframes so they never drift into this failure mode.
+  Rule of thumb going forward: any time a keyframe array is computed from
+  indices/props, clamp both ends.
+  ─────────────────────────────────────────────────
+
+✻ Baked for 1m 11s
+
+※ recap: Overhauled the BlackCloud homepage into a 20-act immersive landing with three WebGL scenes and just fixed a runtime crash in the Timeline rail. Build, tsc, and eslint all pass; next action is to run `npm run dev` and visually QA the new sections. (disable recaps in /config)
