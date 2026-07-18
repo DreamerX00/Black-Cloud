@@ -1,10 +1,12 @@
-Version:             2.1.154
-   Session name:        Disable ponytail feature
-ssion ID:          41a30a89-e831-440b-ab6f-0f50c6452a1e
-   cwd:                 /home/akash-singh/Black-Cloud-1/frontend
- Auth token:          ANTHROPIC_AUTH_TOKEN                                                                                                                                      Anthropic base URL:  https://go.trybons.ai
+ Settings  Status   Config   Usage   Stats
 
- Model:               cobalt-heron
-   IDE:                 Connected to VS Code extension version 2.1.212
+   Version:             2.1.154
+ Session name:        /rename to add a name                                                                                           Session ID:          666da5dd-2be3-4611-a0aa-01697bf1be69
+ cwd:                 /home/akash-singh/Black-Cloud-1
+ Auth token:          ANTHROPIC_AUTH_TOKEN
+   Anthropic base URL:  https://go.trybons.ai
+
+   Model:               amber-marten
+   IDE:                 Connected to VS Code extension version 2.1.214 (server version: 2.1.212)
    MCP servers:         12 connected, 4 need auth · /mcp
    Setting sources:     User settings, Project local settings, Command line arguments
