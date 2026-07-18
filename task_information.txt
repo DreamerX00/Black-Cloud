@@ -1,0 +1,9 @@
+   Version:             2.1.154
+   Session name:        Disable ponytail feature
+ Session ID:          1bf6cff8-b176-40e7-b8b0-e96b08eda06c                                                                                                                      cwd:                 /home/akash-singh/Black-Cloud-2/frontend
+   Auth token:          ANTHROPIC_AUTH_TOKEN
+   Anthropic base URL:  https://go.trybons.ai
+                                                                                                                                                                                  del:               crimson-lynx
+   IDE:                 Connected to VS Code extension version 2.1.212
+   MCP servers:         12 connected, 4 need auth · /mcp
+   Setting sources:     User settings, Project local settings, Command line arguments
