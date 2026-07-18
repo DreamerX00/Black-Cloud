@@ -1,0 +1,392 @@
+export type CatalogNode = {
+  id: string
+  name: string
+  provider: 'aws' | 'azure' | 'gcp'
+  category: 'compute' | 'storage' | 'database' | 'networking' | 'serverless' | 'container' | 'ai' | 'security' | 'monitoring' | 'cdn'
+  icon: string | null
+  description: string
+  isPopular: boolean
+  connections: string[]
+}
+
+export const CATALOG: CatalogNode[] = [
+  // ── AWS (20) ──────────────────────────────────────────────────────────
+  {
+    id: 'aws-ec2',
+    name: 'EC2',
+    provider: 'aws',
+    category: 'compute',
+    icon: '/AWS-ICONS/Arch_Amazon-EC2/48/Arch_Amazon-EC2_48.svg',
+    description: 'Resizable virtual servers in the cloud',
+    isPopular: true,
+    connections: ['storage', 'database', 'networking', 'security', 'monitoring'],
+  },
+  {
+    id: 'aws-ecs',
+    name: 'ECS',
+    provider: 'aws',
+    category: 'container',
+    icon: '/AWS-ICONS/Arch_Amazon-Elastic-Container-Service/48/Arch_Amazon-Elastic-Container-Service_48.svg',
+    description: 'Fully managed container orchestration service',
+    isPopular: true,
+    connections: ['networking', 'storage', 'database', 'monitoring', 'security'],
+  },
+  {
+    id: 'aws-lambda',
+    name: 'Lambda',
+    provider: 'aws',
+    category: 'serverless',
+    icon: '/AWS-ICONS/Arch_AWS-Lambda/48/Arch_AWS-Lambda_48.svg',
+    description: 'Run code without provisioning servers',
+    isPopular: true,
+    connections: ['database', 'storage', 'networking', 'monitoring'],
+  },
+  {
+    id: 'aws-fargate',
+    name: 'Fargate',
+    provider: 'aws',
+    category: 'container',
+    icon: '/AWS-ICONS/Arch_AWS-Fargate/48/Arch_AWS-Fargate_48.svg',
+    description: 'Serverless compute for containers',
+    isPopular: false,
+    connections: ['networking', 'storage', 'database', 'monitoring'],
+  },
+  {
+    id: 'aws-s3',
+    name: 'S3',
+    provider: 'aws',
+    category: 'storage',
+    icon: '/AWS-ICONS/Arch_Amazon-Simple-Storage-Service/48/Arch_Amazon-Simple-Storage-Service_48.svg',
+    description: 'Scalable object storage',
+    isPopular: true,
+    connections: ['compute', 'serverless', 'cdn', 'networking', 'security'],
+  },
+  {
+    id: 'aws-ebs',
+    name: 'EBS',
+    provider: 'aws',
+    category: 'storage',
+    icon: '/AWS-ICONS/Arch_Amazon-Elastic-Block-Store/48/Arch_Amazon-Elastic-Block-Store_48.svg',
+    description: 'Block-level storage volumes for EC2 instances',
+    isPopular: false,
+    connections: ['compute'],
+  },
+  {
+    id: 'aws-rds',
+    name: 'RDS',
+    provider: 'aws',
+    category: 'database',
+    icon: '/AWS-ICONS/Arch_Amazon-RDS/48/Arch_Amazon-RDS_48.svg',
+    description: 'Managed relational database service',
+    isPopular: true,
+    connections: ['compute', 'serverless', 'networking', 'security', 'monitoring'],
+  },
+  {
+    id: 'aws-dynamodb',
+    name: 'DynamoDB',
+    provider: 'aws',
+    category: 'database',
+    icon: '/AWS-ICONS/Arch_Amazon-DynamoDB/48/Arch_Amazon-DynamoDB_48.svg',
+    description: 'Fully managed NoSQL database',
+    isPopular: true,
+    connections: ['compute', 'serverless', 'networking', 'security'],
+  },
+  {
+    id: 'aws-aurora',
+    name: 'Aurora',
+    provider: 'aws',
+    category: 'database',
+    icon: '/AWS-ICONS/Arch_Amazon-Aurora/48/Arch_Amazon-Aurora_48.svg',
+    description: 'MySQL and PostgreSQL-compatible relational database',
+    isPopular: false,
+    connections: ['compute', 'serverless', 'networking', 'security'],
+  },
+  {
+    id: 'aws-vpc',
+    name: 'VPC',
+    provider: 'aws',
+    category: 'networking',
+    icon: '/AWS-ICONS/Arch_Amazon-Virtual-Private-Cloud/48/Arch_Amazon-Virtual-Private-Cloud_48.svg',
+    description: 'Isolated cloud network',
+    isPopular: true,
+    connections: ['compute', 'container', 'database', 'security'],
+  },
+  {
+    id: 'aws-route53',
+    name: 'Route 53',
+    provider: 'aws',
+    category: 'networking',
+    icon: '/AWS-ICONS/Arch_Amazon-Route-53/48/Arch_Amazon-Route-53_48.svg',
+    description: 'Scalable DNS and domain name registration',
+    isPopular: true,
+    connections: ['cdn', 'compute', 'networking'],
+  },
+  {
+    id: 'aws-cloudfront',
+    name: 'CloudFront',
+    provider: 'aws',
+    category: 'cdn',
+    icon: '/AWS-ICONS/Arch_Amazon-CloudFront/48/Arch_Amazon-CloudFront_48.svg',
+    description: 'Global content delivery network',
+    isPopular: true,
+    connections: ['storage', 'compute', 'networking', 'security'],
+  },
+  {
+    id: 'aws-alb',
+    name: 'ALB',
+    provider: 'aws',
+    category: 'networking',
+    icon: '/AWS-ICONS/Arch_Elastic-Load-Balancing/48/Arch_Elastic-Load-Balancing_48.svg',
+    description: 'Application-level load balancer',
+    isPopular: true,
+    connections: ['compute', 'container', 'networking', 'security'],
+  },
+  {
+    id: 'aws-nlb',
+    name: 'NLB',
+    provider: 'aws',
+    category: 'networking',
+    icon: '/AWS-ICONS/Arch_Elastic-Load-Balancing/48/Arch_Elastic-Load-Balancing_48.svg',
+    description: 'Network-level load balancer for TCP/UDP traffic',
+    isPopular: false,
+    connections: ['compute', 'container', 'networking'],
+  },
+  {
+    id: 'aws-api-gateway',
+    name: 'API Gateway',
+    provider: 'aws',
+    category: 'serverless',
+    icon: '/AWS-ICONS/Arch_Amazon-API-Gateway/48/Arch_Amazon-API-Gateway_48.svg',
+    description: 'Create, publish, and manage APIs at any scale',
+    isPopular: true,
+    connections: ['serverless', 'compute', 'networking', 'security'],
+  },
+  {
+    id: 'aws-sqs',
+    name: 'SQS',
+    provider: 'aws',
+    category: 'serverless',
+    icon: '/AWS-ICONS/Arch_Amazon-Simple-Queue-Service/48/Arch_Amazon-Simple-Queue-Service_48.svg',
+    description: 'Fully managed message queuing service',
+    isPopular: false,
+    connections: ['serverless', 'compute', 'monitoring'],
+  },
+  {
+    id: 'aws-sns',
+    name: 'SNS',
+    provider: 'aws',
+    category: 'serverless',
+    icon: '/AWS-ICONS/Arch_Amazon-Simple-Notification-Service/48/Arch_Amazon-Simple-Notification-Service_48.svg',
+    description: 'Pub/sub messaging and mobile notifications',
+    isPopular: false,
+    connections: ['serverless', 'compute', 'monitoring'],
+  },
+  {
+    id: 'aws-elasticache',
+    name: 'ElastiCache',
+    provider: 'aws',
+    category: 'database',
+    icon: '/AWS-ICONS/Arch_Amazon-ElastiCache/48/Arch_Amazon-ElastiCache_48.svg',
+    description: 'In-memory caching service (Redis / Memcached)',
+    isPopular: false,
+    connections: ['compute', 'database', 'networking'],
+  },
+  {
+    id: 'aws-eks',
+    name: 'EKS',
+    provider: 'aws',
+    category: 'container',
+    icon: '/AWS-ICONS/Arch_Amazon-Elastic-Kubernetes-Service/48/Arch_Amazon-Elastic-Kubernetes-Service_48.svg',
+    description: 'Managed Kubernetes service',
+    isPopular: true,
+    connections: ['networking', 'storage', 'database', 'monitoring', 'security'],
+  },
+  {
+    id: 'aws-iam',
+    name: 'IAM',
+    provider: 'aws',
+    category: 'security',
+    icon: '/AWS-ICONS/Arch_AWS-Identity-and-Access-Management/48/Arch_AWS-Identity-and-Access-Management_48.svg',
+    description: 'Identity and access management',
+    isPopular: true,
+    connections: ['compute', 'storage', 'database', 'serverless', 'container'],
+  },
+
+  // ── Azure (7) ─────────────────────────────────────────────────────────
+  {
+    id: 'azure-vm',
+    name: 'Virtual Machines',
+    provider: 'azure',
+    category: 'compute',
+    icon: null,
+    description: 'On-demand scalable virtual machines',
+    isPopular: true,
+    connections: ['storage', 'database', 'networking', 'security', 'monitoring'],
+  },
+  {
+    id: 'azure-aks',
+    name: 'AKS',
+    provider: 'azure',
+    category: 'container',
+    icon: null,
+    description: 'Managed Kubernetes service',
+    isPopular: true,
+    connections: ['networking', 'storage', 'database', 'monitoring', 'security'],
+  },
+  {
+    id: 'azure-functions',
+    name: 'Functions',
+    provider: 'azure',
+    category: 'serverless',
+    icon: null,
+    description: 'Event-driven serverless compute',
+    isPopular: true,
+    connections: ['database', 'storage', 'networking', 'monitoring'],
+  },
+  {
+    id: 'azure-sql',
+    name: 'SQL Database',
+    provider: 'azure',
+    category: 'database',
+    icon: null,
+    description: 'Managed relational SQL database',
+    isPopular: false,
+    connections: ['compute', 'serverless', 'networking', 'security'],
+  },
+  {
+    id: 'azure-blob',
+    name: 'Blob Storage',
+    provider: 'azure',
+    category: 'storage',
+    icon: null,
+    description: 'Massively scalable object storage',
+    isPopular: true,
+    connections: ['compute', 'serverless', 'cdn', 'networking'],
+  },
+  {
+    id: 'azure-app-service',
+    name: 'App Service',
+    provider: 'azure',
+    category: 'compute',
+    icon: null,
+    description: 'Fully managed platform for web apps',
+    isPopular: false,
+    connections: ['database', 'storage', 'networking', 'security', 'monitoring'],
+  },
+  {
+    id: 'azure-cosmos-db',
+    name: 'Cosmos DB',
+    provider: 'azure',
+    category: 'database',
+    icon: null,
+    description: 'Globally distributed multi-model database',
+    isPopular: true,
+    connections: ['compute', 'serverless', 'networking', 'security'],
+  },
+
+  // ── GCP (8) ───────────────────────────────────────────────────────────
+  {
+    id: 'gcp-compute-engine',
+    name: 'Compute Engine',
+    provider: 'gcp',
+    category: 'compute',
+    icon: '/GCP-ICON/compute-engine.svg',
+    description: 'Virtual machines on Google infrastructure',
+    isPopular: true,
+    connections: ['storage', 'database', 'networking', 'security', 'monitoring'],
+  },
+  {
+    id: 'gcp-cloud-run',
+    name: 'Cloud Run',
+    provider: 'gcp',
+    category: 'container',
+    icon: '/GCP-ICON/cloud-run.svg',
+    description: 'Fully managed serverless container platform',
+    isPopular: true,
+    connections: ['networking', 'storage', 'database', 'monitoring'],
+  },
+  {
+    id: 'gcp-gke',
+    name: 'GKE',
+    provider: 'gcp',
+    category: 'container',
+    icon: '/GCP-ICON/google-kubernetes-engine.svg',
+    description: 'Managed Kubernetes clusters',
+    isPopular: true,
+    connections: ['networking', 'storage', 'database', 'monitoring', 'security'],
+  },
+  {
+    id: 'gcp-cloud-sql',
+    name: 'Cloud SQL',
+    provider: 'gcp',
+    category: 'database',
+    icon: '/GCP-ICON/cloud-sql.svg',
+    description: 'Managed MySQL, PostgreSQL, and SQL Server',
+    isPopular: false,
+    connections: ['compute', 'serverless', 'networking', 'security'],
+  },
+  {
+    id: 'gcp-cloud-storage',
+    name: 'Cloud Storage',
+    provider: 'gcp',
+    category: 'storage',
+    icon: '/GCP-ICON/cloud-storage.svg',
+    description: 'Unified object storage',
+    isPopular: true,
+    connections: ['compute', 'serverless', 'cdn', 'networking'],
+  },
+  {
+    id: 'gcp-bigquery',
+    name: 'BigQuery',
+    provider: 'gcp',
+    category: 'database',
+    icon: '/GCP-ICON/bigquery.svg',
+    description: 'Serverless enterprise data warehouse',
+    isPopular: true,
+    connections: ['compute', 'storage', 'ai', 'monitoring'],
+  },
+  {
+    id: 'gcp-cloud-functions',
+    name: 'Cloud Functions',
+    provider: 'gcp',
+    category: 'serverless',
+    icon: '/GCP-ICON/cloud-functions.svg',
+    description: 'Event-driven serverless compute platform',
+    isPopular: false,
+    connections: ['database', 'storage', 'networking', 'monitoring'],
+  },
+  {
+    id: 'gcp-pub-sub',
+    name: 'Pub/Sub',
+    provider: 'gcp',
+    category: 'serverless',
+    icon: '/GCP-ICON/pub-sub.svg',
+    description: 'Global real-time messaging and event ingestion',
+    isPopular: false,
+    connections: ['serverless', 'compute', 'monitoring'],
+  },
+]
+
+// ponytail: linear scans fine for 35 items, index if catalog hits hundreds
+export function getServicesByProvider(provider: string): CatalogNode[] {
+  return CATALOG.filter((n) => n.provider === provider)
+}
+
+export function getServicesByCategory(category: string): CatalogNode[] {
+  return CATALOG.filter((n) => n.category === category)
+}
+
+export function getPopularServices(): CatalogNode[] {
+  return CATALOG.filter((n) => n.isPopular)
+}
+
+export function searchServices(query: string): CatalogNode[] {
+  const q = query.toLowerCase()
+  return CATALOG.filter(
+    (n) =>
+      n.name.toLowerCase().includes(q) ||
+      n.id.includes(q) ||
+      n.description.toLowerCase().includes(q) ||
+      n.category.includes(q)
+  )
+}
